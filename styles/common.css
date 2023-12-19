@@ -1,0 +1,15 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto 800px auto;
+}
+
+.container {
+  width: 100%;
+  grid-column-start: 2;
+}/*# sourceMappingURL=common.css.map */
