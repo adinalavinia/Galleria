@@ -1,0 +1,24 @@
+.container {
+    display: grid;
+    grid-template-columns: 200px auto 300px 50px 50px 50px;
+    padding: 40px;
+    align-items: center;
+    justify-items: center;
+}
+
+
+
+.rectangle {
+    display: flex;
+    width: auto;
+    height: 1px;
+    background-color: #E5E5E5;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+button {
+    cursor: pointer;
+}
+
+
