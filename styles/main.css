@@ -1,0 +1,21 @@
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 40px;
+  align-items: center;
+  justify-items: center;
+  gap: 40px;
+}
+main a {
+  text-decoration: none;
+}
+
+.starry-night {
+  width: 310px;
+  height: 250px;
+}
+
+.girl-with-a-pearl-earring {
+  width: 310px;
+  height: 400px;
+}/*# sourceMappingURL=main.css.map */

@@ -7,4 +7,31 @@ body,
 html {
   margin: 0;
   padding: 0;
+}
+
+main div {
+  position: relative;
+}
+
+.title a {
+  color: #FFF;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  width: 246px;
+  position: absolute;
+  left: 32px;
+  bottom: 56px;
+}
+
+.subtitle {
+  color: #FFF;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  opacity: 0.7528;
+  width: 246px;
+  position: absolute;
+  left: 32px;
+  bottom: 33px;
 }/*# sourceMappingURL=common.css.map */

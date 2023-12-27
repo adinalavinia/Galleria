@@ -4,9 +4,11 @@
     padding: 40px;
     align-items: center;
     justify-items: center;
+
+    a {
+        color: #333333;
+    }
 }
-
-
 
 .rectangle {
     display: flex;
@@ -17,8 +19,34 @@
     margin-right: 40px;
 }
 
-button {
-    cursor: pointer;
+.search {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 28px;
+    background-color: #f6f6f6;
+    transition: box-shadow 0.25s;
+
+    button {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+    }
+
+    .search-input {
+        font-size: 14px;
+        color: #333333;
+        outline: none;
+        border: none;
+        background: transparent;
+        width: 230px;
+    }
 }
+
+.search:focus-within {
+    box-shadow: 0 0 2px black;
+}
+
 
 
