@@ -12,4 +12,80 @@ html {
 html {
   width: 1440px;
   height: 1606px;
+}
+
+.container-fluid-detail {
+  display: flex;
+  padding: 40px;
+  position: relative;
+  margin-top: 60px;
+}
+.container-fluid-detail img {
+  width: 475px;
+  height: 560px;
+  position: relative;
+}
+.container-fluid-detail .name-and-author {
+  width: 445px;
+  height: 238px;
+  background-color: #fff;
+  margin-left: 410px;
+  position: absolute;
+}
+.container-fluid-detail .title-detail {
+  width: 380px;
+  height: 128px;
+  color: #000;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  margin-left: 65px;
+  margin-bottom: 24px;
+}
+.container-fluid-detail .subtitle-detail {
+  width: 246px;
+  height: 19px;
+  color: #7D7D7D;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  margin-left: 65px;
+  bottom: 67px;
+}
+.container-fluid-detail .year-detail {
+  width: 476px;
+  height: 150px;
+  color: #F3F3F3;
+  font-size: 200px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150px;
+  margin-left: 884px;
+  position: absolute;
+}
+.container-fluid-detail p {
+  width: 350px;
+  height: 364px;
+  color: #7D7D7D;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  margin-left: 885px;
+  margin-top: 115px;
+  position: absolute;
+}
+.container-fluid-detail .image-detail {
+  position: relative;
+}
+.container-fluid-detail button {
+  width: 152px;
+  height: 40px;
+  background-color: #000;
+  opacity: 0.7546;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  margin-left: -456px;
+  bottom: 16px;
 }/*# sourceMappingURL=common.css.map */
