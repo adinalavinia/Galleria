@@ -13,7 +13,11 @@ main div {
   position: relative;
 }
 
-.title a {
+main img {
+  width: 310px;
+}
+
+.title {
   color: #FFF;
   font-size: 24px;
   font-style: normal;
@@ -34,4 +38,12 @@ main div {
   position: absolute;
   left: 32px;
   bottom: 33px;
+}
+
+.rectangle-text {
+  width: 310px;
+  height: 170px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.84) 100%);
+  position: absolute;
+  bottom: 5px;
 }/*# sourceMappingURL=common.css.map */
