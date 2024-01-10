@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet" />  
+    <link rel="stylesheet" href="./styles/common.css">  
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/my-account.css">
+
+</head>
+<body>
+    <header class="container">
+        <div class="site-logo">
+            <a href="/index.html"><img src="/img/logo.svg" alt="Galleria"></a>
+        </div>
+        <div></div>
+        <form action="/search-result/">
+            <div class="search">
+            <button type="submit"><span class="material-symbols-outlined">search</span></button>
+            <input class="search-input" type="search" placeholder="Search...">
+            </div>
+        </form>
+        <a href="/contact-us.html"><span class="material-symbols-outlined">headset_mic</span></a>
+        <a href="/my-account.html"><span class="material-symbols-outlined">account_circle</span></a>
+        <a href="/shopping-cart"><span class="material-symbols-outlined">shopping_cart</span></a>
+
+    </header>
+
+    <div class="rectangle">
+        <div class="flex-items"></div>
+        <div class="flex-items"></div>
+        <div class="flex-items"></div>
+    </div>    
+    
+    <div class="login-register-form">
+        <div class="login">
+            <h2>Login</h2>
+            <form action="">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+            </form>
+            <div class="forgot-password">
+                <a href="">Forgot password?</a>
+            </div>
+            <button type="submit">Login</button>
+        </div>
+
+        <div class="register">
+            <h2>Register</h2>
+            <form action="">
+                <input type="text" name="name" placeholder="Name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+                <input type="password" name="repeat-password" placeholder="Repeat your password">
+            </form>
+            <div class="checkbox-terms">
+                <input type="checkbox" class="terms" id="terms" name="terms"> Accept <a href="">privacy policy</a> and terms
+            </div>
+
+            <button type="submit">Register</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
