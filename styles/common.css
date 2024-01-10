@@ -166,4 +166,28 @@ footer .title-artist-footer .artist-footer {
   font-style: normal;
   font-weight: 400;
   margin-top: 8px;
+}
+footer .pagination-buttons {
+  grid-column-start: 3;
+  text-align: center;
+  padding: 36px 40px 36px 41px;
+}
+footer .pagination-buttons span {
+  font-size: 40px;
+}
+footer .pagination-buttons .prev-page {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+footer .pagination-buttons .prev-page:hover {
+  color: #D8D8D8;
+}
+footer .pagination-buttons .next-page {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+footer .pagination-buttons .next-page:hover {
+  color: #D8D8D8;
 }/*# sourceMappingURL=common.css.map */
