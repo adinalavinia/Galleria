@@ -189,13 +189,33 @@ footer {
     }
 
     .pagination-buttons{
-        .prev-page{
-
-        }
+        grid-column-start: 3;
+        text-align: center;
+        padding: 36px 40px 36px 41px;
         
+        span{
+            font-size: 40px;
+        }
+
+        .prev-page{
+            border: none;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .prev-page:hover{
+            color: #D8D8D8;
+        }
+
 
         .next-page{
+            border: none;
+            background: transparent;
+            cursor: pointer;
+        }
 
+        .next-page:hover{
+            color: #D8D8D8;
         }
    }
 
