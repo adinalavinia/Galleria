@@ -1,12 +1,111 @@
 .shoppig-cart-page{
     padding: 40px;
+
+    .cart-item-head {
+        background-color: #e0e0e0;
+        display: grid;
+        grid-template-columns: auto 300px 200px 200px 150px;
+        text-align: center;
+        border-radius: 15px;
+        padding: 15px;
+        font-size: 16px;
+        font-weight: 700;
+
+        .cart-item1{
+            text-align: left;
+            padding-left: 15px;
+        }
+    }
+
+    .cart-items {
+        display: grid;
+        grid-template-columns: auto 300px 200px 200px 150px;
+        grid-template-rows: 50px 50px 50px;
+        padding: 15px;
+        text-align: center;
+
+        div {
+            margin: auto;
+        }
+
+        .cart-item-info {
+            margin-left: 0;
+            text-align: left;
+            padding-left: 15px;
+        }
+    }
+
+    .cart-adress-order {
+        display: grid;
+        grid-template-columns: 500px 500px;
+        gap: 50px;
+        padding: 50px 0 50px 20px;
+
+        input {
+            border: none;
+            border-bottom: 1px solid grey;
+            font-size: 16px;
+        }
+    }
+
+    .cart-notes {
+        padding-left: 20px;
+
+        textarea {
+            width: 400px;
+            height: 100px;
+            border: 1px solid grey;
+            font-size: 16px;
+            border-radius: 20px;  
+        }
+
+        textarea::placeholder{
+            padding: 15px 0 0 10px;
+        }
+
+        button {
+            width: 120px;
+            height: 50px;
+            background-color: transparent;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f0f0f0;
+        }
+    }
+
+    .cart-footer-total {
+        padding: 50px 0 50px 35px;
+        display: grid;
+        grid-template-columns: auto 300px;
+        font-size: 24px;
+
+        .cart-total {
+            font-weight: 700;
+        }
+    }
+
+    .checkout-button {
+        text-align: end;
+        margin-right: 50px;
+
+        button {
+            width: 150px;
+            height: 50px;
+            background-color: transparent;
+            margin-top: 50px;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f0f0f0;
+        }
+    }
 }
 
 
-.cart-item-head{
-    background-color: rgb(189, 189, 189);
-    display: flex;
-    gap: 20px;
-    font-size: 16px;
-    font-weight: 700;
-}

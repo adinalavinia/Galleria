@@ -1,11 +1,95 @@
 .shoppig-cart-page {
   padding: 40px;
 }
-
-.cart-item-head {
-  background-color: rgb(189, 189, 189);
-  display: flex;
-  gap: 20px;
+.shoppig-cart-page .cart-item-head {
+  background-color: #e0e0e0;
+  display: grid;
+  grid-template-columns: auto 300px 200px 200px 150px;
+  text-align: center;
+  border-radius: 15px;
+  padding: 15px;
   font-size: 16px;
   font-weight: 700;
+}
+.shoppig-cart-page .cart-item-head .cart-item1 {
+  text-align: left;
+  padding-left: 15px;
+}
+.shoppig-cart-page .cart-items {
+  display: grid;
+  grid-template-columns: auto 300px 200px 200px 150px;
+  grid-template-rows: 50px 50px 50px;
+  padding: 15px;
+  text-align: center;
+}
+.shoppig-cart-page .cart-items div {
+  margin: auto;
+}
+.shoppig-cart-page .cart-items .cart-item-info {
+  margin-left: 0;
+  text-align: left;
+  padding-left: 15px;
+}
+.shoppig-cart-page .cart-adress-order {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  gap: 50px;
+  padding: 50px 0 50px 20px;
+}
+.shoppig-cart-page .cart-adress-order input {
+  border: none;
+  border-bottom: 1px solid grey;
+  font-size: 16px;
+}
+.shoppig-cart-page .cart-notes {
+  padding-left: 20px;
+}
+.shoppig-cart-page .cart-notes textarea {
+  width: 400px;
+  height: 100px;
+  border: 1px solid grey;
+  font-size: 16px;
+  border-radius: 20px;
+}
+.shoppig-cart-page .cart-notes textarea::-moz-placeholder {
+  padding: 15px 0 0 10px;
+}
+.shoppig-cart-page .cart-notes textarea::placeholder {
+  padding: 15px 0 0 10px;
+}
+.shoppig-cart-page .cart-notes button {
+  width: 120px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.shoppig-cart-page .cart-notes button:hover {
+  background-color: #f0f0f0;
+}
+.shoppig-cart-page .cart-footer-total {
+  padding: 50px 0 50px 35px;
+  display: grid;
+  grid-template-columns: auto 300px;
+  font-size: 24px;
+}
+.shoppig-cart-page .cart-footer-total .cart-total {
+  font-weight: 700;
+}
+.shoppig-cart-page .checkout-button {
+  text-align: end;
+  margin-right: 50px;
+}
+.shoppig-cart-page .checkout-button button {
+  width: 150px;
+  height: 50px;
+  background-color: transparent;
+  margin-top: 50px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.shoppig-cart-page .checkout-button button:hover {
+  background-color: #f0f0f0;
 }/*# sourceMappingURL=shopping-cart.css.map */
