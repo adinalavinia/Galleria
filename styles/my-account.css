@@ -29,6 +29,14 @@
   font-size: 16px;
   cursor: pointer;
 }
+.login-register-form .login .login-button,
+.login-register-form .register .login-button {
+  margin-top: -100px;
+}
+.login-register-form .login .register-button,
+.login-register-form .register .register-button {
+  margin-top: 30px;
+}
 .login-register-form .login button:hover,
 .login-register-form .register button:hover {
   background-color: #f0f0f0;
@@ -41,6 +49,6 @@
 .login-register-form .login .forgot-password,
 .login-register-form .register .forgot-password {
   padding-right: 50px;
-  padding-top: 10px;
+  margin-top: -60px;
   text-align: end;
 }/*# sourceMappingURL=my-account.css.map */

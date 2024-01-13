@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet" />  
+    <link rel="stylesheet" href="./styles/common.css">  
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/shopping-cart.css">
+
+</head>
+<body>
+    <header class="container">
+        <div class="site-logo">
+            <a href="/index.html"><img src="/img/logo.svg" alt="Galleria"></a>
+        </div>
+        <div></div>
+        <form action="/search-result/">
+            <div class="search">
+            <button type="submit"><span class="material-symbols-outlined">search</span></button>
+            <input class="search-input" type="search" placeholder="Search...">
+            </div>
+        </form>
+        <a href="/contact-us.html"><span class="material-symbols-outlined">headset_mic</span></a>
+        <a href="/my-account.html"><span class="material-symbols-outlined">account_circle</span></a>
+        <a href="/shopping-cart.html"><span class="material-symbols-outlined">shopping_cart</span></a>
+
+    </header>
+
+    <div class="rectangle">
+        <div class="flex-items"></div>
+        <div class="flex-items"></div>
+        <div class="flex-items"></div>
+    </div>
+
+    <div class="shoppig-cart-page">
+        <form action="">
+            <div class="cart-item-list">
+                <div class="cart-item-head">
+                    <span class="cart-item">Products</span>
+                    <span class="cart-item">Price</span>
+                    <span class="cart-item">Quantity</span>
+                    <span class="cart-item">Total</span>
+                    <span class="cart-item"></span>
+                </div>
+
+                <div class="cart-items">
+                    <div class="cart-item-info">ABC</div>
+                    <div class="cart-item-price">ABC</div>
+                    <div class="cart-item-quantity">1</div>
+                    <div class="cart-item-price-list">ABC</div>
+                    <div class="cart-item-remove">
+                        <a href="">
+                            <span class="material-symbols-outlined">delete</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cart-notes">
+                    <textarea class="cart-message" placeholder="Add more information about your order"></textarea>
+                    <button type="submit" class="cart-message-button">Add note</button>
+                </div>
+
+                <div class="cart-footer-total">
+                    <span class="cart-total">Total</span>
+                </div>
+
+                <form action="">
+                    <div class="cart-adress-order">
+                        <input type="text" name="name" placeholder="Name">
+                        <input type="text" name="adress" placeholder="Adress">
+                        <input type="text" name="postal-code" placeholder="Postal code">
+                        <input type="text" name="city" placeholder="City">
+                        <input type="text" name="country" placeholder="Country">
+                        <input type="text" name="phone" placeholder="Phone">
+                    </div>
+                </form>
+
+                <button type="submit">Checkout</button>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
