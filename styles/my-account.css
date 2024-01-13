@@ -9,7 +9,7 @@
 .login-register-form .login,
 .login-register-form .register {
   display: grid;
-  grid-template-rows: 120px auto;
+  grid-template-rows: 80px auto;
   margin: 20px 50px;
 }
 .login-register-form .login form input,
