@@ -20,7 +20,7 @@ html {
 // }
 
 .container-fluid-detail {
-    width: 1360px;
+    // width: 1360px;
     height: 624px;
     display: flex;
     padding: 40px;
@@ -69,7 +69,7 @@ html {
         position: absolute;
     }
 
-    p {
+    .p-detail {
         width: 350px;
         height: 364px;
         color: #7D7D7D;
@@ -80,33 +80,37 @@ html {
         margin-left: 885px;
         margin-top: 115px;
         position: absolute;
-    }
 
-    .shopping-cart {
-        width: 150px;
-        height: 60px;
-        position: absolute;
-        bottom: 53px;
-        right: 300px;
-        display: inline-flex;
-        justify-items: center;
-        align-items: center;
+        div {
+            font-size: 16px;
+            color: #252525;
+        }
 
-        button {
+        .shopping-cart {
+            width: 150px;
+            height: 60px;
             display: inline-flex;
             justify-items: center;
             align-items: center;
-            padding: 15px;
-            gap: 10px;
-            border: none;
-            border-radius: 20px;
-            color: #7D7D7D;
-            font-size: 9px;
-            font-weight: 700;
-            letter-spacing: 1.929px;
-            cursor: pointer;
+    
+            button {
+                display: inline-flex;
+                justify-items: center;
+                align-items: center;
+                padding: 15px;
+                gap: 10px;
+                border: none;
+                border-radius: 20px;
+                color: #7D7D7D;
+                font-size: 9px;
+                font-weight: 700;
+                letter-spacing: 1.929px;
+                cursor: pointer;
+            }
         }
     }
+
+    
 
     .image-detail {
         position: relative;
@@ -161,12 +165,9 @@ html {
             }
         }
     }
-
-
 }
 
 footer {
-    width: 1440px;
     height: 96px;
     display: grid;
     grid-template-columns: 360px auto 200px;

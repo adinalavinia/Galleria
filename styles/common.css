@@ -14,7 +14,6 @@ html {
 }
 
 .container-fluid-detail {
-  width: 1360px;
   height: 624px;
   display: flex;
   padding: 40px;
@@ -59,7 +58,7 @@ html {
   margin-left: 884px;
   position: absolute;
 }
-.container-fluid-detail p {
+.container-fluid-detail .p-detail {
   width: 350px;
   height: 364px;
   color: #7D7D7D;
@@ -71,17 +70,18 @@ html {
   margin-top: 115px;
   position: absolute;
 }
-.container-fluid-detail .shopping-cart {
+.container-fluid-detail .p-detail div {
+  font-size: 16px;
+  color: #252525;
+}
+.container-fluid-detail .p-detail .shopping-cart {
   width: 150px;
   height: 60px;
-  position: absolute;
-  bottom: 53px;
-  right: 300px;
   display: inline-flex;
   justify-items: center;
   align-items: center;
 }
-.container-fluid-detail .shopping-cart button {
+.container-fluid-detail .p-detail .shopping-cart button {
   display: inline-flex;
   justify-items: center;
   align-items: center;
@@ -144,7 +144,6 @@ html {
 }
 
 footer {
-  width: 1440px;
   height: 96px;
   display: grid;
   grid-template-columns: 360px auto 200px;
