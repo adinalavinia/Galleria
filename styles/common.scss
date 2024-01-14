@@ -35,6 +35,11 @@ html {
         position: absolute;
     }
 
+    .large-format {
+        height: 302px;
+        position: absolute;
+    }
+
     .title-detail {
         width: 380px;
         height: 128px;
@@ -47,6 +52,7 @@ html {
     }
 
     .subtitle-detail {
+        position: absolute;
         width: 246px;
         height: 19px;
         color: #7D7D7D;

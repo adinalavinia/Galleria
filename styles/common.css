@@ -27,6 +27,10 @@ html {
   margin-left: 410px;
   position: absolute;
 }
+.container-fluid-detail .large-format {
+  height: 302px;
+  position: absolute;
+}
 .container-fluid-detail .title-detail {
   width: 380px;
   height: 128px;
@@ -38,6 +42,7 @@ html {
   margin-bottom: 24px;
 }
 .container-fluid-detail .subtitle-detail {
+  position: absolute;
   width: 246px;
   height: 19px;
   color: #7D7D7D;
