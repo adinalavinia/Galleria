@@ -40,6 +40,11 @@ html {
         position: absolute;
     }
 
+    .small-format {
+        height: 174px;
+        position: absolute;
+    }
+
     .title-detail {
         width: 380px;
         height: 128px;
@@ -113,10 +118,12 @@ html {
                 letter-spacing: 1.929px;
                 cursor: pointer;
             }
+
+            button:hover {
+                background-color: #dadada;
+            }
         }
     }
-
-    
 
     .image-detail {
         position: relative;
@@ -176,7 +183,7 @@ html {
 footer {
     height: 96px;
     display: grid;
-    grid-template-columns: 360px auto 200px;
+    grid-template-columns: 400px auto 200px;
 
 
     .title-artist-footer {
