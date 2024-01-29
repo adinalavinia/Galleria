@@ -1,6 +1,10 @@
 .container-fluid {
-    columns: 4;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     padding: 40px;
+    align-items: center;
+    justify-content: center;
 
     img {
         width: 310px;
@@ -52,6 +56,19 @@
         margin-top: 0;
     }
 
+}
+
+
+@media only screen and (max-width: 375px) {
+    .container-fluid {
+        columns: 1;
+    }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+    .container-fluid {
+        columns: 2;
+    }
 }
 
 

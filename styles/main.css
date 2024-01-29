@@ -1,7 +1,10 @@
 .container-fluid {
-  -moz-columns: 4;
-       columns: 4;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding: 40px;
+  align-items: center;
+  justify-content: center;
 }
 .container-fluid img {
   width: 310px;
@@ -45,4 +48,17 @@
 }
 .container-fluid .starry-night {
   margin-top: 0;
+}
+
+@media only screen and (max-width: 375px) {
+  .container-fluid {
+    -moz-columns: 1;
+         columns: 1;
+  }
+}
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+  .container-fluid {
+    -moz-columns: 2;
+         columns: 2;
+  }
 }/*# sourceMappingURL=main.css.map */
