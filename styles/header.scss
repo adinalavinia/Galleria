@@ -1,23 +1,32 @@
 header {
+    padding: 40px;
+
    .container {
     display: grid;
-    grid-template-columns: 200px auto 300px 50px 50px 50px;
-    padding: 40px;
+    grid-template-columns: 200px auto 700px;
     align-items: center;
     justify-items: center;
 
-        a {
-            color: #333333;
+        .menu-box {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            
+            a {
+                color: #333333;
+            }
+
+            li {
+                display: inline-block;
+            }
+
         }
 
         .site-logo {
             width: 170px;
             height: 48px;
         }
-        
-        #menu {
-            display: none;
-        }
+
         .search {
             width: max-content;
             display: flex;
@@ -39,7 +48,7 @@ header {
                 outline: none;
                 border: none;
                 background: transparent;
-                width: 230px;
+                width: 200px;
             }
         }
 
@@ -58,26 +67,85 @@ header {
     margin-right: 40px;
 }
 
-
+//mobile
 @media screen and (max-width: 375px) {
 
+header {
+    padding: 23px;
+
     .container {
+        display: grid;
+        grid-template-columns: auto 50px 50px;
+
         .site-logo {
-            width: 113px;
-            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-self: left;
+
+            img {
+                width: 113px;
+                height: 32px;
+            }
+
         }
+
+        .menu-box {
+            display: none;
+        }
+
     }
-    #menu {
-        display: block;
-    }
-    
+
+
+}
+
     .rectangle {
         width: 100%;
         margin: 0;
     }
 
+}
 
+//tablet
+@media screen and (min-width: 376px) and (max-width: 768px) {
+    header {
+        padding: 23px;
+    
+        .container {
+            display: grid;
+            grid-template-columns: auto 50px 50px;
+    
+            .site-logo {
+                display: flex;
+                align-items: center;
+                justify-self: left;
+    
+                img {
+                    width: 113px;
+                    height: 32px;
+                }
+    
+            }
+    
+            .menu-box {
+                display: none;
+            }
+    
+        }
+    
+    }
 
+    .rectangle {
+        width: 100%;
+        margin: 0;
+    }
 
 }
 
+
+// desktop
+@media screen and (min-width: 769px) {
+    .toggle-btn {
+        display: none;
+    }
+
+}

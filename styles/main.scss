@@ -61,9 +61,10 @@ main {
     }
 }
 
-@media only screen and (max-width: 376px) {
 
-    
+// mobile
+@media only screen and (max-width: 375px) {
+
     main {
         display: flex;
         align-items: center;
@@ -77,20 +78,50 @@ main {
             padding: 0;
 
             .card {
-                margin: 23px 0;
+                width: 327px;
+                margin: 23px;
+
+                img, 
+                .rectangle-text {
+                    width: 327px;
+                }
 
             }
         }
-
-
-
     }
 }
 
-// @media only screen and (min-width: 376px) and (max-width: 768px) {
 
-//     }
-// }
+//tablet
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+
+        .container-fluid {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+
+            .card {
+                width: 324px;
+                margin: 23px;
+
+                img, 
+                .rectangle-text {
+                    width: 324px;
+                }
+
+            }
+        }
+    }
+
+
+}
+
 
 
 
