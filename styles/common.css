@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 * {
   font-family: "Libre Baskerville", sans-serif;
-  box-sizing: border-box;
 }
 
 *:focus {
@@ -14,29 +13,34 @@ html {
   padding: 0;
 }
 
-.container-fluid-detail {
+.container-flex {
+  display: flex;
+  justify-content: center;
+}
+.container-flex .container-fluid-detail {
+  width: 1360px;
   height: 624px;
   display: flex;
   padding: 40px;
   position: relative;
   margin-top: 60px;
 }
-.container-fluid-detail .name-and-author {
+.container-flex .container-fluid-detail .name-and-author {
   width: 445px;
   height: 238px;
   background-color: #fff;
   margin-left: 410px;
   position: absolute;
 }
-.container-fluid-detail .large-format {
+.container-flex .container-fluid-detail .large-format {
   height: 302px;
   position: absolute;
 }
-.container-fluid-detail .small-format {
+.container-flex .container-fluid-detail .small-format {
   height: 174px;
   position: absolute;
 }
-.container-fluid-detail .title-detail {
+.container-flex .container-fluid-detail .title-detail {
   width: 380px;
   height: 128px;
   color: #000;
@@ -46,7 +50,7 @@ html {
   margin-left: 65px;
   margin-bottom: 24px;
 }
-.container-fluid-detail .subtitle-detail {
+.container-flex .container-fluid-detail .subtitle-detail {
   position: absolute;
   width: 246px;
   height: 19px;
@@ -57,7 +61,7 @@ html {
   margin-left: 65px;
   bottom: 67px;
 }
-.container-fluid-detail .year-detail {
+.container-flex .container-fluid-detail .year-detail {
   width: 476px;
   height: 150px;
   color: #F3F3F3;
@@ -68,7 +72,7 @@ html {
   margin-left: 884px;
   position: absolute;
 }
-.container-fluid-detail .p-detail {
+.container-flex .container-fluid-detail .p-detail {
   width: 350px;
   height: 364px;
   color: #7D7D7D;
@@ -80,18 +84,18 @@ html {
   margin-top: 115px;
   position: absolute;
 }
-.container-fluid-detail .p-detail div {
+.container-flex .container-fluid-detail .p-detail div {
   font-size: 16px;
   color: #252525;
 }
-.container-fluid-detail .p-detail .shopping-cart {
+.container-flex .container-fluid-detail .p-detail .shopping-cart {
   width: 150px;
   height: 60px;
   display: inline-flex;
   justify-items: center;
   align-items: center;
 }
-.container-fluid-detail .p-detail .shopping-cart button {
+.container-flex .container-fluid-detail .p-detail .shopping-cart button {
   display: inline-flex;
   justify-items: center;
   align-items: center;
@@ -105,30 +109,28 @@ html {
   letter-spacing: 1.929px;
   cursor: pointer;
 }
-.container-fluid-detail .p-detail .shopping-cart button:hover {
+.container-flex .container-fluid-detail .p-detail .shopping-cart button:hover {
   background-color: #dadada;
 }
-.container-fluid-detail .image-detail {
+.container-flex .container-fluid-detail .image-detail {
   position: relative;
 }
-.container-fluid-detail .image-detail .artist {
+.container-flex .container-fluid-detail .image-detail .artist {
   width: 128px;
   height: 128px;
   position: absolute;
   margin-left: 30px;
   bottom: 0px;
 }
-.container-fluid-detail .image-detail .image-large {
+.container-flex .container-fluid-detail .image-detail .image-large {
   width: 475px;
   height: 560px;
   position: relative;
 }
-.container-fluid-detail .image-detail .button-box:hover {
-  opacity: 0.6;
-  background-color: #666666;
-  color: #FFF;
+.container-flex .container-fluid-detail .image-detail .button-box:hover {
+  background-color: rgba(255, 255, 255, 0.2522);
 }
-.container-fluid-detail .image-detail .button-box {
+.container-flex .container-fluid-detail .image-detail .button-box {
   width: 152px;
   height: 40px;
   background-color: #000;
@@ -138,7 +140,7 @@ html {
   bottom: 80px;
   transition: 0.1s;
 }
-.container-fluid-detail .image-detail .button-box button {
+.container-flex .container-fluid-detail .image-detail .button-box button {
   display: inline-flex;
   padding: 15px;
   gap: 14px;
@@ -150,7 +152,7 @@ html {
   letter-spacing: 2.143px;
   cursor: pointer;
 }
-.container-fluid-detail .image-detail .button-box button img {
+.container-flex .container-fluid-detail .image-detail .button-box button img {
   width: 12px;
   height: 12px;
   color: #FFF;
