@@ -1,22 +1,32 @@
 header {
   padding: 40px;
+  display: grid;
 }
 header .container {
   display: grid;
   grid-template-columns: 200px auto 700px;
   align-items: center;
   justify-items: center;
+  position: relative;
 }
 header .container .menu-box {
   display: flex;
   align-items: center;
   gap: 30px;
 }
-header .container .menu-box a {
-  color: #333333;
-}
 header .container .menu-box li {
   display: inline-block;
+}
+header .container a {
+  color: #333333;
+  text-decoration: none;
+  cursor: pointer;
+}
+header .container .dropdown {
+  background-color: #fff;
+  display: flex;
+  position: absolute;
+  right: 20px;
 }
 header .container .site-logo {
   width: 170px;
@@ -61,10 +71,14 @@ header .container .search:focus-within {
 @media screen and (max-width: 375px) {
   header {
     padding: 23px;
+    display: flex;
+    align-items: center;
   }
   header .container {
-    display: grid;
-    grid-template-columns: auto 50px 50px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
   }
   header .container .site-logo {
     display: flex;
@@ -77,6 +91,26 @@ header .container .search:focus-within {
   }
   header .container .menu-box {
     display: none;
+    padding-left: 0;
+    margin: 0;
+    margin-top: 25px;
+  }
+  header .container .menu-box .search-input {
+    width: 100px;
+  }
+  header .container ul {
+    display: block;
+  }
+  header .container .dropdown {
+    background-color: #fff;
+    background: transparent;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+  header .container .dropdown .toggle-btn {
+    position: absolute;
+    right: 20px;
   }
   .rectangle {
     width: 100%;
@@ -86,10 +120,15 @@ header .container .search:focus-within {
 @media screen and (min-width: 376px) and (max-width: 768px) {
   header {
     padding: 23px;
+    display: flex;
+    align-items: center;
   }
   header .container {
-    display: grid;
-    grid-template-columns: auto 50px 50px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    align-items: center;
   }
   header .container .site-logo {
     display: flex;
@@ -100,8 +139,28 @@ header .container .search:focus-within {
     width: 113px;
     height: 32px;
   }
+  header .container ul {
+    display: block;
+  }
   header .container .menu-box {
     display: none;
+    padding-left: 0;
+    margin: 0;
+    margin-top: 25px;
+  }
+  header .container .menu-box .search-input {
+    width: 100px;
+  }
+  header .container .dropdown {
+    background-color: #fff;
+    background: transparent;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+  header .container .dropdown .toggle-btn {
+    position: absolute;
+    right: 20px;
   }
   .rectangle {
     width: 100%;
@@ -110,6 +169,9 @@ header .container .search:focus-within {
 }
 @media screen and (min-width: 769px) {
   .toggle-btn {
+    display: none;
+  }
+  .dropdown {
     display: none;
   }
 }/*# sourceMappingURL=header.css.map */
