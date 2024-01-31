@@ -12,21 +12,32 @@
     <link rel="stylesheet" href="./styles/shopping-cart.css">
 </head>
 <body>
-    <header class="container">
-        <div class="site-logo">
-            <a href="/index.html"><img src="/img/logo.svg" alt="Galleria"></a>
-        </div>
-        <div></div>
-        <form action="/search-result/">
-            <div class="search">
-            <button type="submit"><span class="material-symbols-outlined">search</span></button>
-            <input class="search-input" type="search" placeholder="Search...">
+    <header>
+        <div class="container">
+            <div class="site-logo">
+                <a href="/index.html"><img src="/img/logo.svg" alt="Galleria"></a>
             </div>
-        </form>
-        <a href="/contact-us.html"><span class="material-symbols-outlined">headset_mic</span></a>
-        <a href="/my-account.html"><span class="material-symbols-outlined">account_circle</span></a>
-        <a href="/shopping-cart.html"><span class="material-symbols-outlined">shopping_cart</span></a>
+            <div></div>
 
+            <nav class="dropdown">
+                <div class="toggle-btn" onclick="toggleBtn()">
+                    <span class="material-symbols-outlined">menu</span>
+                </div>
+
+                <ul class="menu-box">
+                    <li><form action="/search-result/">
+                            <div class="search">
+                                <button type="submit"><span class="material-symbols-outlined">search</span></button>
+                                <input class="search-input" type="search" placeholder="Search...">
+                            </div>
+                        </form>
+                    </li>
+                    <li><a href="/contact-us.html"><span class="material-symbols-outlined">headset_mic</span></a></li>
+                    <li><a href="/my-account.html"><span class="material-symbols-outlined">account_circle</span></a></li>
+                    <li><a href="/shopping-cart.html"><span class="material-symbols-outlined">shopping_cart</span></a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <div class="rectangle">
@@ -35,7 +46,7 @@
         <div class="flex-items"></div>
     </div>
 
-
+<div class="container-flex">
     <div class="container-fluid-detail">
         <div class="image-detail">
             <img class="image-large" src="img/van-gogh-self-portrait/hero-large.jpg">
@@ -71,7 +82,7 @@
         </div>
    
     </div>
-
+</div>
 
     <footer>
         <div class="loading-bar"></div>
@@ -88,6 +99,8 @@
             <button type="submit" class="next-page"><span class="material-symbols-outlined">last_page</span></button>
         </div>
     </footer>
+
+    <script src="./scripts/script.js"></script>
 
 </body>
 </html>
