@@ -51,6 +51,16 @@
             margin-top: -60px;
             text-align: end;
         }
+
+        .error-email-login {
+            color: red;
+            display: none;
+        }
+
+        .valid-email-address {
+            color: green;
+            display: none;
+        }
     }
     
 }
