@@ -51,4 +51,14 @@
   padding-right: 50px;
   margin-top: -60px;
   text-align: end;
+}
+.login-register-form .login .error-email-login,
+.login-register-form .register .error-email-login {
+  color: red;
+  display: none;
+}
+.login-register-form .login .valid-email-address,
+.login-register-form .register .valid-email-address {
+  color: green;
+  display: none;
 }/*# sourceMappingURL=my-account.css.map */
