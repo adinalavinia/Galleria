@@ -20,9 +20,9 @@
             <div></div>
 
             <nav class="dropdown">
-                <div class="toggle-btn" onclick="toggleBtn()">
+                <a class="toggle-btn" onclick="toggleBtn()">
                     <span class="material-symbols-outlined">menu</span>
-                </div>
+                </a>
 
                 <ul class="menu-box">
                     <li><form action="/search-result/">
@@ -53,7 +53,14 @@
             <div class="button-box">
                 <button type="submit"><img src="./img/Group 7.svg"> VIEW IMAGE</button>
             </div>
-            <img class="artist" src="./img/starry-night/artist.jpg">
+
+            <!-- <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <button onclick="closeImage()" class="close">CLOSE</button>
+                    <img src="./img/starry-night/gallery.jpg">
+                </div>
+                <img class="artist" src="./img/starry-night/artist.jpg">
+            </div> -->
         </div>
 
         <div class="name-and-author">
@@ -101,6 +108,7 @@
     </footer>
 
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/script-detail.js"></script>
 
 </body>
 </html>

@@ -1,6 +1,7 @@
 main {
     display: flex;
     justify-content: center;
+    padding: 0;
 
 
     .container-fluid {
@@ -69,12 +70,10 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: auto;
 
         .container-fluid {
             display: flex;
             flex-direction: column;
-            margin: auto;
             padding: 0;
 
             .card {
@@ -99,12 +98,9 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: auto;
 
         .container-fluid {
-            display: flex;
-            flex-direction: column;
-            margin: auto;
+            columns: 2;
 
             .card {
                 width: 324px;
@@ -114,7 +110,10 @@ main {
                 .rectangle-text {
                     width: 324px;
                 }
+            }
 
+            .starry-night {
+                margin-top: 0;
             }
         }
     }
