@@ -1,7 +1,7 @@
 const errorEmailLogin = document.querySelector('.error-email-login');
-const validEmailLogin = document.querySelector('.valid-email-address');
-const emailLogin = document.getElementById("email-login");
-emailLogin.addEventListener('blur', (event) => {
+const validEmailLogin = document.querySelector('.valid-email-login');
+const emailLogin = document.getElementById('email-login');
+emailLogin.addEventListener('keyup', (event) => {
     let emailLoginValue = event.target.value;
 
     if(emailLoginValue.includes('@')) {
@@ -21,8 +21,11 @@ emailLogin.addEventListener('blur', (event) => {
     }
 })
 
+
+const errorPasswordLogin = document.querySelector('.error-pass-login');
+const validPasswordLogin = document.querySelector('.valid-pass-login');
 const passwordLogin = document.getElementById('pass-login');
-passwordLogin.addEventListener('blur', (event) => {
+passwordLogin.addEventListener('keyup', (event) => {
     let passwordLoginValue = event.target.value;
     let hasCapitalLetter = false;
     let hasLowerLetter = false;
@@ -46,50 +49,49 @@ passwordLogin.addEventListener('blur', (event) => {
 
     if(hasCapitalLetter == false || hasLowerLetter == false || hasNumbers == false ) {
         passwordLogin.style.border = '1px solid red';
+        errorPasswordLogin.style.display = 'block';
     } else {
         passwordLogin.style.border = '1px solid green';
+        errorPasswordLogin.style.display = 'none';
+        validPasswordLogin.style.display = 'block';
     }
 
     if(passwordLoginValue == ''){
         passwordLogin.style.border = null;
+        errorPasswordLogin.style.display = 'none';
+        validPasswordLogin.style.display = 'none';
     }
 })
 
 
-const nameRegister = document.getElementById('name-register');
-nameRegister.addEventListener('blur', (event) => {
-    let nameRegisterValue = event.target.value;
-
-    if(nameRegisterValue.length < 3) {
-        nameRegister.style.border = '1px solid red';
-    } else {
-        nameRegister.style.border = '1px solid green';
-    }
-
-    if(nameRegisterValue == ''){
-        nameRegister.style.border = null;
-    }
-})
-
-
+const errorEmailRegister = document.querySelector('.error-email-register');
+const validEmailRegister = document.querySelector('.valid-email-register');
 const emailRegister = document.getElementById('email-register');
-emailRegister.addEventListener('blur', (event) => {
+emailRegister.addEventListener('keyup', (event) => {
     let emailRegisterValue = event.target.value;
 
     if(emailRegisterValue.includes('@')) {
         emailRegister.style.border = '1px solid green';
+        errorEmailRegister.style.display = 'none';
+        validEmailRegister.style.display = 'block';
     } else {
         emailRegister.style.border = '1px solid red';
+        errorEmailRegister.style.display = 'block';
+        validEmailRegister.style.display = 'none';
     }
 
     if(emailRegisterValue == ''){
         emailRegister.style.border = null;
+        errorEmailRegister.style.display = 'none';
+        validEmailRegister.style.display = 'none';
     }
 })
 
 
+const errorPasswordRegister = document.querySelector('.error-pass-register');
+const validPasswordRegister = document.querySelector('.valid-pass-register');
 const passwordRegister = document.getElementById('pass-register');
-passwordRegister.addEventListener('blur', (event) => {
+passwordRegister.addEventListener('keyup', (event) => {
     let passwordRegisterValue = event.target.value;
     let hasCapitalLetter = false;
     let hasLowerLetter = false;
@@ -113,26 +115,102 @@ passwordRegister.addEventListener('blur', (event) => {
 
     if(hasCapitalLetter == false || hasLowerLetter == false || hasNumbers == false ) {
         passwordRegister.style.border = '1px solid red';
+        errorPasswordRegister.style.display = 'block';
     } else {
         passwordRegister.style.border = '1px solid green';
+        errorPasswordRegister.style.display = 'none';
+        validPasswordRegister.style.display = 'block';
     }
 
     if(passwordRegisterValue == ''){
         passwordRegister.style.border = null;
+        errorPasswordRegister.style.display = 'none';
+        validPasswordRegister.style.display = 'none';
     }
 })
 
 
+const errorConfirmPasswordRegister = document.querySelector('.error-confirm-pass-register');
+const validConfirmPasswordRegister = document.querySelector('.valid-confirm-pass-register');
 const confirmPassword = document.getElementById('confirm-pass-register');
 confirmPassword.addEventListener('keyup', (event) => {
 
     if(passwordRegister.value !== confirmPassword.value){
         confirmPassword.style.border = '1px solid red';
+        errorConfirmPasswordRegister.style.display = 'block';
     } else {
         confirmPassword.style.border = '1px solid green';
+        errorConfirmPasswordRegister.style.display = 'none';
+        validConfirmPasswordRegister.style.display = 'block';
     }
 
     if(confirmPassword.value == ''){
         confirmPassword.style.border = null;
+        errorConfirmPasswordRegister.style.display = 'none';
+        validConfirmPasswordRegister.style.display = 'none';
     }
 })
+
+
+
+
+// const errorsRequired = document.querySelectorAll('error-required');
+const nameError = document.querySelector('.name-error');
+const emailRegsiterError = document.querySelector('.email-register-error');
+const passwordRegisterError = document.querySelector('.pass-register-error');
+const confirmPasswordError = document.querySelector('.confirm-pass-register-error');
+const errorTerms = document.querySelector('.error-terms');
+const registerForm = document.getElementById('register-form');
+const nameRegister = document.getElementById('name-register');
+const checkboxTerms = document.getElementById('terms');
+const registerButton = document.querySelector('.register-button');
+
+nameRegister.addEventListener('keyup', (event) => {
+    if(nameRegister.value == ''){
+        nameError.style.display = 'block';
+    }else {
+        nameError.style.display = 'none';
+    }
+
+})
+
+
+// if(checkboxTerms.checked || nameRegister.value !== ''|| emailRegister.value !== '' || passwordRegister.value !== '' || confirmPassword.value !== ''){
+//     nameError.style.display = 'none';
+//     emailRegsiterError.style.display = 'none';
+//     passwordRegisterError.style.display = 'none';
+//     confirmPasswordError.style.display = 'none';
+//     errorTerms.style.display = 'none';
+// }
+
+function isChecked(){
+      
+    if(checkboxTerms.checked == false || nameRegister.value == ''|| emailRegister.value == '' || passwordRegister.value == '' || confirmPassword.value == ''){
+        
+        // nameRegister.addEventListener('keyup', (event) => {
+        //     if(nameRegister.value == ''){
+        //         nameError.style.display = 'block';
+        //     }else {
+        //         nameError.style.display = 'none';
+        //     }
+        
+        // })
+
+
+
+        nameError.style.display = 'block';
+        emailRegsiterError.style.display = 'block';
+        passwordRegisterError.style.display = 'block';
+        confirmPasswordError.style.display = 'block';
+        errorTerms.style.display = 'block';
+
+    } else {
+        location.href = 'index.html';
+
+    }
+    
+
+}
+
+
+

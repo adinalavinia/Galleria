@@ -123,19 +123,19 @@ header {
             background: transparent;
             // display: flex;
             position: absolute;
-            right: 20px;
+            right: 10px;
             top: 10px;
 
             .toggle-btn {
                 position: absolute;
-                right: 20px;
+                right: 10px;
             }
         }
     }
 }
 
     .rectangle {
-        width: 100%;
+        // max-width: 100%;
         margin: 0;
     }
 }
@@ -146,6 +146,7 @@ header {
         padding: 23px;
         display: flex;
         align-items: center;
+        max-width: 100%;
     
         .container {
             width: 100%;
@@ -197,7 +198,7 @@ header {
     }
 
     .rectangle {
-        width: 100%;
+        // max-width: 100%;
         margin: 0;
     }
 }
@@ -212,7 +213,5 @@ header {
     .dropdown {
         display: none;
     }
-
-    
 
 }

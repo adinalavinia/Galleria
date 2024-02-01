@@ -79,6 +79,7 @@ main .container-fluid .starry-night {
     justify-content: center;
   }
   main .container-fluid {
+    max-width: 100%;
     -moz-columns: 2;
          columns: 2;
   }

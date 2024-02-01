@@ -47,35 +47,60 @@
         <div class="flex-items"></div>
     </div>   
 
-<div class="container-flex">
-    <div class="login-register-form">
+<div class="container-account">
+    <div class="login-register-forms">
         <div class="login">
             <h2>Login</h2>
             <form action="">
                 <input type="email" id="email-login" name="email" placeholder="Email" required>
-                <span class="error-email-login">Please enter a valid email address!</span>
-                <span class="valid-email-address">Email address validated!</span>
+                <span class="error error-email-login">Please enter a valid email address!</span>
+                <span class="valid valid-email-login">Email address validated!</span>
+                <span class="error-required email-error">This field is required!</span>
+
                 <input type="password" id="pass-login" name="password" placeholder="Password" required>
+                <span class="error error-pass-login">Please choose a stronger passwsord!</span>
+                <span class="valid valid-pass-login">Password validated!</span>
+                <span class="error-required pass-error">This field is required!</span>
+
             </form>
             <div class="forgot-password">
                 <a href="">Forgot password?</a>
             </div>
-            <button type="submit" class="login-button">Login</button>
+            <div class="login-button">
+                <button type="submit">Login</button>
+            </div>
         </div>
 
         <div class="register">
             <h2>Register</h2>
-            <form action="">
+            <form action="" id="register-form">
                 <input type="text" id="name-register" name="name" placeholder="Name" required>
+                <span class="error-required name-error">This field is required!</span>
+
                 <input type="email" id="email-register" name="email" placeholder="Email" required>
+                <span class="error error-email-register">Please enter a valid email address!</span>
+                <span class="valid valid-email-register">Email address validated!</span>
+                <span class="error-required email-register-error">This field is required!</span>
+
                 <input type="password" id="pass-register" name="password" placeholder="Password" required>
-                <input type="password" id="confirm-pass-register" name="repeat-password" placeholder="Repeat your password" required>
+                <span class="error error-pass-register">Please choose a stronger passwsord!</span>
+                <span class="valid valid-pass-register">Password validated!</span>
+                <span class="error-required pass-register-error">This field is required!</span>
+
+                <input type="password" id="confirm-pass-register" name="repeat-password" placeholder="Confirm password" required>
+                <span class="error error-confirm-pass-register">Please confirm password!</span>
+                <span class="valid valid-confirm-pass-register">Password validated!</span>
+                <span class="error-required confirm-pass-register-error">This field is required!</span>
+
             </form>
             <div class="checkbox-terms">
-                <input type="checkbox" class="terms" id="terms" name="terms" required> Accept <a href="">privacy policy</a> and terms
+                <input type="checkbox" class="terms" id="terms" name="terms"> Accept <a href="">privacy policy</a> and terms
+                <span class="error error-terms">Please check this box if you want to proceed!</span>
             </div>
 
-            <button type="submit" class="register-button">Register</button>
+            <div class="register-button-box">
+                <button type="submit" class="register-button" onclick="isChecked()">Register</button>
+            </div>
         </div>
 
     </div>
