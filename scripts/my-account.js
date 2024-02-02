@@ -86,7 +86,7 @@ function loginForm(){
     }
 
     if(emailLogin.value == '' || passwordLogin.value == ''){
-        //
+        // 
        
     } else {
         location.href = 'index.html';
