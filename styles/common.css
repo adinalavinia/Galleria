@@ -13,34 +13,79 @@ html {
   padding: 0;
 }
 
-.container-flex {
-  display: flex;
-  justify-content: center;
-}
-.container-flex .container-fluid-detail {
-  width: 1360px;
-  height: 624px;
+.container-detail {
   display: flex;
   padding: 40px;
-  position: relative;
+}
+.container-detail .container-fluid-detail {
+  display: grid;
+  grid-template-columns: auto auto;
   margin-top: 60px;
 }
-.container-flex .container-fluid-detail .name-and-author {
+.container-detail .container-fluid-detail .left {
+  position: relative;
+}
+.container-detail .container-fluid-detail .left .image-detail {
+  position: relative;
+}
+.container-detail .container-fluid-detail .left .image-detail .image-large {
+  width: 475px;
+  height: 560px;
+  position: relative;
+}
+.container-detail .container-fluid-detail .left .image-detail .button-box {
+  width: 152px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.7545);
+  position: absolute;
+  margin-left: 16px;
+  bottom: 16px;
+  transition: 0.1s;
+}
+.container-detail .container-fluid-detail .left .image-detail .button-box button {
+  display: inline-flex;
+  padding: 15px;
+  gap: 14px;
+  border: none;
+  background: transparent;
+  color: #FFF;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.143px;
+  cursor: pointer;
+}
+.container-detail .container-fluid-detail .left .image-detail .button-box button img {
+  width: 12px;
+  height: 12px;
+  color: #FFF;
+}
+.container-detail .container-fluid-detail .left .image-detail .button-box:hover {
+  background-color: rgba(255, 255, 255, 0.2522);
+}
+.container-detail .container-fluid-detail .left .image-detail .artist {
+  width: 128px;
+  height: 128px;
+  position: absolute;
+  margin-left: 30px;
+  bottom: -64px;
+}
+.container-detail .container-fluid-detail .left .name-and-author {
   width: 445px;
   height: 238px;
   background-color: #fff;
   margin-left: 410px;
   position: absolute;
+  top: 0;
 }
-.container-flex .container-fluid-detail .large-format {
+.container-detail .container-fluid-detail .left .name-and-author .large-format {
   height: 302px;
   position: absolute;
 }
-.container-flex .container-fluid-detail .small-format {
+.container-detail .container-fluid-detail .left .name-and-author .small-format {
   height: 174px;
   position: absolute;
 }
-.container-flex .container-fluid-detail .title-detail {
+.container-detail .container-fluid-detail .left .name-and-author .title-detail {
   width: 380px;
   height: 128px;
   color: #000;
@@ -50,7 +95,7 @@ html {
   margin-left: 65px;
   margin-bottom: 24px;
 }
-.container-flex .container-fluid-detail .subtitle-detail {
+.container-detail .container-fluid-detail .left .name-and-author .subtitle-detail {
   position: absolute;
   width: 246px;
   height: 19px;
@@ -61,7 +106,11 @@ html {
   margin-left: 65px;
   bottom: 67px;
 }
-.container-flex .container-fluid-detail .year-detail {
+.container-detail .container-fluid-detail .right {
+  position: relative;
+  margin-left: 584px;
+}
+.container-detail .container-fluid-detail .right .year-detail {
   width: 476px;
   height: 150px;
   color: #F3F3F3;
@@ -69,10 +118,9 @@ html {
   font-style: normal;
   font-weight: 700;
   line-height: 150px;
-  margin-left: 884px;
   position: absolute;
 }
-.container-flex .container-fluid-detail .p-detail {
+.container-detail .container-fluid-detail .right .p-detail {
   width: 350px;
   height: 364px;
   color: #7D7D7D;
@@ -80,22 +128,21 @@ html {
   font-style: normal;
   font-weight: 700;
   line-height: 28px;
-  margin-left: 885px;
-  margin-top: 115px;
+  margin-top: 100px;
   position: absolute;
 }
-.container-flex .container-fluid-detail .p-detail div {
+.container-detail .container-fluid-detail .right .p-detail .price {
   font-size: 16px;
   color: #252525;
 }
-.container-flex .container-fluid-detail .p-detail .shopping-cart {
+.container-detail .container-fluid-detail .right .p-detail .shopping-cart {
   width: 150px;
   height: 60px;
   display: inline-flex;
   justify-items: center;
   align-items: center;
 }
-.container-flex .container-fluid-detail .p-detail .shopping-cart button {
+.container-detail .container-fluid-detail .right .p-detail .shopping-cart button {
   display: inline-flex;
   justify-items: center;
   align-items: center;
@@ -109,53 +156,8 @@ html {
   letter-spacing: 1.929px;
   cursor: pointer;
 }
-.container-flex .container-fluid-detail .p-detail .shopping-cart button:hover {
+.container-detail .container-fluid-detail .right .p-detail .shopping-cart button:hover {
   background-color: #dadada;
-}
-.container-flex .container-fluid-detail .image-detail {
-  position: relative;
-}
-.container-flex .container-fluid-detail .image-detail .artist {
-  width: 128px;
-  height: 128px;
-  position: absolute;
-  margin-left: 30px;
-  bottom: 0px;
-}
-.container-flex .container-fluid-detail .image-detail .image-large {
-  width: 475px;
-  height: 560px;
-  position: relative;
-}
-.container-flex .container-fluid-detail .image-detail .button-box:hover {
-  background-color: rgba(255, 255, 255, 0.2522);
-}
-.container-flex .container-fluid-detail .image-detail .button-box {
-  width: 152px;
-  height: 40px;
-  background-color: #000;
-  opacity: 0.7546;
-  position: absolute;
-  margin-left: 16px;
-  bottom: 80px;
-  transition: 0.1s;
-}
-.container-flex .container-fluid-detail .image-detail .button-box button {
-  display: inline-flex;
-  padding: 15px;
-  gap: 14px;
-  border: none;
-  background: transparent;
-  color: #FFF;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 2.143px;
-  cursor: pointer;
-}
-.container-flex .container-fluid-detail .image-detail .button-box button img {
-  width: 12px;
-  height: 12px;
-  color: #FFF;
 }
 
 footer {
@@ -209,5 +211,19 @@ footer .pagination-buttons .next-page:hover {
   .container-fluid-detail {
     display: flex;
     max-width: 350px;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 768px) {
+  .container-detail {
+    display: flex;
+    justify-content: center;
+  }
+  .container-detail .container-fluid-detail {
+    max-width: 500px;
+    padding: 40px;
+    margin: 0;
+  }
+  .container-detail .name-and-author {
+    margin-left: 0;
   }
 }/*# sourceMappingURL=common.css.map */
