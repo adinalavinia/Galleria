@@ -105,15 +105,14 @@ header .container .search:focus-within {
     background-color: #fff;
     background: transparent;
     position: absolute;
-    right: 20px;
+    right: 10px;
     top: 10px;
   }
   header .container .dropdown .toggle-btn {
     position: absolute;
-    right: 20px;
+    right: 10px;
   }
   .rectangle {
-    width: 100%;
     margin: 0;
   }
 }
@@ -122,6 +121,7 @@ header .container .search:focus-within {
     padding: 23px;
     display: flex;
     align-items: center;
+    max-width: 100%;
   }
   header .container {
     width: 100%;
@@ -163,7 +163,6 @@ header .container .search:focus-within {
     right: 20px;
   }
   .rectangle {
-    width: 100%;
     margin: 0;
   }
 }

@@ -1,4 +1,4 @@
-.login-register-form {
+.login-register-forms {
     width: 1300px;
     height: 700px;
     border: none;
@@ -8,8 +8,9 @@
 
     .login,
     .register {
-        display: grid;
-        grid-template-rows: 80px auto;
+        display: flex;
+        // columns: 2;
+        flex-direction: column;
         margin: 20px 50px;
 
         form input {
@@ -29,12 +30,13 @@
             cursor: pointer;
         }
 
-        .login-button{
-            margin-top: -100px;
+        .login-button-box {
+            width: 130px;
+            margin: 50px 0;
         }
 
         .register-button{
-            margin-top: 30px;
+            margin: 30px 0;
         }
 
         button:hover {
@@ -48,19 +50,97 @@
 
         .forgot-password {
             padding-right: 50px;
-            margin-top: -60px;
+            margin-top: 20px;
             text-align: end;
         }
 
-        .error-email-login {
-            color: red;
-            display: none;
+        .checkbox-terms {
+            margin-top: 20px;
         }
 
-        .valid-email-address {
-            color: green;
+        .error,
+        .valid,
+        .error-required {
             display: none;
+            margin: 15px;
+        }
+
+        .error,
+        .error-required {
+            color: red;
+        }
+
+        .valid {
+            color: green;
         }
     }
     
+}
+
+
+
+
+
+// mobile
+@media screen and (max-width: 375px) {
+
+    .login-register-forms{
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        margin: 0;
+        // font-size: 14px;
+
+        .login,
+        .register {
+            font-size: 12px;
+            max-width: 300px;
+            margin: 20px;
+        }
+
+        form input {
+            font-size: 12px;
+            max-width: 280px;
+            max-height: 50px;
+        }
+
+        .forgot-password {
+            display: flex;
+        }
+
+        .login-button,
+        .register-button {
+            font-size: 12px;
+        }
+    }
+
+
+
+}
+
+//tablet
+@media screen and (min-width: 376px) and (max-width: 768px) {
+
+    .login-register-forms{
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        margin: 0;
+
+        .login,
+        .register {
+            width: 550px;
+            margin: 20px;
+        }
+
+        form input {
+            max-width: 500px;
+            max-height: 70px;
+        }
+
+        .forgot-password {
+            display: flex;
+        }
+    }
+
 }
