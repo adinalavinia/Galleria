@@ -29,14 +29,14 @@
   font-size: 16px;
   cursor: pointer;
 }
-.login-register-forms .login .login-button,
-.login-register-forms .register .login-button {
+.login-register-forms .login .login-button-box,
+.login-register-forms .register .login-button-box {
   width: 130px;
-  margin-top: 50px;
+  margin: 50px 0;
 }
 .login-register-forms .login .register-button,
 .login-register-forms .register .register-button {
-  margin-top: 30px;
+  margin: 30px 0;
 }
 .login-register-forms .login button:hover,
 .login-register-forms .register button:hover {
