@@ -15,11 +15,13 @@ html {
 
 .container-detail {
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 40px;
 }
 .container-detail .container-fluid-detail {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  width: 1360px;
   margin-top: 60px;
 }
 .container-detail .container-fluid-detail .left {
@@ -75,7 +77,7 @@ html {
   background-color: #fff;
   margin-left: 410px;
   position: absolute;
-  top: 0;
+  top: -2px;
 }
 .container-detail .container-fluid-detail .left .name-and-author .large-format {
   height: 302px;
@@ -108,7 +110,7 @@ html {
 }
 .container-detail .container-fluid-detail .right {
   position: relative;
-  margin-left: 584px;
+  margin-left: 450px;
 }
 .container-detail .container-fluid-detail .right .year-detail {
   width: 476px;
@@ -122,7 +124,6 @@ html {
 }
 .container-detail .container-fluid-detail .right .p-detail {
   width: 350px;
-  height: 364px;
   color: #7D7D7D;
   font-size: 14px;
   font-style: normal;
@@ -160,70 +161,160 @@ html {
   background-color: #dadada;
 }
 
-footer {
+.footer {
+  display: grid;
+  margin-top: 75px;
+}
+.footer .footer-section {
   height: 96px;
   display: grid;
   grid-template-columns: 400px auto 200px;
 }
-footer .title-artist-footer {
+.footer .footer-section .title-artist-footer {
   grid-column-start: 1;
   padding: 25px 40px 25px 41px;
 }
-footer .title-artist-footer .title-footer {
+.footer .footer-section .title-artist-footer .title-footer {
   color: #000;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
 }
-footer .title-artist-footer .artist-footer {
+.footer .footer-section .title-artist-footer .artist-footer {
   color: #000;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
   margin-top: 8px;
 }
-footer .pagination-buttons {
+.footer .footer-section .pagination-buttons {
   grid-column-start: 3;
   text-align: center;
-  padding: 36px 40px 36px 41px;
+  padding: 26px 40px 36px 41px;
 }
-footer .pagination-buttons span {
+.footer .footer-section .pagination-buttons span {
   font-size: 40px;
 }
-footer .pagination-buttons .prev-page {
+.footer .footer-section .pagination-buttons .prev-page {
   border: none;
   background: transparent;
   cursor: pointer;
 }
-footer .pagination-buttons .prev-page:hover {
+.footer .footer-section .pagination-buttons .prev-page:hover {
   color: #D8D8D8;
 }
-footer .pagination-buttons .next-page {
+.footer .footer-section .pagination-buttons .next-page {
   border: none;
   background: transparent;
   cursor: pointer;
 }
-footer .pagination-buttons .next-page:hover {
+.footer .footer-section .pagination-buttons .next-page:hover {
   color: #D8D8D8;
 }
 
 @media screen and (max-width: 375px) {
-  .container-fluid-detail {
+  .container-detail {
     display: flex;
+    flex-direction: column;
     max-width: 350px;
+    padding: 24px;
+  }
+  .container-detail .container-fluid-detail {
+    display: flex;
+    flex-direction: column;
+    max-width: 370px;
+    height: 1300px;
+    margin: 0;
+    gap: 64px;
+  }
+  .container-detail .container-fluid-detail .left .image-detail {
+    position: relative;
+    left: 20px;
+  }
+  .container-detail .container-fluid-detail .left .image-detail .image-large {
+    width: 327px;
+    height: 280px;
+    position: relative;
+  }
+  .container-detail .container-fluid-detail .left .image-detail .button-box {
+    top: 16px;
+  }
+  .container-detail .container-fluid-detail .left .image-detail .artist {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    left: 0;
+    bottom: -120px;
+  }
+  .container-detail .container-fluid-detail .left .name-and-author {
+    width: 280px;
+    height: 104px;
+    position: absolute;
+    margin-left: 0;
+    margin-top: 230px;
+  }
+  .container-detail .container-fluid-detail .left .name-and-author .title-detail {
+    width: 232px;
+    height: 29px;
+    font-size: 24px;
+    margin-left: 24px;
+    margin-top: 24px;
+  }
+  .container-detail .container-fluid-detail .left .name-and-author .subtitle-detail {
+    width: 232px;
+    height: 19px;
+    margin-left: 24px;
+    bottom: 24px;
+  }
+  .container-detail .container-fluid-detail .right {
+    position: relative;
+    max-width: 350px;
+    margin-left: 0;
+    margin-bottom: 50px;
+  }
+  .container-detail .container-fluid-detail .right .year-detail {
+    position: absolute;
+    font-size: 100px;
+    left: 120px;
+  }
+  .container-detail .container-fluid-detail .right .p-detail {
+    width: 327px;
+    height: 364px;
   }
 }
 @media screen and (min-width: 376px) and (max-width: 768px) {
   .container-detail {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    max-width: 500px;
   }
   .container-detail .container-fluid-detail {
+    display: flex;
+    flex-direction: column;
     max-width: 500px;
-    padding: 40px;
+    height: 1150px;
     margin: 0;
+    gap: 64px;
   }
-  .container-detail .name-and-author {
+  .container-detail .container-fluid-detail .left .image-detail {
+    position: relative;
+  }
+  .container-detail .container-fluid-detail .left .image-detail .artist {
+    margin-top: 0;
+    margin-left: 30px;
+    bottom: 200px;
+  }
+  .container-detail .container-fluid-detail .left .name-and-author {
+    margin-left: 243px;
+  }
+  .container-detail .container-fluid-detail .right {
+    position: relative;
+    max-width: 500px;
     margin-left: 0;
+    margin-bottom: 50px;
+  }
+  .container-detail .container-fluid-detail .right .p-detail {
+    margin-top: 75px;
+    margin-left: 115px;
   }
 }/*# sourceMappingURL=common.css.map */
