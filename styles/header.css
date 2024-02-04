@@ -60,8 +60,6 @@ header .container .search:focus-within {
 }
 
 .rectangle {
-  display: flex;
-  width: auto;
   height: 1px;
   background-color: #E5E5E5;
   margin-left: 40px;
@@ -113,19 +111,18 @@ header .container .search:focus-within {
     right: 10px;
   }
   .rectangle {
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 @media screen and (min-width: 376px) and (max-width: 768px) {
   header {
     padding: 23px;
-    display: flex;
     align-items: center;
-    max-width: 100%;
+    max-width: 750px;
   }
   header .container {
-    width: 100%;
-    display: flex;
+    width: 750px;
     position: relative;
     box-sizing: border-box;
     align-items: center;
@@ -154,7 +151,6 @@ header .container .search:focus-within {
   header .container .dropdown {
     background-color: #fff;
     background: transparent;
-    position: absolute;
     right: 20px;
     top: 10px;
   }
@@ -163,7 +159,8 @@ header .container .search:focus-within {
     right: 20px;
   }
   .rectangle {
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 @media screen and (min-width: 769px) {

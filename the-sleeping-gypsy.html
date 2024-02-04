@@ -41,50 +41,55 @@
     </header>
 
     <div class="rectangle">
-        <div class="flex-items"></div>
-        <div class="flex-items"></div>
-        <div class="flex-items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
     </div>
 
-<div class="container-flex">
+<div class="container-detail">
     <div class="container-fluid-detail">
-        <div class="image-detail">
-            <img class="image-large" src="img/the-sleeping-gypsy/hero-large.jpg">
-            <div class="button-box">
-                <button type="submit"><img src="./img/Group 7.svg"> VIEW IMAGE</button>
+        <div class="left">
+            <div class="image-detail">
+                <img class="image-large" src="img/the-sleeping-gypsy/hero-large.jpg">
+                <div class="button-box">
+                    <button type="submit"><img src="./img/Group 7.svg"> VIEW IMAGE</button>
+                </div>
+                <img class="artist artist-large-format" src="./img/the-sleeping-gypsy/artist.jpg">
             </div>
-            <img class="artist" src="./img/the-sleeping-gypsy/artist.jpg">
+
+            <div class="name-author-large-format">
+                <div class="title-detail">The Sleeping Gypsy</div>
+                <div class="subtitle-detail">Henri Rousseau</div>
+            </div>
         </div>
 
-        <div class="name-and-author large-format">
-            <div class="title-detail">The <br> Sleeping <br> Gypsy</div>
-            <div class="subtitle-detail">Henri Rousseau</div>
-        </div>
+        <div class="right">
+            <div class="year-detail">1897</div>
 
-        <div class="year-detail">1897</div>
+            <div class="p-detail">
+                <p>
+                    The Sleeping Gypsy (French: La Bohémienne endormie) is an 1897 oil painting by French 
+                    Naïve artist Henri Rousseau (1844-1910). It is a fantastical depiction of a lion musing 
+                    over a sleeping woman on a moonlit night. Rousseau first exhibited the painting at the 
+                    13th Salon des Indépendants, and tried unsuccessfully to sell it to the mayor of his 
+                    hometown, Laval. Instead, it entered the private collection of a Parisian charcoal merchant 
+                    where it remained until 1924, when it was discovered by the art critic Louis Vauxcelles. 
+                    <br>
+                    <br>
+                </p>
+                <div> $5.000.000 </div>
 
-        <div class="p-detail">
-            <p>
-                The Sleeping Gypsy (French: La Bohémienne endormie) is an 1897 oil painting by French 
-                Naïve artist Henri Rousseau (1844-1910). It is a fantastical depiction of a lion musing 
-                over a sleeping woman on a moonlit night. Rousseau first exhibited the painting at the 
-                13th Salon des Indépendants, and tried unsuccessfully to sell it to the mayor of his 
-                hometown, Laval. Instead, it entered the private collection of a Parisian charcoal merchant 
-                where it remained until 1924, when it was discovered by the art critic Louis Vauxcelles. 
-                <br>
-                <br>
-            </p>
-            <div> $5.000.000 </div>
-
-            <div class="shopping-cart">
-                <button type="submit"><span class="material-symbols-outlined">shopping_cart</span>Add to cart</button>
+                <div class="shopping-cart">
+                    <button type="submit"><span class="material-symbols-outlined">shopping_cart</span>Add to cart</button>
+                </div>
             </div>
         </div>
    
     </div>
 </div>
 
-    <footer>
+<div class="footer">
+    <div class="footer-section">
         <div class="loading-bar"></div>
 
         <div class="title-artist-footer">
@@ -98,9 +103,11 @@
             <button type="submit" class="prev-page"><span class="material-symbols-outlined">first_page</span></button>
             <button type="submit" class="next-page"><span class="material-symbols-outlined">last_page</span></button>
         </div>
-    </footer>
+    </div>
+</div>
 
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/script-detail.js"></script>
 
 </body>
 </html>

@@ -79,6 +79,24 @@ html {
                 }
             }
 
+            .name-author-large-format {
+                width: 445px;
+                height: 302px;
+                position: absolute;
+                background-color: #fff;
+                margin-left: 410px;
+                top: -2px;
+            }
+
+            .name-author-small-format {
+                width: 445px;
+                height: 174px;
+                position: absolute;
+                background-color: #fff;
+                margin-left: 410px;
+                top: -2px;
+            }
+
             .name-and-author {
                 width: 445px;
                 height: 238px;
@@ -87,40 +105,39 @@ html {
                 position: absolute;
                 top: -2px;
 
-                .large-format {
-                    height: 302px;
-                    position: absolute;
-                }
-    
-                .small-format {
-                    height: 174px;
-                    position: absolute;
-                }
-
-                .title-detail {
-                    width: 380px;
-                    height: 128px;
-                    color: #000;
-                    font-size: 56px;
-                    font-style: normal;
-                    font-weight: 700;
-                    margin-left: 65px;
-                    margin-bottom: 24px;
-                }
-    
-                .subtitle-detail {
-                    position: absolute;
-                    width: 246px;
-                    height: 19px;
-                    color: #7D7D7D;
-                    font-size: 15px;
-                    font-style: normal;
-                    font-weight: 400;
-                    margin-left: 65px;
-                    bottom: 67px;
-                }
             }
 
+            .title-detail {
+                width: 320px;
+                height: 128px;
+                color: #000;
+                font-size: 56px;
+                font-style: normal;
+                font-weight: 700;
+                margin-left: 65px;
+                margin-bottom: 24px;
+            }
+
+            .title-detail-short-text {
+                width: 280px;
+            }
+
+            .title-detail-long-text {
+                width: 380px;
+            }
+
+            .subtitle-detail {
+                position: absolute;
+                width: 246px;
+                height: 19px;
+                color: #7D7D7D;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                margin-left: 65px;
+                bottom: 67px;
+            }
+            
         }
 
         .right {
@@ -180,7 +197,6 @@ html {
                     }
                 }
             }
-
         }
 
         
@@ -223,11 +239,6 @@ html {
             // }
 
 
-
-
-
-
-
         
     }
 }
@@ -237,12 +248,10 @@ html {
     display: grid;
     margin-top: 75px;
 
-
     .footer-section {
         height: 96px;
         display: grid;
         grid-template-columns: 400px auto 200px;
-
 
         .title-artist-footer {
             grid-column-start: 1;
@@ -283,7 +292,6 @@ html {
                 color: #D8D8D8;
             }
 
-
             .next-page{
                 border: none;
                 background: transparent;
@@ -295,30 +303,30 @@ html {
             }
         }
     }
-
-
-    
 }
 
 
-//trebuie actualizat
+
 @media screen and (max-width: 375px) {
     
     .container-detail {
         display: flex;
         flex-direction: column;
         max-width: 350px;
-        padding: 24px;
+        padding: 0;
+        margin: 24px;
     
         .container-fluid-detail {
             display: flex;
             flex-direction: column;
             max-width: 370px;
-            height: 1300px;
+            height: 900px;
             margin: 0;
             gap: 64px;
+            padding: 0;
 
             .left {
+                // padding: 24px;
 
                 .image-detail {
                     position: relative;
@@ -328,6 +336,7 @@ html {
                         width: 327px;
                         height: 280px;
                         position: relative;
+                        left: 0;
                     }
 
                     .button-box {
@@ -338,34 +347,53 @@ html {
                         width: 64px;
                         height: 64px;
                         position: absolute;
-                        left: 0;
-                        bottom: -120px;
-                        
+                        margin: 0;
+                        left: 16px;
+                        bottom: -155px;
                     }
+                }
+
+                .name-author-large-format {
+                    width: 280px;
+                    height: 133px;
+                    position: absolute;
+                    margin-left: 0;
+                    top: 240px;
+                }
+    
+                .name-author-small-format {
+                    width: 280px;
+                    height: 104px;
+                    position: absolute;
+                    margin-left: 0;
+                    top: 240px;
                 }
 
                 .name-and-author {
                     width: 280px;
                     height: 104px;
                     position: absolute;
-                    margin-left: 0;
-                    margin-top: 230px;
+                    margin-left: 10px;
+                    margin-top: 254px;
+                }
 
+                .title-detail {
+                    width: 232px;
+                    height: 29px;
+                    font-size: 24px;
+                    margin-left: 48px;
+                    margin-top: 24px;
+                }
+    
+                .subtitle-detail {
+                    width: 232px;
+                    height: 19px;
+                    margin-left: 48px;
+                    bottom: 24px;
+                }
 
-                    .title-detail {
-                        width: 232px;
-                        height: 29px;
-                        font-size: 24px;
-                        margin-left: 24px;
-                        margin-top: 24px;
-                    }
-        
-                    .subtitle-detail {
-                        width: 232px;
-                        height: 19px;
-                        margin-left: 24px;
-                        bottom: 24px;
-                    }
+                .subtitle-detail-bottom {
+                    bottom: 0;
                 }
             }
 
@@ -373,22 +401,55 @@ html {
                 position: relative;
                 max-width: 350px;
                 margin-left: 0;
+                // padding: 24px;
                 margin-bottom: 50px;
+                margin-top: 20px;
 
                 .year-detail {
+                    max-width: 238px;
+                    height: 100px;
                     position: absolute;
                     font-size: 100px;
-                    left: 120px;
-                    
-
+                    left: 125px;
+                    margin-top: 0;
                 }
 
                 .p-detail {
                     width: 327px;
-                    height: 364px;
-                    // margin-top: 75px;
-                    // margin-left: 115px;
+                    margin-top: 80px;
+                    margin-left: 24px;
+                }
+            }
+        }
+    }
 
+    .footer {
+        display: grid;
+        margin-top: 120px;
+        padding: 24px;
+
+        .footer-section {
+            height: 72px;
+            display: grid;
+            grid-template-columns: 170px auto 100px;
+
+            .title-artist-footer {
+                padding: 0;
+
+                .title-footer {
+                    font-size: 14px;
+                }
+
+                .artist-footer {
+                    font-size: 10px;
+                }
+            }
+
+            .pagination-buttons{
+                padding: 0;
+                
+                span{
+                    font-size: 30px;
                 }
             }
         }
@@ -421,6 +482,34 @@ html {
                         margin-left: 30px;
                         bottom: 200px;
                     }
+
+                    .artist-large-format {
+                        margin-top: 0;
+                        margin-left: 30px;
+                        bottom: 135px;
+                    }
+
+                    .artist-small-format {
+                        margin-top: 0;
+                        margin-left: 30px;
+                        bottom: 260px;
+                    }
+                }
+
+                .name-author-large-format {
+                    width: 445px;
+                    height: 302px;
+                    position: absolute;
+                    margin-left: 243px;
+                    top: -2px;
+                }
+    
+                .name-author-small-format {
+                    width: 445px;
+                    height: 174px;
+                    position: absolute;
+                    margin-left: 243px;
+                    top: -2px;
                 }
 
                 .name-and-author {
@@ -435,6 +524,7 @@ html {
                 margin-bottom: 50px;                
                 
                 .p-detail {
+                    width: 457px;
                     margin-top: 75px;
                     margin-left: 115px;
                 }

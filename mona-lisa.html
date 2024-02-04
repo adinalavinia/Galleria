@@ -41,50 +41,54 @@
     </header>
 
     <div class="rectangle">
-        <div class="flex-items"></div>
-        <div class="flex-items"></div>
-        <div class="flex-items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
     </div>
 
-<div class="container-flex">
+<div class="container-detail">
     <div class="container-fluid-detail">
-        <div class="image-detail">
-            <img class="image-large" src="img/mona-lisa/hero-large.jpg">
-            <div class="button-box">
-                <button type="submit"><img src="./img/Group 7.svg"> VIEW IMAGE</button>
+        <div class="left">
+            <div class="image-detail">
+                <img class="image-large" src="img/mona-lisa/hero-large.jpg">
+                <div class="button-box">
+                    <button type="submit"><img src="./img/Group 7.svg"> VIEW IMAGE</button>
+                </div>
+                <img class="artist" src="./img/mona-lisa/artist.jpg">
             </div>
-            <img class="artist" src="./img/mona-lisa/artist.jpg">
-        </div>
 
-        <div class="name-and-author">
-            <div class="title-detail">Mona <br> Lisa</div>
-            <div class="subtitle-detail">Leonardo da Vinci</div>
-        </div>
-
-        <div class="year-detail">1503</div>
-
-        <div class="p-detail">
-            <p>
-                The Mona Lisa (/ˌmoʊnə 'li:sə/; italian: 
-                La Gioconda [la dʒo'konda] or Monna Lisa ['mɔnna 'li:za]) is a half-length portrait painting 
-                by Italian artist Leonardo da Vinci. Considered an archetypal masterpiece of the Italian Renaissance, 
-                it has been described as "the best known, the most visited, the most written about, the most sung about, 
-                the most parodied work of art in the world". The painting's novel qualities include the subject's enigmatic 
-                expression, the monumentality of the composition, the subtle modelling of forms, and the atmospheric illusionism.
-                <br>
-                <br>
-            </p>
-            <div> $860.000.000 </div>
-
-            <div class="shopping-cart">
-                <button type="submit"><span class="material-symbols-outlined">shopping_cart</span>Add to cart</button>
+            <div class="name-and-author">
+                <div class="title-detail title-detail-short-text">Mona Lisa</div>
+                <div class="subtitle-detail">Leonardo da Vinci</div>
             </div>
         </div>
-   
+
+        <div class="right">
+            <div class="year-detail">1503</div>
+
+            <div class="p-detail">
+                <p>
+                    The Mona Lisa (/ˌmoʊnə 'li:sə/; italian: 
+                    La Gioconda [la dʒo'konda] or Monna Lisa ['mɔnna 'li:za]) is a half-length portrait painting 
+                    by Italian artist Leonardo da Vinci. Considered an archetypal masterpiece of the Italian Renaissance, 
+                    it has been described as "the best known, the most visited, the most written about, the most sung about, 
+                    the most parodied work of art in the world". The painting's novel qualities include the subject's enigmatic 
+                    expression, the monumentality of the composition, the subtle modelling of forms, and the atmospheric illusionism.
+                    <br>
+                    <br>
+                </p>
+                <div> $860.000.000 </div>
+
+                <div class="shopping-cart">
+                    <button type="submit"><span class="material-symbols-outlined">shopping_cart</span>Add to cart</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-    <footer>
+<div class="footer">
+    <div class="footer-section">
         <div class="loading-bar"></div>
 
         <div class="title-artist-footer">
@@ -98,9 +102,11 @@
             <button type="submit" class="prev-page"><span class="material-symbols-outlined">first_page</span></button>
             <button type="submit" class="next-page"><span class="material-symbols-outlined">last_page</span></button>
         </div>
-    </footer>
+    </div>
+</div>
 
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/script-detail.js"></script>
 
 </body>
 </html>

@@ -41,48 +41,52 @@
     </header>
 
     <div class="rectangle">
-        <div class="flex-items"></div>
-        <div class="flex-items"></div>
-        <div class="flex-items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
     </div>
 
-<div class="container-flex">
+<div class="container-detail">
     <div class="container-fluid-detail">
-        <div class="image-detail">
-            <img class="image-large" src="img/the-storm-on-the-sea-of-galilee/hero-large.jpg">
-            <div class="button-box">
-                <button type="submit"><img src="./img/Group 7.svg"> VIEW IMAGE</button>
+        <div class="left">
+            <div class="image-detail">
+                <img class="image-large" src="img/the-storm-on-the-sea-of-galilee/hero-large.jpg">
+                <div class="button-box">
+                    <button type="submit"><img src="./img/Group 7.svg"> VIEW IMAGE</button>
+                </div>
+                <img class="artist artist-large-format" src="./img/the-storm-on-the-sea-of-galilee/artist.jpg">
             </div>
-            <img class="artist" src="./img/the-storm-on-the-sea-of-galilee/artist.jpg">
-        </div>
 
-        <div class="name-and-author large-format">
-            <div class="title-detail">The Storm <br> on the Sea <br> of Galilee</div>
-            <div class="subtitle-detail">Rembrandt</div>
-        </div>
-
-        <div class="year-detail">1633</div>
-
-        <div class="p-detail">
-            <p>
-                The painting, in vertical format, shows a close-up view of Christ's disciples struggling 
-                frantically against the heavy storm to regain control of their fishing boat. 
-                A huge wave beats the bow and rips the sail. One of the disciples is seen vomiting over the side. 
-                Another one, looking directly out at the viewer, is a self-portrait of the artist. Only Christ, depicted on the right, remains calm.
-                <br>
-                <br>
-            </p>
-            <div> $500.000.000 </div>
-
-            <div class="shopping-cart">
-                <button type="submit"><span class="material-symbols-outlined">shopping_cart</span>Add to cart</button>
+            <div class="name-author-large-format">
+                <div class="title-detail">The Storm <br> on the Sea <br> of Galilee</div>
+                <div class="subtitle-detail">Rembrandt</div>
             </div>
         </div>
-   
+
+        <div class="right">
+            <div class="year-detail">1633</div>
+
+            <div class="p-detail">
+                <p>
+                    The painting, in vertical format, shows a close-up view of Christ's disciples struggling 
+                    frantically against the heavy storm to regain control of their fishing boat. 
+                    A huge wave beats the bow and rips the sail. One of the disciples is seen vomiting over the side. 
+                    Another one, looking directly out at the viewer, is a self-portrait of the artist. Only Christ, depicted on the right, remains calm.
+                    <br>
+                    <br>
+                </p>
+                <div> $500.000.000 </div>
+
+                <div class="shopping-cart">
+                    <button type="submit"><span class="material-symbols-outlined">shopping_cart</span>Add to cart</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-    <footer>
+<div class="footer">
+    <div class="footer-section">
         <div class="loading-bar"></div>
 
         <div class="title-artist-footer">
@@ -96,9 +100,11 @@
             <button type="submit" class="prev-page"><span class="material-symbols-outlined">first_page</span></button>
             <button type="submit" class="next-page"><span class="material-symbols-outlined">last_page</span></button>
         </div>
-    </footer>
+    </div>
+</div>
 
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/script-detail.js"></script>
 
 </body>
 </html>
