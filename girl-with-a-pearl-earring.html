@@ -41,48 +41,52 @@
     </header>
 
     <div class="rectangle">
-        <div class="flex-items"></div>
-        <div class="flex-items"></div>
-        <div class="flex-items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
     </div>
 
-<div class="container-flex">
+<div class="container-detail">
     <div class="container-fluid-detail">
-        <div class="image-detail">
-            <img class="image-large" src="img/girl-with-pearl-earring/hero-large.jpg">
-            <div class="button-box">
-                <button type="submit"><img src="./img/Group 7.svg"> VIEW IMAGE</button>
+        <div class="left">
+            <div class="image-detail">
+                <img class="image-large" src="img/girl-with-pearl-earring/hero-large.jpg">
+                <div class="button-box">
+                    <button type="submit"><img src="./img/Group 7.svg"> VIEW IMAGE</button>
+                </div>
+                <img class="artist artist-large-format" src="./img/girl-with-pearl-earring/artist.jpg">
             </div>
-            <img class="artist" src="./img/girl-with-pearl-earring/artist.jpg">
-        </div>
 
-        <div class="name-and-author large-format">
-            <div class="title-detail">Girl with <br> a Pearl <br> Earring</div>
-            <div class="subtitle-detail">Johannes Vermeer</div>
-        </div>
-
-        <div class="year-detail">1665</div>
-
-        <div class="p-detail">
-            <p>
-                The painting is a tronie, the Dutch 17th-century description of a 'head' that was not meant to be a portrait. 
-                It depicts a European girl wearing an exotic dress, an oriental turban, and what was thought to be a very large pearl as an earring. 
-                In 2014, Dutch astrophysicist Vincent Icke raised doubts about the material of the earring and argued that it looks more like polished tin 
-                than pearl on the grounds of the specular reflection, the pear shape and the large size of the earring.
-                <br>
-                <br>
-            </p>
-            <div> $300.000.000 </div>
-
-            <div class="shopping-cart">
-                <button type="submit"><span class="material-symbols-outlined">shopping_cart</span>Add to cart</button>
+            <div class="name-author-large-format">
+                <div class="title-detail">Girl with a Pearl Earring</div>
+                <div class="subtitle-detail">Johannes Vermeer</div>
             </div>
         </div>
-   
+
+        <div class="right">
+            <div class="year-detail">1665</div>
+
+            <div class="p-detail">
+                <p>
+                    The painting is a tronie, the Dutch 17th-century description of a 'head' that was not meant to be a portrait. 
+                    It depicts a European girl wearing an exotic dress, an oriental turban, and what was thought to be a very large pearl as an earring. 
+                    In 2014, Dutch astrophysicist Vincent Icke raised doubts about the material of the earring and argued that it looks more like polished tin 
+                    than pearl on the grounds of the specular reflection, the pear shape and the large size of the earring.
+                    <br>
+                    <br>
+                </p>
+                <div> $300.000.000 </div>
+
+                <div class="shopping-cart">
+                    <button type="submit"><span class="material-symbols-outlined">shopping_cart</span>Add to cart</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-    <footer>
+<div class="footer">
+    <div class="footer-section">
         <div class="loading-bar"></div>
 
         <div class="title-artist-footer">
@@ -96,9 +100,11 @@
             <button type="submit" class="prev-page"><span class="material-symbols-outlined">first_page</span></button>
             <button type="submit" class="next-page"><span class="material-symbols-outlined">last_page</span></button>
         </div>
-    </footer>
+    </div>
+</div>
 
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/script-detail.js"></script>
 
 </body>
 </html>

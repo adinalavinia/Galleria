@@ -41,50 +41,54 @@
     </header>
 
     <div class="rectangle">
-        <div class="flex-items"></div>
-        <div class="flex-items"></div>
-        <div class="flex-items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
     </div>
 
-<div class="container-flex">
+<div class="container-detail">
     <div class="container-fluid-detail">
-        <div class="image-detail">
-            <img class="image-large" src="img/arnolfini-portrait/hero-large.jpg">
-            <div class="button-box">
-                <button type="submit"><img src="./img/Group 7.svg"> VIEW IMAGE</button>
+        <div class="left">
+            <div class="image-detail">
+                <img class="image-large" src="img/arnolfini-portrait/hero-large.jpg">
+                <div class="button-box">
+                    <button type="submit"><img src="./img/Group 7.svg"> VIEW IMAGE</button>
+                </div>
+                <img class="artist" src="./img/arnolfini-portrait/artist.jpg">
             </div>
-            <img class="artist" src="./img/arnolfini-portrait/artist.jpg">
-        </div>
 
-        <div class="name-and-author">
-            <div class="title-detail">Arnolfini <br> Portrait</div>
-            <div class="subtitle-detail">Jan van Eyck</div>
-        </div>
-
-        <div class="year-detail">1434</div>
-
-        <div class="p-detail">
-            <p>
-                It is considered one of the most original and complex paintings in Western art, 
-                because of its beauty, complex iconography, geometric orthogonal perspective, and expansion 
-                of the picture space with the use of a mirror. According to Ernst Gombrich "in its own way it was as new and 
-                revolutionary as Donatello's or Masaccio's work in Italy. A simple corner of the real world had suddenly been 
-                fixed on to a panel as if by magic ... For the first time in history the artist became the perfect eye-witness 
-                in the truest sense of the term".
-                <br>
-                <br>
-            </p>
-            <div> $400.000.000 </div>
-
-            <div class="shopping-cart">
-                <button type="submit"><span class="material-symbols-outlined">shopping_cart</span>Add to cart</button>
+            <div class="name-and-author">
+                <div class="title-detail">Arnolfini Portrait</div>
+                <div class="subtitle-detail">Jan van Eyck</div>
             </div>
         </div>
-   
+
+        <div class="right">
+            <div class="year-detail">1434</div>
+
+            <div class="p-detail">
+                <p>
+                    It is considered one of the most original and complex paintings in Western art, 
+                    because of its beauty, complex iconography, geometric orthogonal perspective, and expansion 
+                    of the picture space with the use of a mirror. According to Ernst Gombrich "in its own way it was as new and 
+                    revolutionary as Donatello's or Masaccio's work in Italy. A simple corner of the real world had suddenly been 
+                    fixed on to a panel as if by magic ... For the first time in history the artist became the perfect eye-witness 
+                    in the truest sense of the term".
+                    <br>
+                    <br>
+                </p>
+                <div> $400.000.000 </div>
+
+                <div class="shopping-cart">
+                    <button type="submit"><span class="material-symbols-outlined">shopping_cart</span>Add to cart</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-    <footer>
+<div class="footer">
+    <div class="footer-section">
         <div class="loading-bar"></div>
 
         <div class="title-artist-footer">
@@ -98,9 +102,11 @@
             <button type="submit" class="prev-page"><span class="material-symbols-outlined">first_page</span></button>
             <button type="submit" class="next-page"><span class="material-symbols-outlined">last_page</span></button>
         </div>
-    </footer>
+    </div>
+</div>
 
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/script-detail.js"></script>
 
 </body>
 </html>

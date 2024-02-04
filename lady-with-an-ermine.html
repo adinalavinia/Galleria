@@ -41,51 +41,55 @@
     </header>
 
     <div class="rectangle">
-        <div class="flex-items"></div>
-        <div class="flex-items"></div>
-        <div class="flex-items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
     </div>
 
-<div class="container-flex">
+<div class="container-detail">
     <div class="container-fluid-detail">
-        <div class="image-detail">
-            <img class="image-large" src="img/lady-with-an-ermine/hero-large.jpg">
-            <div class="button-box">
-                <button type="submit"><img src="./img/Group 7.svg"> VIEW IMAGE</button>
+        <div class="left">
+            <div class="image-detail">
+                <img class="image-large" src="img/lady-with-an-ermine/hero-large.jpg">
+                <div class="button-box">
+                    <button type="submit"><img src="./img/Group 7.svg"> VIEW IMAGE</button>
+                </div>
+                <img class="artist artist-large-format" src="./img/lady-with-an-ermine/artist.jpg">
             </div>
-            <img class="artist" src="./img/lady-with-an-ermine/artist.jpg">
-        </div>
 
-        <div class="name-and-author">
-            <div class="title-detail">Lady with an <br> Ermine</div>
-            <div class="subtitle-detail">Leonardo da Vinci</div>
-        </div>
-
-        <div class="year-detail">1489</div>
-
-        <div class="p-detail">
-            <p>
-                The Lady with an Ermine (Italian: Dama con l'ermellino ['da:ma kon lermel'li:no]; 
-                Polish: Dama z gronostajem) is a portrait painting widely attributed to the Italian 
-                Renaissance artist Leonardo da Vinci. Dated to c. 1489-1491, the work is painted in oils on a 
-                panel of walnut wood. Its subject is Cecilia Gallerani, a mistress of Ludovico Sforza ("Il Moro"), 
-                Duke of Milan; Leonardo was painter to the Sforza court at the time of its execution. 
-                It is one of only four surviving portraits of women painted by Leonardo, the others being Ginevra de' Benci, 
-                La Belle Ferronnière and the Mona Lisa.
-                <br>
-                <br>
-            </p>
-            <div> $3.000.000.000 </div>
-
-            <div class="shopping-cart">
-                <button type="submit"><span class="material-symbols-outlined">shopping_cart</span>Add to cart</button>
+            <div class="name-author-large-format">
+                <div class="title-detail">Lady with an Ermine</div>
+                <div class="subtitle-detail">Leonardo da Vinci</div>
             </div>
         </div>
-   
+
+        <div class="right">
+            <div class="year-detail">1489</div>
+
+            <div class="p-detail">
+                <p>
+                    The Lady with an Ermine (Italian: Dama con l'ermellino ['da:ma kon lermel'li:no]; 
+                    Polish: Dama z gronostajem) is a portrait painting widely attributed to the Italian 
+                    Renaissance artist Leonardo da Vinci. Dated to c. 1489-1491, the work is painted in oils on a 
+                    panel of walnut wood. Its subject is Cecilia Gallerani, a mistress of Ludovico Sforza ("Il Moro"), 
+                    Duke of Milan; Leonardo was painter to the Sforza court at the time of its execution. 
+                    It is one of only four surviving portraits of women painted by Leonardo, the others being Ginevra de' Benci, 
+                    La Belle Ferronnière and the Mona Lisa.
+                    <br>
+                    <br>
+                </p>
+                <div> $3.000.000.000 </div>
+
+                <div class="shopping-cart">
+                    <button type="submit"><span class="material-symbols-outlined">shopping_cart</span>Add to cart</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-    <footer>
+<div class="footer">
+    <div class="footer-section">
         <div class="loading-bar"></div>
 
         <div class="title-artist-footer">
@@ -99,9 +103,11 @@
             <button type="submit" class="prev-page"><span class="material-symbols-outlined">first_page</span></button>
             <button type="submit" class="next-page"><span class="material-symbols-outlined">last_page</span></button>
         </div>
-    </footer>
+    </div>
+</div>
 
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/script-detail.js"></script>
 
 </body>
 </html>

@@ -71,6 +71,22 @@ html {
   margin-left: 30px;
   bottom: -64px;
 }
+.container-detail .container-fluid-detail .left .name-author-large-format {
+  height: 302px;
+  position: absolute;
+  width: 445px;
+  background-color: #fff;
+  margin-left: 410px;
+  top: -2px;
+}
+.container-detail .container-fluid-detail .left .name-author-small-format {
+  height: 174px;
+  position: absolute;
+  width: 445px;
+  background-color: #fff;
+  margin-left: 410px;
+  top: -2px;
+}
 .container-detail .container-fluid-detail .left .name-and-author {
   width: 445px;
   height: 238px;
@@ -79,16 +95,8 @@ html {
   position: absolute;
   top: -2px;
 }
-.container-detail .container-fluid-detail .left .name-and-author .large-format {
-  height: 302px;
-  position: absolute;
-}
-.container-detail .container-fluid-detail .left .name-and-author .small-format {
-  height: 174px;
-  position: absolute;
-}
-.container-detail .container-fluid-detail .left .name-and-author .title-detail {
-  width: 250px;
+.container-detail .container-fluid-detail .left .title-detail {
+  width: 270px;
   height: 128px;
   color: #000;
   font-size: 56px;
@@ -97,7 +105,7 @@ html {
   margin-left: 65px;
   margin-bottom: 24px;
 }
-.container-detail .container-fluid-detail .left .name-and-author .subtitle-detail {
+.container-detail .container-fluid-detail .left .subtitle-detail {
   position: absolute;
   width: 246px;
   height: 19px;
@@ -218,6 +226,7 @@ html {
     flex-direction: column;
     max-width: 350px;
     padding: 0;
+    margin: 24px;
   }
   .container-detail .container-fluid-detail {
     display: flex;
@@ -227,9 +236,6 @@ html {
     margin: 0;
     gap: 64px;
     padding: 0;
-  }
-  .container-detail .container-fluid-detail .left {
-    padding: 24px;
   }
   .container-detail .container-fluid-detail .left .image-detail {
     position: relative;
@@ -250,7 +256,21 @@ html {
     position: absolute;
     margin: 0;
     left: 16px;
-    bottom: -110px;
+    bottom: -155px;
+  }
+  .container-detail .container-fluid-detail .left .name-author-large-format {
+    width: 280px;
+    height: 133px;
+    position: absolute;
+    margin-left: 0;
+    top: 240px;
+  }
+  .container-detail .container-fluid-detail .left .name-author-small-format {
+    width: 280px;
+    height: 104px;
+    position: absolute;
+    margin-left: 0;
+    top: 240px;
   }
   .container-detail .container-fluid-detail .left .name-and-author {
     width: 280px;
@@ -259,25 +279,28 @@ html {
     margin-left: 10px;
     margin-top: 254px;
   }
-  .container-detail .container-fluid-detail .left .name-and-author .title-detail {
+  .container-detail .container-fluid-detail .left .title-detail {
     width: 232px;
     height: 29px;
     font-size: 24px;
-    margin-left: 24px;
+    margin-left: 48px;
     margin-top: 24px;
   }
-  .container-detail .container-fluid-detail .left .name-and-author .subtitle-detail {
+  .container-detail .container-fluid-detail .left .subtitle-detail {
     width: 232px;
     height: 19px;
-    margin-left: 24px;
+    margin-left: 48px;
     bottom: 24px;
+  }
+  .container-detail .container-fluid-detail .left .subtitle-detail-penitent-magdalene {
+    bottom: 0;
   }
   .container-detail .container-fluid-detail .right {
     position: relative;
     max-width: 350px;
     margin-left: 0;
-    padding: 24px;
     margin-bottom: 50px;
+    margin-top: 20px;
   }
   .container-detail .container-fluid-detail .right .year-detail {
     max-width: 238px;
@@ -285,17 +308,16 @@ html {
     position: absolute;
     font-size: 100px;
     left: 125px;
-    margin-top: -55px;
+    margin-top: 0;
   }
   .container-detail .container-fluid-detail .right .p-detail {
     width: 327px;
-    height: 364px;
-    margin-top: 30px;
-    margin-left: 16px;
+    margin-top: 80px;
+    margin-left: 24px;
   }
   .footer {
     display: grid;
-    margin-top: 70px;
+    margin-top: 120px;
     padding: 24px;
   }
   .footer .footer-section {
@@ -341,6 +363,30 @@ html {
     margin-left: 30px;
     bottom: 200px;
   }
+  .container-detail .container-fluid-detail .left .image-detail .artist-large-format {
+    margin-top: 0;
+    margin-left: 30px;
+    bottom: 135px;
+  }
+  .container-detail .container-fluid-detail .left .image-detail .artist-small-format {
+    margin-top: 0;
+    margin-left: 30px;
+    bottom: 260px;
+  }
+  .container-detail .container-fluid-detail .left .name-author-large-format {
+    width: 445px;
+    height: 302px;
+    position: absolute;
+    margin-left: 243px;
+    top: -2px;
+  }
+  .container-detail .container-fluid-detail .left .name-author-small-format {
+    width: 445px;
+    height: 174px;
+    position: absolute;
+    margin-left: 243px;
+    top: -2px;
+  }
   .container-detail .container-fluid-detail .left .name-and-author {
     margin-left: 243px;
   }
@@ -351,6 +397,7 @@ html {
     margin-bottom: 50px;
   }
   .container-detail .container-fluid-detail .right .p-detail {
+    width: 457px;
     margin-top: 75px;
     margin-left: 115px;
   }

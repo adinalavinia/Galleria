@@ -79,6 +79,24 @@ html {
                 }
             }
 
+            .name-author-large-format {
+                height: 302px;
+                position: absolute;
+                width: 445px;
+                background-color: #fff;
+                margin-left: 410px;
+                top: -2px;
+            }
+
+            .name-author-small-format {
+                height: 174px;
+                position: absolute;
+                width: 445px;
+                background-color: #fff;
+                margin-left: 410px;
+                top: -2px;
+            }
+
             .name-and-author {
                 width: 445px;
                 height: 238px;
@@ -87,39 +105,31 @@ html {
                 position: absolute;
                 top: -2px;
 
-                .large-format {
-                    height: 302px;
-                    position: absolute;
-                }
-    
-                .small-format {
-                    height: 174px;
-                    position: absolute;
-                }
-
-                .title-detail {
-                    width: 250px;
-                    height: 128px;
-                    color: #000;
-                    font-size: 56px;
-                    font-style: normal;
-                    font-weight: 700;
-                    margin-left: 65px;
-                    margin-bottom: 24px;
-                }
-    
-                .subtitle-detail {
-                    position: absolute;
-                    width: 246px;
-                    height: 19px;
-                    color: #7D7D7D;
-                    font-size: 15px;
-                    font-style: normal;
-                    font-weight: 400;
-                    margin-left: 65px;
-                    bottom: 67px;
-                }
             }
+
+            .title-detail {
+                width: 270px;
+                height: 128px;
+                color: #000;
+                font-size: 56px;
+                font-style: normal;
+                font-weight: 700;
+                margin-left: 65px;
+                margin-bottom: 24px;
+            }
+
+            .subtitle-detail {
+                position: absolute;
+                width: 246px;
+                height: 19px;
+                color: #7D7D7D;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                margin-left: 65px;
+                bottom: 67px;
+            }
+            
         }
 
         .right {
@@ -288,7 +298,7 @@ html {
 }
 
 
-//trebuie actualizat
+
 @media screen and (max-width: 375px) {
     
     .container-detail {
@@ -296,6 +306,7 @@ html {
         flex-direction: column;
         max-width: 350px;
         padding: 0;
+        margin: 24px;
     
         .container-fluid-detail {
             display: flex;
@@ -307,7 +318,7 @@ html {
             padding: 0;
 
             .left {
-                padding: 24px;
+                // padding: 24px;
 
                 .image-detail {
                     position: relative;
@@ -330,8 +341,24 @@ html {
                         position: absolute;
                         margin: 0;
                         left: 16px;
-                        bottom: -110px;
+                        bottom: -155px;
                     }
+                }
+
+                .name-author-large-format {
+                    width: 280px;
+                    height: 133px;
+                    position: absolute;
+                    margin-left: 0;
+                    top: 240px;
+                }
+    
+                .name-author-small-format {
+                    width: 280px;
+                    height: 104px;
+                    position: absolute;
+                    margin-left: 0;
+                    top: 240px;
                 }
 
                 .name-and-author {
@@ -340,21 +367,25 @@ html {
                     position: absolute;
                     margin-left: 10px;
                     margin-top: 254px;
+                }
 
-                    .title-detail {
-                        width: 232px;
-                        height: 29px;
-                        font-size: 24px;
-                        margin-left: 24px;
-                        margin-top: 24px;
-                    }
-        
-                    .subtitle-detail {
-                        width: 232px;
-                        height: 19px;
-                        margin-left: 24px;
-                        bottom: 24px;
-                    }
+                .title-detail {
+                    width: 232px;
+                    height: 29px;
+                    font-size: 24px;
+                    margin-left: 48px;
+                    margin-top: 24px;
+                }
+    
+                .subtitle-detail {
+                    width: 232px;
+                    height: 19px;
+                    margin-left: 48px;
+                    bottom: 24px;
+                }
+
+                .subtitle-detail-penitent-magdalene {
+                    bottom: 0;
                 }
             }
 
@@ -362,8 +393,9 @@ html {
                 position: relative;
                 max-width: 350px;
                 margin-left: 0;
-                padding: 24px;
+                // padding: 24px;
                 margin-bottom: 50px;
+                margin-top: 20px;
 
                 .year-detail {
                     max-width: 238px;
@@ -371,14 +403,13 @@ html {
                     position: absolute;
                     font-size: 100px;
                     left: 125px;
-                    margin-top: -55px;
+                    margin-top: 0;
                 }
 
                 .p-detail {
                     width: 327px;
-                    height: 364px;
-                    margin-top: 30px;
-                    margin-left: 16px;
+                    margin-top: 80px;
+                    margin-left: 24px;
                 }
             }
         }
@@ -386,7 +417,7 @@ html {
 
     .footer {
         display: grid;
-        margin-top: 70px;
+        margin-top: 120px;
         padding: 24px;
 
         .footer-section {
@@ -443,6 +474,34 @@ html {
                         margin-left: 30px;
                         bottom: 200px;
                     }
+
+                    .artist-large-format {
+                        margin-top: 0;
+                        margin-left: 30px;
+                        bottom: 135px;
+                    }
+
+                    .artist-small-format {
+                        margin-top: 0;
+                        margin-left: 30px;
+                        bottom: 260px;
+                    }
+                }
+
+                .name-author-large-format {
+                    width: 445px;
+                    height: 302px;
+                    position: absolute;
+                    margin-left: 243px;
+                    top: -2px;
+                }
+    
+                .name-author-small-format {
+                    width: 445px;
+                    height: 174px;
+                    position: absolute;
+                    margin-left: 243px;
+                    top: -2px;
                 }
 
                 .name-and-author {
@@ -457,6 +516,7 @@ html {
                 margin-bottom: 50px;                
                 
                 .p-detail {
+                    width: 457px;
                     margin-top: 75px;
                     margin-left: 115px;
                 }
