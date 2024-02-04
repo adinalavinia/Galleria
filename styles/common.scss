@@ -98,7 +98,7 @@ html {
                 }
 
                 .title-detail {
-                    width: 380px;
+                    width: 250px;
                     height: 128px;
                     color: #000;
                     font-size: 56px;
@@ -120,7 +120,6 @@ html {
                     bottom: 67px;
                 }
             }
-
         }
 
         .right {
@@ -180,7 +179,6 @@ html {
                     }
                 }
             }
-
         }
 
         
@@ -223,11 +221,6 @@ html {
             // }
 
 
-
-
-
-
-
         
     }
 }
@@ -237,12 +230,10 @@ html {
     display: grid;
     margin-top: 75px;
 
-
     .footer-section {
         height: 96px;
         display: grid;
         grid-template-columns: 400px auto 200px;
-
 
         .title-artist-footer {
             grid-column-start: 1;
@@ -283,7 +274,6 @@ html {
                 color: #D8D8D8;
             }
 
-
             .next-page{
                 border: none;
                 background: transparent;
@@ -295,9 +285,6 @@ html {
             }
         }
     }
-
-
-    
 }
 
 
@@ -308,17 +295,19 @@ html {
         display: flex;
         flex-direction: column;
         max-width: 350px;
-        padding: 24px;
+        padding: 0;
     
         .container-fluid-detail {
             display: flex;
             flex-direction: column;
             max-width: 370px;
-            height: 1300px;
+            height: 900px;
             margin: 0;
             gap: 64px;
+            padding: 0;
 
             .left {
+                padding: 24px;
 
                 .image-detail {
                     position: relative;
@@ -328,6 +317,7 @@ html {
                         width: 327px;
                         height: 280px;
                         position: relative;
+                        left: 0;
                     }
 
                     .button-box {
@@ -338,9 +328,9 @@ html {
                         width: 64px;
                         height: 64px;
                         position: absolute;
-                        left: 0;
-                        bottom: -120px;
-                        
+                        margin: 0;
+                        left: 16px;
+                        bottom: -110px;
                     }
                 }
 
@@ -348,9 +338,8 @@ html {
                     width: 280px;
                     height: 104px;
                     position: absolute;
-                    margin-left: 0;
-                    margin-top: 230px;
-
+                    margin-left: 10px;
+                    margin-top: 254px;
 
                     .title-detail {
                         width: 232px;
@@ -373,22 +362,55 @@ html {
                 position: relative;
                 max-width: 350px;
                 margin-left: 0;
+                padding: 24px;
                 margin-bottom: 50px;
 
                 .year-detail {
+                    max-width: 238px;
+                    height: 100px;
                     position: absolute;
                     font-size: 100px;
-                    left: 120px;
-                    
-
+                    left: 125px;
+                    margin-top: -55px;
                 }
 
                 .p-detail {
                     width: 327px;
                     height: 364px;
-                    // margin-top: 75px;
-                    // margin-left: 115px;
+                    margin-top: 30px;
+                    margin-left: 16px;
+                }
+            }
+        }
+    }
 
+    .footer {
+        display: grid;
+        margin-top: 70px;
+        padding: 24px;
+
+        .footer-section {
+            height: 72px;
+            display: grid;
+            grid-template-columns: 150px auto 100px;
+
+            .title-artist-footer {
+                padding: 0;
+
+                .title-footer {
+                    font-size: 14px;
+                }
+
+                .artist-footer {
+                    font-size: 10px;
+                }
+            }
+
+            .pagination-buttons{
+                padding: 0;
+                
+                span{
+                    font-size: 30px;
                 }
             }
         }

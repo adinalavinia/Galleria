@@ -88,7 +88,7 @@ html {
   position: absolute;
 }
 .container-detail .container-fluid-detail .left .name-and-author .title-detail {
-  width: 380px;
+  width: 250px;
   height: 128px;
   color: #000;
   font-size: 56px;
@@ -217,15 +217,19 @@ html {
     display: flex;
     flex-direction: column;
     max-width: 350px;
-    padding: 24px;
+    padding: 0;
   }
   .container-detail .container-fluid-detail {
     display: flex;
     flex-direction: column;
     max-width: 370px;
-    height: 1300px;
+    height: 900px;
     margin: 0;
     gap: 64px;
+    padding: 0;
+  }
+  .container-detail .container-fluid-detail .left {
+    padding: 24px;
   }
   .container-detail .container-fluid-detail .left .image-detail {
     position: relative;
@@ -235,6 +239,7 @@ html {
     width: 327px;
     height: 280px;
     position: relative;
+    left: 0;
   }
   .container-detail .container-fluid-detail .left .image-detail .button-box {
     top: 16px;
@@ -243,15 +248,16 @@ html {
     width: 64px;
     height: 64px;
     position: absolute;
-    left: 0;
-    bottom: -120px;
+    margin: 0;
+    left: 16px;
+    bottom: -110px;
   }
   .container-detail .container-fluid-detail .left .name-and-author {
     width: 280px;
     height: 104px;
     position: absolute;
-    margin-left: 0;
-    margin-top: 230px;
+    margin-left: 10px;
+    margin-top: 254px;
   }
   .container-detail .container-fluid-detail .left .name-and-author .title-detail {
     width: 232px;
@@ -270,16 +276,47 @@ html {
     position: relative;
     max-width: 350px;
     margin-left: 0;
+    padding: 24px;
     margin-bottom: 50px;
   }
   .container-detail .container-fluid-detail .right .year-detail {
+    max-width: 238px;
+    height: 100px;
     position: absolute;
     font-size: 100px;
-    left: 120px;
+    left: 125px;
+    margin-top: -55px;
   }
   .container-detail .container-fluid-detail .right .p-detail {
     width: 327px;
     height: 364px;
+    margin-top: 30px;
+    margin-left: 16px;
+  }
+  .footer {
+    display: grid;
+    margin-top: 70px;
+    padding: 24px;
+  }
+  .footer .footer-section {
+    height: 72px;
+    display: grid;
+    grid-template-columns: 150px auto 100px;
+  }
+  .footer .footer-section .title-artist-footer {
+    padding: 0;
+  }
+  .footer .footer-section .title-artist-footer .title-footer {
+    font-size: 14px;
+  }
+  .footer .footer-section .title-artist-footer .artist-footer {
+    font-size: 10px;
+  }
+  .footer .footer-section .pagination-buttons {
+    padding: 0;
+  }
+  .footer .footer-section .pagination-buttons span {
+    font-size: 30px;
   }
 }
 @media screen and (min-width: 376px) and (max-width: 768px) {
