@@ -72,17 +72,17 @@ html {
   bottom: -64px;
 }
 .container-detail .container-fluid-detail .left .name-author-large-format {
+  width: 445px;
   height: 302px;
   position: absolute;
-  width: 445px;
   background-color: #fff;
   margin-left: 410px;
   top: -2px;
 }
 .container-detail .container-fluid-detail .left .name-author-small-format {
+  width: 445px;
   height: 174px;
   position: absolute;
-  width: 445px;
   background-color: #fff;
   margin-left: 410px;
   top: -2px;
@@ -96,7 +96,7 @@ html {
   top: -2px;
 }
 .container-detail .container-fluid-detail .left .title-detail {
-  width: 270px;
+  width: 320px;
   height: 128px;
   color: #000;
   font-size: 56px;
@@ -104,6 +104,12 @@ html {
   font-weight: 700;
   margin-left: 65px;
   margin-bottom: 24px;
+}
+.container-detail .container-fluid-detail .left .title-detail-short-text {
+  width: 280px;
+}
+.container-detail .container-fluid-detail .left .title-detail-long-text {
+  width: 380px;
 }
 .container-detail .container-fluid-detail .left .subtitle-detail {
   position: absolute;
@@ -292,7 +298,7 @@ html {
     margin-left: 48px;
     bottom: 24px;
   }
-  .container-detail .container-fluid-detail .left .subtitle-detail-penitent-magdalene {
+  .container-detail .container-fluid-detail .left .subtitle-detail-bottom {
     bottom: 0;
   }
   .container-detail .container-fluid-detail .right {
@@ -323,7 +329,7 @@ html {
   .footer .footer-section {
     height: 72px;
     display: grid;
-    grid-template-columns: 150px auto 100px;
+    grid-template-columns: 170px auto 100px;
   }
   .footer .footer-section .title-artist-footer {
     padding: 0;

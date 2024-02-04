@@ -41,49 +41,54 @@
     </header>
 
     <div class="rectangle">
-        <div class="flex-items"></div>
-        <div class="flex-items"></div>
-        <div class="flex-items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
     </div>
 
-<div class="container-flex">
+<div class="container-detail">
     <div class="container-fluid-detail">
-        <div class="image-detail">
-            <img class="image-large" src="img/the-great-wave-off-kanagawa/hero-large.jpg">
-            <div class="button-box">
-                <button type="submit"><img src="./img/Group 7.svg"> VIEW IMAGE</button>
+        <div class="left">
+            <div class="image-detail">
+                <img class="image-large" src="img/the-great-wave-off-kanagawa/hero-large.jpg">
+                <div class="button-box">
+                    <button type="submit"><img src="./img/Group 7.svg"> VIEW IMAGE</button>
+                </div>
+                <img class="artist artist-large-format" src="./img/the-great-wave-off-kanagawa/artist.jpg">
             </div>
-            <img class="artist" src="./img/the-great-wave-off-kanagawa/artist.jpg">
+
+            <div class="name-author-large-format">
+                <div class="title-detail">The Great Wave off Kanagawa</div>
+                <div class="subtitle-detail">Hokusai</div>
+            </div>
         </div>
 
-        <div class="name-and-author large-format">
-            <div class="title-detail">The Great <br> Wave off <br> Kanagawa</div>
-            <div class="subtitle-detail">Hokusai</div>
-        </div>
+        <div class="right">
+            <div class="year-detail">1831</div>
 
-        <div class="year-detail">1831</div>
+            <div class="p-detail">
+                <p>
+                    The Great Wave off Kanagawa (Japanese: 神奈川沖浪裏, Hepburn: Kanagawa-oki Nami Ura, lit. "Under the Wave off Kanagawa"), 
+                    also known as The Great Wave or simply The Wave, is a woodblock print by the Japanese ukiyo-e artist Hokusai. 
+                    It was published sometime between 1829 and 1833 in the late Edo period as the first print in Hokusai's series Thirty-six Views
+                    of Mount Fuji. The image depicts an enormous wave threatening three boats off the coast in the Sagami Bay (Kanagawa Prefecture) 
+                    while Mount Fuji rises in the background. 
+                    <br>
+                    <br>
+                </p>
+                <div> $2.800.000 </div>
 
-        <div class="p-detail">
-            <p>
-                The Great Wave off Kanagawa (Japanese: 神奈川沖浪裏, Hepburn: Kanagawa-oki Nami Ura, lit. "Under the Wave off Kanagawa"), 
-                also known as The Great Wave or simply The Wave, is a woodblock print by the Japanese ukiyo-e artist Hokusai. 
-                It was published sometime between 1829 and 1833 in the late Edo period as the first print in Hokusai's series Thirty-six Views
-                 of Mount Fuji. The image depicts an enormous wave threatening three boats off the coast in the Sagami Bay (Kanagawa Prefecture) 
-                 while Mount Fuji rises in the background. 
-                <br>
-                <br>
-            </p>
-            <div> $2.800.000 </div>
-
-            <div class="shopping-cart">
-                <button type="submit"><span class="material-symbols-outlined">shopping_cart</span>Add to cart</button>
+                <div class="shopping-cart">
+                    <button type="submit"><span class="material-symbols-outlined">shopping_cart</span>Add to cart</button>
+                </div>
             </div>
         </div>
    
     </div>
 </div>
 
-    <footer>
+<div class="footer">
+    <div class="footer-section">
         <div class="loading-bar"></div>
 
         <div class="title-artist-footer">
@@ -97,9 +102,11 @@
             <button type="submit" class="prev-page"><span class="material-symbols-outlined">first_page</span></button>
             <button type="submit" class="next-page"><span class="material-symbols-outlined">last_page</span></button>
         </div>
-    </footer>
+    </div>
+</div>
 
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/script-detail.js"></script>
 
 </body>
 </html>
