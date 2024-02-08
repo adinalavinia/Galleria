@@ -1,14 +1,3 @@
-function toggleBtn(){
-    let menu = document.querySelector('.menu-box');
-
-    if(menu.style.display == 'block'){
-        menu.style.display = 'none';
-    } else {
-        menu.style.display = 'block';
-    }
-}
-
-
 let products = [
 'Arnolfini Portrait', 
 'Girl with a Pearl Earring', 
@@ -26,19 +15,45 @@ let products = [
 'The Swing', 
 'Van Gogh self-portrait'];
 
-function generateProduct(productName) {
+let pagesSearch = [
+    'starry-night.html',
+    'girl-with-a-pearl-earring.html',
+    'guernica.html',
+    'penitent-magdalene.html',
+    'the-storm-on-the-sea-of-galilee.html',
+    'the-great-wave-off-kanagawa.html',
+    'van-gogh-self-portrait.html',
+    'the-sleeping-gypsy',
+    'lady-with-an-ermine.html',
+    'the-night-cafe',
+    'the-basket-of-apples.html',
+    'the-boy-in-the-red-vest.html',
+    'arnolfini-portrait.html',
+    'mona-lisa.html',
+    'the-swing.html'
+];
+
+let index = 0;
+
+function generateProduct(productName, index) {
     const product = document.createElement('div');
     product.classList.add('product');
+
+    
     const paragraph = document.createElement('p');
-    paragraph.textContent = productName;
+    paragraph.textContent = '<a href="' + pagesSearch[index] + '">' + productName + '</a>'  ;
     product.appendChild(paragraph);
+
+
+
     return product;
 }
 
 let productsContainer = document.querySelector('.search');
 for (const productName of products){
-    const product = generateProduct(productName);
+    const product = generateProduct(productName, index);
     productsContainer.appendChild(product);
+    index++;
 }
 
 const searchInput = document.querySelector('.search-input');
