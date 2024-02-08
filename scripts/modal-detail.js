@@ -8,3 +8,18 @@ let btn = document.querySelector(".button-box");
 
 // function closeImage() {
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
