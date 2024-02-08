@@ -38,6 +38,49 @@
 .container-contact-us .contact-us-form .contact-us-left button:hover {
   background-color: #f0f0f0;
 }
+.container-contact-us .contact-us-form .modal-contact-us {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+}
+.container-contact-us .contact-us-form .modal-contact-us .close-modal-contact-us {
+  width: 90px;
+  margin-bottom: 20px;
+  margin-left: 270px;
+  color: white;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  cursor: pointer;
+  border: none;
+}
+.container-contact-us .contact-us-form .modal-contact-us .close-modal-contact-us:hover {
+  opacity: 0.5;
+  text-decoration: none;
+}
+.container-contact-us .contact-us-form .modal-contact-us .modal-contact-us-content {
+  width: 300px;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 16px;
+  color: black;
+}
 .container-contact-us .contact-us-form .contact-us-right {
   display: grid;
   grid-template-rows: 200px auto;

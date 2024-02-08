@@ -1,13 +1,20 @@
-// let modal = document.querySelector(".myModal");
-// let closeBtn = document.getElementsByClassName("close");
-let btn = document.querySelector(".button-box");
 
-// btn.addEventListener('click', () => {
-// console.log('hello')
-// });
+const modal = document.querySelector(".modal");
+const closeBtn = document.querySelector(".close");
+const btn = document.querySelector(".button-box");
 
-// function closeImage() {
-// }
+btn.addEventListener('click', fullScreen);
+function fullScreen(){
+    modal.style.display = 'flex';
+    modal.style.alignItems = 'center';
+    modal.style.justifyContent = 'center';
+};
+
+
+closeBtn.addEventListener('click', closeImage);
+function closeImage() {
+    modal.style.display = 'none';
+}
 
 
 
