@@ -282,6 +282,10 @@ html {
     left: 20px;
   }
   .container-detail .container-fluid-detail .left .image-detail .image-large {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
     width: 327px;
     height: 280px;
     position: relative;
@@ -340,7 +344,7 @@ html {
     max-width: 350px;
     margin-left: 0;
     margin-bottom: 50px;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .container-detail .container-fluid-detail .right .year-detail {
     max-width: 238px;

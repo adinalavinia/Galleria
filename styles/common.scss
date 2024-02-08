@@ -320,13 +320,14 @@ html {
             padding: 0;
 
             .left {
-                // padding: 24px;
 
                 .image-detail {
                     position: relative;
                     left: 20px;
-
+                    
                     .image-large {
+                        object-fit: cover;
+                        object-position: center;
                         width: 327px;
                         height: 280px;
                         position: relative;
@@ -395,9 +396,8 @@ html {
                 position: relative;
                 max-width: 350px;
                 margin-left: 0;
-                // padding: 24px;
                 margin-bottom: 50px;
-                margin-top: 20px;
+                margin-top: 40px;
 
                 .year-detail {
                     max-width: 238px;
