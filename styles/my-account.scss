@@ -54,6 +54,70 @@
             text-align: end;
         }
 
+        .forgot-password-button {
+            width: 180px;
+        }
+
+        .modal-forgot-password, 
+        .modal-send-email {
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-repeat: no-repeat no-repeat;
+            background-position: center center;
+            background: rgba(black, 0.75);
+            display: flex;
+            flex-direction: column;
+
+            .close-forgot-password {
+                width: 90px;
+                margin-bottom: 20px;
+                margin-left: 270px;
+                color: white;
+                background: transparent;
+                font-size: 14px;
+                font-weight: 700;
+                letter-spacing: 3px;
+                cursor: pointer;
+                border: none;
+            }
+
+            .close-forgot-password:hover {
+                opacity: 0.5;
+                text-decoration: none;
+            }
+
+            .modal-forgot-password-content,
+            .modal-send-email-content {
+                width: 350px;
+                height: 200px;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                border-radius: 12px;
+                padding: 20px;
+                font-size: 16px;
+                color: black;
+
+                .input-forgot-password {
+                    width: 280px;
+                    height: 50px;
+                    margin: 15px;
+                }
+
+                .close-reset-email {
+                    margin-top: 20px;
+                }
+            }
+        }
+
         .checkbox-terms {
             margin-top: 20px;
         }
