@@ -53,6 +53,92 @@
   margin-top: 20px;
   text-align: end;
 }
+.login-register-forms .login .forgot-password .forgot-password-button,
+.login-register-forms .register .forgot-password .forgot-password-button {
+  width: 180px;
+}
+.login-register-forms .login .modal-forgot-password,
+.login-register-forms .login .modal-send-email,
+.login-register-forms .register .modal-forgot-password,
+.login-register-forms .register .modal-send-email {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+}
+.login-register-forms .login .modal-forgot-password .close-forgot-password,
+.login-register-forms .login .modal-send-email .close-forgot-password,
+.login-register-forms .register .modal-forgot-password .close-forgot-password,
+.login-register-forms .register .modal-send-email .close-forgot-password {
+  width: 90px;
+  margin-bottom: 20px;
+  margin-left: 270px;
+  color: white;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  cursor: pointer;
+  border: none;
+}
+.login-register-forms .login .modal-forgot-password .close-forgot-password:hover,
+.login-register-forms .login .modal-send-email .close-forgot-password:hover,
+.login-register-forms .register .modal-forgot-password .close-forgot-password:hover,
+.login-register-forms .register .modal-send-email .close-forgot-password:hover {
+  opacity: 0.5;
+  text-decoration: none;
+}
+.login-register-forms .login .modal-forgot-password .modal-forgot-password-content,
+.login-register-forms .login .modal-forgot-password .modal-send-email-content,
+.login-register-forms .login .modal-send-email .modal-forgot-password-content,
+.login-register-forms .login .modal-send-email .modal-send-email-content,
+.login-register-forms .register .modal-forgot-password .modal-forgot-password-content,
+.login-register-forms .register .modal-forgot-password .modal-send-email-content,
+.login-register-forms .register .modal-send-email .modal-forgot-password-content,
+.login-register-forms .register .modal-send-email .modal-send-email-content {
+  width: 350px;
+  height: 200px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 16px;
+  color: black;
+}
+.login-register-forms .login .modal-forgot-password .modal-forgot-password-content .input-forgot-password,
+.login-register-forms .login .modal-forgot-password .modal-send-email-content .input-forgot-password,
+.login-register-forms .login .modal-send-email .modal-forgot-password-content .input-forgot-password,
+.login-register-forms .login .modal-send-email .modal-send-email-content .input-forgot-password,
+.login-register-forms .register .modal-forgot-password .modal-forgot-password-content .input-forgot-password,
+.login-register-forms .register .modal-forgot-password .modal-send-email-content .input-forgot-password,
+.login-register-forms .register .modal-send-email .modal-forgot-password-content .input-forgot-password,
+.login-register-forms .register .modal-send-email .modal-send-email-content .input-forgot-password {
+  width: 280px;
+  height: 50px;
+  margin: 15px;
+}
+.login-register-forms .login .modal-forgot-password .modal-forgot-password-content .close-reset-email,
+.login-register-forms .login .modal-forgot-password .modal-send-email-content .close-reset-email,
+.login-register-forms .login .modal-send-email .modal-forgot-password-content .close-reset-email,
+.login-register-forms .login .modal-send-email .modal-send-email-content .close-reset-email,
+.login-register-forms .register .modal-forgot-password .modal-forgot-password-content .close-reset-email,
+.login-register-forms .register .modal-forgot-password .modal-send-email-content .close-reset-email,
+.login-register-forms .register .modal-send-email .modal-forgot-password-content .close-reset-email,
+.login-register-forms .register .modal-send-email .modal-send-email-content .close-reset-email {
+  margin-top: 20px;
+}
 .login-register-forms .login .checkbox-terms,
 .login-register-forms .register .checkbox-terms {
   margin-top: 20px;

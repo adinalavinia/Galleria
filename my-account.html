@@ -64,11 +64,24 @@
                 <span class="error error-pass-login">Please choose a stronger passwsord! <br> Ensure that password contains both upper and lowercase letters and numbers.</span>
                 <span class="valid valid-pass-login">Password validated!</span>
                 <span class="error-required pass-error">This field is required!</span>
-
             </form>
             <div class="forgot-password">
-                <a href="">Forgot password?</a>
+                <button type="submit" class="forgot-password-button">Forgot password</button>
             </div>
+            <div class="modal-forgot-password" style="display: none;">
+                <button class="close-forgot-password">CLOSE</button>
+                <div class="modal-forgot-password-content">Please introduce your email address:
+                    <input type="text" class="input-forgot-password" placeholder="Email">
+                    <button type="submit" class="send-forgot-password">Send</button>
+                </div>
+            </div>
+            <div class="modal-send-email" style="display: none;">
+                <div class="modal-send-email-content">
+                    Password reset email was sent! <br> Check your inbox or your spam folder! 
+                    <button type="submit" class="close-reset-email">OK</button>
+                </div>
+            </div>
+
             <div class="login-button-box">
                 <button type="submit" class="login-button" onclick="loginForm()">Login</button>
             </div>
