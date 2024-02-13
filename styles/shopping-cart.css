@@ -4,12 +4,13 @@
 .shoppig-cart-page .cart-item-head {
   background-color: #e0e0e0;
   display: grid;
-  grid-template-columns: auto 300px 200px 200px 150px;
+  grid-template-columns: repeat(4, 1fr);
   text-align: center;
   border-radius: 15px;
   padding: 15px;
   font-size: 16px;
   font-weight: 700;
+  margin-bottom: 50px;
 }
 .shoppig-cart-page .cart-item-head .cart-item1 {
   text-align: left;
@@ -24,18 +25,21 @@
 .shoppig-cart-page .cart-items ul {
   margin: auto;
 }
+.shoppig-cart-page .cart-items li {
+  display: inline-block;
+}
 .shoppig-cart-page .cart-items .cart-item-info {
   margin-left: 0;
   text-align: left;
   padding-left: 15px;
 }
-.shoppig-cart-page .cart-adress-order {
+.shoppig-cart-page .cart-address-order {
   display: grid;
   grid-template-columns: 500px 500px;
   gap: 50px;
   padding: 50px 0 50px 20px;
 }
-.shoppig-cart-page .cart-adress-order input {
+.shoppig-cart-page .cart-address-order input {
   border: none;
   border-bottom: 1px solid grey;
   font-size: 16px;
@@ -59,11 +63,14 @@
 .shoppig-cart-page .cart-footer-total {
   padding: 50px 0 50px 35px;
   display: grid;
-  grid-template-columns: auto 300px;
-  font-size: 24px;
+  grid-template-columns: 1fr 1fr;
+  font-size: 20px;
 }
 .shoppig-cart-page .cart-footer-total .cart-total {
   font-weight: 700;
+}
+.shoppig-cart-page .cart-footer-total .price-total {
+  text-align: center;
 }
 .shoppig-cart-page .checkout-button {
   text-align: end;
@@ -96,8 +103,8 @@
   flex-direction: column;
 }
 .shoppig-cart-page .modal-send-order .modal-send-order-content {
-  width: 350px;
-  height: 200px;
+  width: 330px;
+  height: 180px;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -120,4 +127,58 @@
 }
 .shoppig-cart-page .modal-send-order .modal-send-order-content .close-send-order:hover {
   background-color: #f0f0f0;
+}
+
+@media screen and (max-width: 375px) {
+  .shoppig-cart-page {
+    padding: 20px;
+  }
+  .shoppig-cart-page .cart-item-head {
+    max-width: 350px;
+    font-size: 14px;
+  }
+  .shoppig-cart-page .cart-item-head .cart-item1 {
+    padding-left: 0;
+  }
+  .shoppig-cart-page .cart-address-order {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    padding: 5px;
+    gap: 30px;
+  }
+  .shoppig-cart-page .cart-address-order input {
+    max-width: 300px;
+    font-size: 14px;
+  }
+  .shoppig-cart-page .cart-notes {
+    padding-left: 2px;
+  }
+  .shoppig-cart-page .cart-notes textarea {
+    max-width: 250px;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 768px) {
+  .shoppig-cart-page {
+    padding: 20px;
+  }
+  .shoppig-cart-page .cart-address-order {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    padding: 5px;
+    gap: 30px;
+  }
+  .shoppig-cart-page .cart-address-order input {
+    max-width: 300px;
+  }
+  .shoppig-cart-page .cart-notes {
+    padding-left: 2px;
+  }
+  .shoppig-cart-page .cart-notes textarea {
+    max-width: 250px;
+    margin-top: 20px;
+  }
 }/*# sourceMappingURL=shopping-cart.css.map */
