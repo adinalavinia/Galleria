@@ -53,8 +53,8 @@
   margin-top: 20px;
   text-align: end;
 }
-.login-register-forms .login .forgot-password-button,
-.login-register-forms .register .forgot-password-button {
+.login-register-forms .login .forgot-password .forgot-password-button,
+.login-register-forms .register .forgot-password .forgot-password-button {
   width: 180px;
 }
 .login-register-forms .login .modal-forgot-password,
