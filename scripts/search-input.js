@@ -1,19 +1,20 @@
 let products = [
-'Arnolfini Portrait', 
-'Girl with a Pearl Earring', 
-'Guernica', 
-'Lady with an Ermine', 
-'Mona Lisa', 
-'Penitent Magdalene', 
-'Starry Night', 
-'The Basket of Apples', 
-'The Boy in the Red Vest', 
-'The Great Wave off Kanagawa', 
-'The Night Café', 
-'The Sleeping Gypsy', 
-'The Storm on the Sea of Galilee', 
-'The Swing', 
-'Van Gogh self-portrait'];
+    'Starry Night', 
+    'Girl with a Pearl Earring', 
+    'Guernica', 
+    'Penitent Magdalene', 
+    'The Storm on the Sea of Galilee', 
+    'The Great Wave off Kanagawa', 
+    'Van Gogh self-portrait',
+    'The Sleeping Gypsy', 
+    'Lady with an Ermine', 
+    'The Night Café', 
+    'The Basket of Apples', 
+    'The Boy in the Red Vest', 
+    'Arnolfini Portrait', 
+    'Mona Lisa', 
+    'The Swing'
+];
 
 let pagesSearch = [
     'starry-night.html',
@@ -23,9 +24,9 @@ let pagesSearch = [
     'the-storm-on-the-sea-of-galilee.html',
     'the-great-wave-off-kanagawa.html',
     'van-gogh-self-portrait.html',
-    'the-sleeping-gypsy',
+    'the-sleeping-gypsy.html',
     'lady-with-an-ermine.html',
-    'the-night-cafe',
+    'the-night-cafe.html',
     'the-basket-of-apples.html',
     'the-boy-in-the-red-vest.html',
     'arnolfini-portrait.html',
@@ -39,27 +40,27 @@ function generateProduct(productName, index) {
     const product = document.createElement('div');
     product.classList.add('product');
 
-    
     const paragraph = document.createElement('p');
-    paragraph.textContent = '<a href="' + pagesSearch[index] + '">' + productName + '</a>'  ;
+    paragraph.textContent = productName + ';';
+    // paragraph.textContent = "<a href='" + pagesSearch[index] + "'></a>" + productName;
+    
     product.appendChild(paragraph);
-
-
 
     return product;
 }
 
-let productsContainer = document.querySelector('.search');
+const productsContainer = document.querySelector('.search');
 for (const productName of products){
     const product = generateProduct(productName, index);
     productsContainer.appendChild(product);
-    index++;
+    
 }
 
 const searchInput = document.querySelector('.search-input');
 const renderedProducts = productsContainer.querySelectorAll('.product');
 searchInput.addEventListener('keyup', (event) => {
     const inputValue = searchInput.value;
+    
     for( const product of renderedProducts){
         const p = product.querySelector('p');
         const productName = p.textContent;
