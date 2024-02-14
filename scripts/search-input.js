@@ -34,39 +34,41 @@ let pagesSearch = [
     'the-swing.html'
 ];
 
+
 let index = 0;
+function generateProduct(productName) {
+    const aTag = document.createElement('a');
+    aTag.innerHTML = products[index];
+    aTag.href = pagesSearch[index] ;    
 
-function generateProduct(productName, index) {
-    const product = document.createElement('div');
-    product.classList.add('product');
+    const productLi = document.createElement('li');
+    productLi.classList.add('name-product');
+    productLi.style.display = 'none';
+    productLi.appendChild(aTag);
 
-    const paragraph = document.createElement('p');
-    paragraph.textContent = productName + ';';
-    // paragraph.textContent = "<a href='" + pagesSearch[index] + "'></a>" + productName;
-    
-    product.appendChild(paragraph);
-
-    return product;
+    return productLi;
 }
+const ul = document.querySelector('.product-list');
+ul.style.border = 'none';
 
-const productsContainer = document.querySelector('.search');
 for (const productName of products){
-    const product = generateProduct(productName, index);
-    productsContainer.appendChild(product);
-    
+    const product = generateProduct(productName);
+    ul.appendChild(product);
+    index++;
 }
 
 const searchInput = document.querySelector('.search-input');
-const renderedProducts = productsContainer.querySelectorAll('.product');
+const renderedProducts = document.querySelectorAll('.name-product');
 searchInput.addEventListener('keyup', (event) => {
     const inputValue = searchInput.value;
     
     for( const product of renderedProducts){
-        const p = product.querySelector('p');
-        const productName = p.textContent;
+        const a = product.querySelector('a');
+        const productName = a.innerHTML;
     
         if(productName.toLowerCase().startsWith(inputValue.toLowerCase())){
             product.style.display = 'flex';
+            ul.style.border = '1px solid grey';
         } else {
             product.style.display = 'none';
         }
@@ -76,5 +78,6 @@ searchInput.addEventListener('keyup', (event) => {
         }
     }
 })
+
 
 
