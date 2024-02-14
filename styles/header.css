@@ -17,6 +17,22 @@ header .container .menu-box {
 header .container .menu-box li {
   display: inline-block;
 }
+header .container .menu-box .product-list {
+  width: 260px;
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  position: absolute;
+  padding-left: 0;
+  z-index: 1;
+}
+header .container .menu-box .product-list li {
+  margin: 4px;
+}
 header .container a {
   color: #333333;
   text-decoration: none;
@@ -54,16 +70,7 @@ header .container .search .search-input {
   border: none;
   background: transparent;
   width: 200px;
-}
-header .container .search .product {
-  display: none;
-}
-header .container .search .products {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  font-size: 16px;
-  overflow-y: auto;
+  position: relative;
 }
 header .container .search:focus-within {
   box-shadow: 0 0 2px black;

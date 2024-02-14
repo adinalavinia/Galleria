@@ -18,6 +18,24 @@ header {
             li {
                 display: inline-block;
             }
+
+            .product-list {
+                width: 260px;
+                background-color: white;
+                border-radius: 12px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-direction: column;
+                position: absolute;
+                padding-left: 0;
+                z-index: 1;
+                
+                li {
+                    margin: 4px;
+                }
+            }
         }
 
         a {
@@ -60,18 +78,7 @@ header {
                 border: none;
                 background: transparent;
                 width: 200px;
-            }
-
-            .product {
-                display: none;
-            }
-
-            .products {
-                display: flex;
-                flex-direction: row;
-                gap: 16px;
-                font-size: 16px;
-                overflow-y: auto;
+                position: relative;
             }
         }
 
