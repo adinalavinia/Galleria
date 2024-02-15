@@ -1,10 +1,3 @@
-const addToCartBtn = document.querySelectorAll('.shopping-cart');
-const cartItemsList = document.querySelectorAll('.cart-items');
-
-const itemsListName = document.querySelector('.cart-item-name');
-const itemsListPrice = document.querySelector('.cart-item-price');
-const itemsListQuantity = document.querySelector('.cart-item-quantity');
-
 let productsArray = [
     {
         id: 0,
@@ -15,28 +8,98 @@ let productsArray = [
     {
         id: 1,
         name: 'Girl with a Pearl Earring',
-        price: '$100.000.000',
+        price: '$300.000.000',
         links: 'girl-with-a-pearl-earring.html'
     },
     {
         id: 2,
         name: 'Guernica', 
-        price: '$100.000.000',
+        price: '$200.000.000',
         links: 'guernica.html'
     },
     {
         id: 3,
         name: 'Penitent Magdalene',
-        price: '$100.000.000',
+        price: '$5.000.000',
         links: 'penitent-magdalene.html'
+    },
+    {
+        id: 4,
+        name: 'The Storm on the Sea of Galilee', 
+        price: '$500.000.000',
+        links: 'the-storm-on-the-sea-of-galilee.html'
+    },
+    {
+        id: 5,
+        name: 'The Great Wave off Kanagawa', 
+        price: '$2.800.000',
+        links: 'the-great-wave-off-kanagawa.html'
+    },
+    {
+        id: 6,
+        name: 'Van Gogh self-portrait', 
+        price: '$72.000.000',
+        links: 'van-gogh-self-portrait.html'
+    },
+    {
+        id: 7,
+        name: 'The Sleeping Gypsy', 
+        price: '$5.000.000',
+        links: 'the-sleeping-gypsy.html'
+    },
+    {
+        id: 8,
+        name: 'Lady with an Ermine', 
+        price: '$3.000.000.000',
+        links: 'lady-with-an-ermine.html'
+    },
+    {
+        id: 9,
+        name: 'The Night Café', 
+        price: '$200.000.000',
+        links: 'the-night-cafe.html'
+    },
+    {
+        id: 10,
+        name: 'The Basket of Apples', 
+        price: '$7.000.000',
+        links: 'the-basket-of-apples.html'
+    },
+    {
+        id: 11,
+        name: 'The Boy in the Red Vest', 
+        price: '$109.000.000',
+        links: 'the-boy-in-the-red-vest.html'
+    },
+    {
+        id: 12,
+        name: 'Arnolfini Portrait', 
+        price: '$400.000.000',
+        links: 'arnolfini-portrait.html'
+    },
+    {
+        id: 13,
+        name: 'Mona Lisa', 
+        price: '$860.000.000',
+        links: 'mona-lisa.html'
+    },
+    {
+        id: 14,
+        name: 'The Swing', 
+        price: '$24.000.000',
+        links: 'the-swing.html'
     }
 ];
 
+const addToCartBtn = document.querySelectorAll('.shopping-cart');
+const cartItemsList = document.querySelectorAll('.cart-items');
+const itemsListName = document.querySelector('.cart-item-name');
+const itemsListPrice = document.querySelector('.cart-item-price');
+const itemsListQuantity = document.querySelector('.cart-item-quantity');
 
 for(let i = 0; i < addToCartBtn.length; i++){
     addToCartBtn[i].addEventListener('click', addToShoppingList);
 }
-
 
 function addToShoppingList(e){
     let btnShop = e.target;
@@ -74,6 +137,13 @@ function addToShoppingList(e){
             shopDeleteBtn.style.border = 'none';
             shopDeleteBtn.style.cursor = 'pointer';
             console.log(shopDeleteBtn);
+
+            shopDeleteBtn.addEventListener('click', removeItem);
+    
+            function removeItem(e){
+                const item = e.target.value;
+                ulShop.remove(item);
+            }
 
         
             ulShop.appendChild(shopItemName);
