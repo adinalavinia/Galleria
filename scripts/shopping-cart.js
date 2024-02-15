@@ -92,63 +92,98 @@ let productsArray = [
 ];
 
 const addToCartBtn = document.querySelectorAll('.shopping-cart');
-const cartItemsList = document.querySelectorAll('.cart-items');
-const itemsListName = document.querySelector('.cart-item-name');
-const itemsListPrice = document.querySelector('.cart-item-price');
-const itemsListQuantity = document.querySelector('.cart-item-quantity');
 
 for(let i = 0; i < addToCartBtn.length; i++){
     addToCartBtn[i].addEventListener('click', addToShoppingList);
-}
+};
 
 function addToShoppingList(e){
-
     const btnShop = e.currentTarget;
     if(!btnShop){
         console.log(btnShop)
         return;
-    }
+    };
 
     const productIdShop = +btnShop.dataset.productId;
 
     const foundProduct = productsArray.find((product) => {
         return product.id === productIdShop;
-    })
+    });
 
     if(!foundProduct){
         console.log(productIdShop)
         console.log(foundProduct)
         return;
-    }
+    };
 
     const shoppingCartProducts = JSON.parse(localStorage.getItem('products'));
 
-    const foundCartItem = shoppingCartProducts.find((product) => {
-        return product.id === productIdShop;
-    })
+    let foundCartItem;
+    if(shoppingCartProducts){
+         foundCartItem = shoppingCartProducts.find((product) => {
+            return product.id === productIdShop;
+        })
+    }
 
     if(foundCartItem){
+        alert("This is a unique product! You can add only one product of this type to the shopping cart!")
         return;
-        //de facut erorare in pag ca am mai adaugat prod 
-    }
+    };
 
     if(shoppingCartProducts){
         shoppingCartProducts.push(foundProduct);
         localStorage.setItem('products', JSON.stringify(shoppingCartProducts));
     } else {
         localStorage.setItem('products', JSON.stringify([foundProduct]));
-    }
-
+    };
 }
 
+const cartItem = document.querySelector('.cart-items-list-line');
+const cartItemsList = document.querySelectorAll('.cart-items');
 
 function showItemsCart(){
+    const products = JSON.parse(localStorage.getItem('products'));
+    for(let i = 0; i < products.length; i++){
+        const shopItemName = document.createElement('li');
+        shopItemName.classList.add('cart-item-name');
+        shopItemName.innerHTML = products[i].name;
+        console.log(shopItemName)
+        
+        const shopItemPrice = document.createElement('li');
+        shopItemPrice.classList.add('cart-item-price');
+        shopItemPrice.innerHTML = products[i].price;
+        console.log(shopItemPrice)
 
-    // de preluat prod din localStorage 
-    // pt fiecare prod trebuie pus in shopping cart 
-    
-    
+        cartItem.appendChild('shopItemName')
+        cartItem.appendChild('shopItemPrice')
+    }    
 }
+// de preluat prod din localStorage 
+// pt fiecare prod trebuie pus in shopping cart 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
