@@ -1,5 +1,6 @@
 .container-contact-us {
   display: flex;
+  justify-content: center;
 }
 .container-contact-us .contact-us-form {
   border: none;
@@ -8,7 +9,7 @@
   padding: 40px;
 }
 .container-contact-us .contact-us-form .contact-us-left {
-  margin-right: 50px;
+  margin-right: 70px;
 }
 .container-contact-us .contact-us-form .contact-us-left input {
   display: flex;

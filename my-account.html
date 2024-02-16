@@ -84,7 +84,7 @@
             </div>
 
             <div class="login-button-box">
-                <button type="submit" class="login-button" onclick="loginForm()">Login</button>
+                <button type="submit" class="login-button">Login</button>
             </div>
         </div>
 
@@ -116,14 +116,22 @@
             </div>
 
             <div class="register-button-box">
-                <button type="submit" class="register-button" onclick="registerForm()">Register</button>
+                <button type="submit" class="register-button">Register</button>
             </div>
+
+            <div class="modal-register-success" style="display: none;">
+                <button class="close-modal-register-success">CLOSE</button>
+                <div class="modal-register-success-content">Your account has been created!</div>
+            </div>
+
         </div>
+
 
     </div>
 </div>
 
-    <script src="./scripts/my-account.js"></script>
+    <script src="./scripts/my-account-login.js"></script>
+    <script src="./scripts/my-account-register.js"></script>
     <script src="./scripts/modal-my-account.js"></script>
     <script src="./scripts/local-storage-my-account.js"></script>
     <script src="./scripts/forgot-password.js"></script>
