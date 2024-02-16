@@ -3,104 +3,93 @@ let productsArray = [
         id: 0,
         name: 'Starry Night',
         price: '$100.000.000',
-        links: 'starry-night.html'
     },
     {
         id: 1,
         name: 'Girl with a Pearl Earring',
         price: '$300.000.000',
-        links: 'girl-with-a-pearl-earring.html'
     },
     {
         id: 2,
         name: 'Guernica', 
         price: '$200.000.000',
-        links: 'guernica.html'
     },
     {
         id: 3,
         name: 'Penitent Magdalene',
         price: '$5.000.000',
-        links: 'penitent-magdalene.html'
     },
     {
         id: 4,
         name: 'The Storm on the Sea of Galilee', 
         price: '$500.000.000',
-        links: 'the-storm-on-the-sea-of-galilee.html'
     },
     {
         id: 5,
         name: 'The Great Wave off Kanagawa', 
         price: '$2.800.000',
-        links: 'the-great-wave-off-kanagawa.html'
     },
     {
         id: 6,
         name: 'Van Gogh self-portrait', 
         price: '$72.000.000',
-        links: 'van-gogh-self-portrait.html'
     },
     {
         id: 7,
         name: 'The Sleeping Gypsy', 
         price: '$5.000.000',
-        links: 'the-sleeping-gypsy.html'
     },
     {
         id: 8,
         name: 'Lady with an Ermine', 
         price: '$3.000.000.000',
-        links: 'lady-with-an-ermine.html'
     },
     {
         id: 9,
         name: 'The Night Café', 
         price: '$200.000.000',
-        links: 'the-night-cafe.html'
     },
     {
         id: 10,
         name: 'The Basket of Apples', 
         price: '$7.000.000',
-        links: 'the-basket-of-apples.html'
     },
     {
         id: 11,
         name: 'The Boy in the Red Vest', 
         price: '$109.000.000',
-        links: 'the-boy-in-the-red-vest.html'
     },
     {
         id: 12,
         name: 'Arnolfini Portrait', 
         price: '$400.000.000',
-        links: 'arnolfini-portrait.html'
     },
     {
         id: 13,
         name: 'Mona Lisa', 
         price: '$860.000.000',
-        links: 'mona-lisa.html'
     },
     {
         id: 14,
         name: 'The Swing', 
         price: '$24.000.000',
-        links: 'the-swing.html'
     }
 ];
 
 const addToCartBtn = document.querySelectorAll('.shopping-cart');
+const cartItemsList = document.querySelectorAll('.cart-items');
+const cartItem = document.querySelector('.cart-items-list-line');
 
 for(let i = 0; i < addToCartBtn.length; i++){
     addToCartBtn[i].addEventListener('click', addToShoppingList);
+    addToCartBtn[i].addEventListener('click', showItemsCart);
+ 
 };
+
 
 function addToShoppingList(e){
     const btnShop = e.currentTarget;
     if(!btnShop){
-        console.log(btnShop)
         return;
     };
 
@@ -111,8 +100,6 @@ function addToShoppingList(e){
     });
 
     if(!foundProduct){
-        console.log(productIdShop)
-        console.log(foundProduct)
         return;
     };
 
@@ -136,28 +123,43 @@ function addToShoppingList(e){
     } else {
         localStorage.setItem('products', JSON.stringify([foundProduct]));
     };
+
+
 }
-
-const cartItem = document.querySelector('.cart-items-list-line');
-const cartItemsList = document.querySelectorAll('.cart-items');
-
 function showItemsCart(){
     const products = JSON.parse(localStorage.getItem('products'));
+
+    console.log(products)
+
+    
     for(let i = 0; i < products.length; i++){
-        const shopItemName = document.createElement('li');
+  
+        let shopItemName = document.createElement('li');
         shopItemName.classList.add('cart-item-name');
-        shopItemName.innerHTML = products[i].name;
+        shopItemName.textContent = products[i].name;
+        
+        // shopItemName.style.display = 'flex';
         console.log(shopItemName)
+
         
         const shopItemPrice = document.createElement('li');
         shopItemPrice.classList.add('cart-item-price');
-        shopItemPrice.innerHTML = products[i].price;
+        shopItemPrice.textContent = products[i].price;
         console.log(shopItemPrice)
+        
 
-        cartItem.appendChild('shopItemName')
-        cartItem.appendChild('shopItemPrice')
-    }    
+
+        const newListShop = document.createElement('ul')
+        newListShop.classList.add('cart-item');
+
+        
+        
+    }   
+    
 }
+
+
+
 // de preluat prod din localStorage 
 // pt fiecare prod trebuie pus in shopping cart 
 
@@ -171,9 +173,12 @@ function showItemsCart(){
 
 
 
+// function removeItemFromCart(){
+//     let temp = foundProduct.filter(item => item.id != productId)
+//     localStorage.setItem('cart', JSON.stringify(temp))
+// }
 
-
-
+// removeItemFromCart(2)
 
 
 
