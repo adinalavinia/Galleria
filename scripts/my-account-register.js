@@ -1,102 +1,3 @@
-const emailLoginError = document.querySelector('.email-error');
-const passwordLoginError = document.querySelector('.pass-error');
-const loginButton = document.querySelector('.login-button');
-
-const errorEmailLogin = document.querySelector('.error-email-login');
-const validEmailLogin = document.querySelector('.valid-email-login');
-const emailLogin = document.getElementById('email-login');
-emailLogin.addEventListener('keyup', (event) => {
-    let emailLoginValue = event.target.value;
-
-    if(emailLoginValue.includes('@')) {
-        emailLogin.style.border = '1px solid green';
-        errorEmailLogin.style.display = 'none';
-        validEmailLogin.style.display = 'block';
-    } else {
-        emailLogin.style.border = '1px solid red';
-        errorEmailLogin.style.display = 'block';
-        validEmailLogin.style.display = 'none';
-        emailLoginError.style.display = 'none';
-    }
-
-    if(emailLoginValue == ''){
-        emailLogin.style.border = null;
-        errorEmailLogin.style.display = 'none';
-        validEmailLogin.style.display = 'none';
-        emailLoginError.style.display = 'block';
-    }
-})
-
-
-const errorPasswordLogin = document.querySelector('.error-pass-login');
-const validPasswordLogin = document.querySelector('.valid-pass-login');
-const passwordLogin = document.getElementById('pass-login');
-passwordLogin.addEventListener('keyup', (event) => {
-    let passwordLoginValue = event.target.value;
-    let hasCapitalLetter = false;
-    let hasLowerLetter = false;
-    let hasNumbers = false;
-
-    for(let i = 0; i < passwordLoginValue.length; i++){
-        const character = passwordLoginValue[i];
-
-        if(character >= 'A' && character <= 'Z'){
-            hasCapitalLetter = true;
-        }
-
-        if(character >= 'a' && character <= 'z'){
-            hasLowerLetter = true;
-        }
-
-        if(character >= '0' && character <= '9'){
-            hasNumbers = true;
-        }
-    }
-
-    if(hasCapitalLetter == false || hasLowerLetter == false || hasNumbers == false ) {
-        passwordLogin.style.border = '1px solid red';
-        errorPasswordLogin.style.display = 'block';
-        validPasswordLogin.style.display = 'none';
-        passwordLoginError.style.display = 'none';
-    } else {
-        passwordLogin.style.border = '1px solid green';
-        errorPasswordLogin.style.display = 'none';
-        validPasswordLogin.style.display = 'block';
-        passwordLoginError.style.display = 'none';
-    }
-
-    if(passwordLoginValue == ''){
-        passwordLogin.style.border = null;
-        errorPasswordLogin.style.display = 'none';
-        validPasswordLogin.style.display = 'none';
-        passwordLoginError.style.display = 'block';
-    }
-})
-
-// errors login required
-
-function loginForm(){
-
-    if(emailLogin.value == ''){
-        emailLoginError.style.display = 'block';
-    } 
-
-    if(passwordLogin.value == ''){
-        passwordLoginError.style.display = 'block';
-    }
-
-    if(emailLogin.value == '' || passwordLogin.value == ''){
-        // 
-       
-    } else {
-        location.href = 'index.html';
-    }
-    
-}
-
-
-
-
 const errorEmailRegister = document.querySelector('.error-email-register');
 const validEmailRegister = document.querySelector('.valid-email-register');
 const emailRegister = document.getElementById('email-register');
@@ -216,8 +117,61 @@ nameRegister.addEventListener('keyup', (event) => {
 
 })
 
-function registerForm(){
 
+registerButton.addEventListener('click', registerForm);
+
+function registerForm(event){
+
+    event.preventDefault();
+    const nameStored = nameRegister.value;
+    const emailStored = emailRegister.value;
+    const passwordStored = passwordRegister.value;
+    const confirmPasswordStored = confirmPassword.value;
+
+    const user = {
+        nameStored,
+        emailStored,
+        passwordStored,
+        confirmPasswordStored
+    };
+
+    const modalRegisterSuccess = document.querySelector('.modal-register-success');
+    const closeModalRegisterSuccess = document.querySelector('.close-modal-register-success')
+
+    closeModalRegisterSuccess.addEventListener('click', closeMessageModalRegister);
+    function closeMessageModalRegister() {
+        modalRegisterSuccess.style.display = 'none';
+        location.href = "index.html";
+    }
+
+    if(emailStored !== '' && nameStored !== '' && passwordStored !== '' && confirmPasswordStored !== '' && checkboxTerms.checked === true){
+        const savedUsers = JSON.parse(localStorage.getItem('users'));
+
+        modalRegisterSuccess.style.display = 'flex';
+        modalRegisterSuccess.style.alignItems = 'center';
+        modalRegisterSuccess.style.justifyContent = 'center';
+
+        if(savedUsers){
+            
+            const foundUser = savedUsers.find((user) => user.emailStored === emailStored)
+            if(foundUser){
+                modalRegisterSuccess.style.display = 'none';
+                alert('This user already exist!'); 
+                return;
+            } 
+
+            savedUsers.push(user);
+            localStorage.setItem('users', JSON.stringify(savedUsers))
+        }else {
+            localStorage.setItem('users', JSON.stringify([user]))
+        }
+    }
+
+    registerErrors()
+
+}
+
+function registerErrors(){
     if(nameRegister.value == ''){
         nameError.style.display = 'block';
     } 
@@ -240,15 +194,4 @@ function registerForm(){
         errorTerms.style.display = 'none';
     }
 
-      
-    if(checkboxTerms.checked === false || nameRegister.value == '' || emailRegister.value == '' || passwordRegister.value == '' || confirmPassword.value == ''){
-       // 
-       
-    } else {
-        location.href = 'index.html';
-    }
-    
 }
-
-
-
