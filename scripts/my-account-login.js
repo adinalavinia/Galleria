@@ -73,40 +73,38 @@ passwordLogin.addEventListener('keyup', (event) => {
     }
 })
 
-// errors login required
 
 loginButton.addEventListener('click', loginForm)
 
 function loginForm(event){
-    
-    
     event.preventDefault();
+    
     const emailStored = emailLogin.value;
     const passwordStored = passwordLogin.value;
 
     if(emailStored !== '' && passwordStored !== ''){
         const users = JSON.parse(localStorage.getItem('users'));
+        // console.log(users)
 
-    
+        const foundUser = users.find((user) => user.emailStored === emailLogin && user.passwordStored === passwordLogin);
+        console.log(foundUser)
+        
         if(!users || users.length === 0){
             alert('This email does not exist!')
-            
+            // return;
         }
-
-        const foundUser = users.find((user) => user.emailLogin === emailStored && user.passwordLogin === passwordStored);
 
         if(foundUser){
             localStorage.setItem('logged-user', JSON.stringify(foundUser))
-            location.href = 'index.html';
+            // location.href = 'index.html';
+            alert("you're logged");
         } else {
-            
             alert('This user does not exist!')
         }
-
+        
     }
 
     loginErrors();
-    
 }
 
 
@@ -118,14 +116,6 @@ function loginErrors(){
     if(passwordLogin.value == ''){
         passwordLoginError.style.display = 'block';
     }
-
-    // if(emailLogin.value == '' || passwordLogin.value == ''){
-    //     // 
-       
-    // } 
-    // else {
-    //     location.href = 'index.html';
-    // }
 }
 
 
