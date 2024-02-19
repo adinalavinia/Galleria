@@ -77,189 +77,79 @@ let productsArray = [
 ];
 
 const addToCartBtn = document.querySelectorAll('.shopping-cart');
-const cartItemsList = document.querySelectorAll('.cart-items');
-const cartItem = document.querySelector('.cart-items-list-line');
 
 for(let i = 0; i < addToCartBtn.length; i++){
     addToCartBtn[i].addEventListener('click', addToShoppingList);
-    addToCartBtn[i].addEventListener('click', showItemsCart);
- 
-};
+}
 
-
-function addToShoppingList(e){
+function addToShoppingList(e) {
     const btnShop = e.currentTarget;
-    if(!btnShop){
-        return;
-    };
+    if (!btnShop) return;
 
     const productIdShop = +btnShop.dataset.productId;
 
     const foundProduct = productsArray.find((product) => {
         return product.id === productIdShop;
-    });
+    })
 
-    if(!foundProduct){
-        return;
-    };
+    if (!foundProduct) return;
 
     const shoppingCartProducts = JSON.parse(localStorage.getItem('products'));
 
     let foundCartItem;
-    if(shoppingCartProducts){
+    if (shoppingCartProducts) {
          foundCartItem = shoppingCartProducts.find((product) => {
             return product.id === productIdShop;
         })
     }
 
-    if(foundCartItem){
+    if (foundCartItem) {
         alert("This is a unique product! You can add only one product of this type to the shopping cart!")
         return;
-    };
+    }
 
-    if(shoppingCartProducts){
+    if (shoppingCartProducts) {
         shoppingCartProducts.push(foundProduct);
         localStorage.setItem('products', JSON.stringify(shoppingCartProducts));
     } else {
         localStorage.setItem('products', JSON.stringify([foundProduct]));
-    };
-
-
+    }
 }
-function showItemsCart(){
+
+function showItemsCart() {
     const products = JSON.parse(localStorage.getItem('products'));
+    let cartWrapper = document.querySelector('.cart-wrapper');
 
-    console.log(products)
-
-    
     for(let i = 0; i < products.length; i++){
-  
         let shopItemName = document.createElement('li');
         shopItemName.classList.add('cart-item-name');
         shopItemName.textContent = products[i].name;
-        
-        // shopItemName.style.display = 'flex';
-        console.log(shopItemName)
 
-        
         const shopItemPrice = document.createElement('li');
         shopItemPrice.classList.add('cart-item-price');
         shopItemPrice.textContent = products[i].price;
-        console.log(shopItemPrice)
-        
-
 
         const newListShop = document.createElement('ul')
-        newListShop.classList.add('cart-item');
+        newListShop.classList.add('cart-items-list-line');
 
-        
-        
+        const deleteBtnShoppingCart = document.createElement('li');
+        deleteBtnShoppingCart.innerHTML = `<span class="material-symbols-outlined">delete</span>`;
+        deleteBtnShoppingCart.style.backgroundColor = 'transparent';
+        deleteBtnShoppingCart.style.border = 'none';
+        deleteBtnShoppingCart.style.cursor = 'pointer';
+
+        cartWrapper.appendChild(newListShop);
+        newListShop.appendChild(shopItemName);
+        newListShop.appendChild(shopItemPrice);
+        newListShop.appendChild(deleteBtnShoppingCart);
+
+        deleteBtnShoppingCart.addEventListener('click', (e) => {
+            newListShop.remove();
+        })
     }   
-    
 }
 
-
-
-// de preluat prod din localStorage 
-// pt fiecare prod trebuie pus in shopping cart 
-
-
-
-
-
-
-
-
-
-
-
-// function removeItemFromCart(){
-//     let temp = foundProduct.filter(item => item.id != productId)
-//     localStorage.setItem('cart', JSON.stringify(temp))
-// }
-
-// removeItemFromCart(2)
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // let btnShop = e.target;
-
-    // let domainDetail = 'http://127.0.0.1:5500/';
-    // let urlDetail = window.location.href;
-    // urlDetail = urlDetail.replace(domainDetail, '');
-
-    // for(let i = 0; i < productsArray.length; i++){
-    //     let nameShop = productsArray[i].name;
-    //     let priceShop = productsArray[i].price;
-    //     let link = productsArray[i].links;
-
-    //     if(urlDetail == link){
-    //         const ulShop = document.createElement('ul');
-    //         ulShop.classList.add('cart-items-list-line');
-
-    //         const shopItemName = document.createElement('li');
-    //         shopItemName.classList.add('cart-item-name');
-    //         shopItemName.innerHTML = nameShop;
-    //         console.log(shopItemName);
-
-    //         const shopItemPrice = document.createElement('li');
-    //         shopItemPrice.classList.add('cart-item-price');
-    //         shopItemPrice.innerHTML = priceShop;
-    //         console.log(shopItemPrice);
-
-
-    //         const shopDeleteBtn = document.createElement('button');
-    //         shopDeleteBtn.innerHTML = '<span class="material-symbols-outlined">delete</span>';
-    //         shopDeleteBtn.style.backgroundColor = 'transparent';
-    //         shopDeleteBtn.style.border = 'none';
-    //         shopDeleteBtn.style.cursor = 'pointer';
-    //         console.log(shopDeleteBtn);
-
-    //         shopDeleteBtn.addEventListener('click', removeItem);
-    
-    //         function removeItem(e){
-    //             const item = e.target.value;
-    //             ulShop.remove(item);
-    //         }
-
-        
-    //         ulShop.appendChild(shopItemName);
-    //         ulShop.appendChild(shopItemPrice);
-    //         ulShop.appendChild(shopDeleteBtn);
-    //     }
-        
-    // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-//     deleteBtn.addEventListener('click', removeItem);
-    
-//     function removeItem(e){
-//         const item = e.target.value;
-//         li.remove(item);
-//     }
-      
-// }
+let currentLocation = window.location.href;
+if(location.href.includes('shopping-cart')){
+    showItemsCart()
+}

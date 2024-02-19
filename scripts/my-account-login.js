@@ -78,35 +78,29 @@ loginButton.addEventListener('click', loginForm)
 
 function loginForm(event){
     event.preventDefault();
+
+    let emailLoginValue = emailLogin.value;
+    let passwordLoginValue = passwordLogin.value;
     
-    const emailStored = emailLogin.value;
-    const passwordStored = passwordLogin.value;
-
-    if(emailStored !== '' && passwordStored !== ''){
+    if(emailLogin !== '' && passwordLogin !== ''){
         const users = JSON.parse(localStorage.getItem('users'));
-        // console.log(users)
 
-        const foundUser = users.find((user) => user.emailStored === emailLogin && user.passwordStored === passwordLogin);
-        console.log(foundUser)
-        
         if(!users || users.length === 0){
             alert('This email does not exist!')
-            // return;
+            return;
         }
-
+        
+        const foundUser = users.find((user) => user.emailStored == emailLoginValue && user.passwordStored == passwordLoginValue);
         if(foundUser){
             localStorage.setItem('logged-user', JSON.stringify(foundUser))
-            // location.href = 'index.html';
-            alert("you're logged");
+            alert("Welcome! You are successfully logged in");
+            location.href = 'index.html';
         } else {
             alert('This user does not exist!')
         }
-        
     }
-
     loginErrors();
 }
-
 
 function loginErrors(){
     if(emailLogin.value == ''){
@@ -117,8 +111,3 @@ function loginErrors(){
         passwordLoginError.style.display = 'block';
     }
 }
-
-
-
-
-
