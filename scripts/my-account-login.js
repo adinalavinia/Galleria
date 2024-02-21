@@ -73,42 +73,34 @@ passwordLogin.addEventListener('keyup', (event) => {
     }
 })
 
-// errors login required
 
 loginButton.addEventListener('click', loginForm)
 
 function loginForm(event){
-    
-    
     event.preventDefault();
-    const emailStored = emailLogin.value;
-    const passwordStored = passwordLogin.value;
 
-    if(emailStored !== '' && passwordStored !== ''){
+    let emailLoginValue = emailLogin.value;
+    let passwordLoginValue = passwordLogin.value;
+    
+    if(emailLogin !== '' && passwordLogin !== ''){
         const users = JSON.parse(localStorage.getItem('users'));
 
-    
         if(!users || users.length === 0){
             alert('This email does not exist!')
-            
+            return;
         }
-
-        const foundUser = users.find((user) => user.emailLogin === emailStored && user.passwordLogin === passwordStored);
-
+        
+        const foundUser = users.find((user) => user.emailStored == emailLoginValue && user.passwordStored == passwordLoginValue);
         if(foundUser){
             localStorage.setItem('logged-user', JSON.stringify(foundUser))
+            alert("Welcome! You are successfully logged in");
             location.href = 'index.html';
         } else {
-            
             alert('This user does not exist!')
         }
-
     }
-
     loginErrors();
-    
 }
-
 
 function loginErrors(){
     if(emailLogin.value == ''){
@@ -118,17 +110,4 @@ function loginErrors(){
     if(passwordLogin.value == ''){
         passwordLoginError.style.display = 'block';
     }
-
-    // if(emailLogin.value == '' || passwordLogin.value == ''){
-    //     // 
-       
-    // } 
-    // else {
-    //     location.href = 'index.html';
-    // }
 }
-
-
-
-
-

@@ -138,10 +138,10 @@ header .container .search:focus-within {
     padding: 23px;
     display: flex;
     align-items: center;
-    max-width: 750px;
+    max-width: 90%;
   }
   header .container {
-    max-width: 750px;
+    max-width: 90%;
     position: relative;
     box-sizing: border-box;
     align-items: center;

@@ -168,10 +168,10 @@ header {
         padding: 23px;
         display: flex;
         align-items: center;
-        max-width: 750px;
+        max-width: 90%;
     
         .container {
-            max-width: 750px;
+            max-width: 90%;
             // display: flex;
             position: relative;
             box-sizing: border-box;
@@ -220,7 +220,7 @@ header {
     }
 
     .rectangle {
-        // max-width: 770px;
+        // max-width: 80vh;
         margin-left: 0;
         margin-right: 0;
     }

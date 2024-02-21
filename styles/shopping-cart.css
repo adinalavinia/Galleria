@@ -16,20 +16,20 @@
   text-align: left;
   padding-left: 15px;
 }
-.shoppig-cart-page .cart-table .cart-items {
+.shoppig-cart-page .cart-table .cart-wrapper {
   padding: 15px;
   text-align: center;
 }
-.shoppig-cart-page .cart-table .cart-items .cart-items-list-line {
+.shoppig-cart-page .cart-table .cart-wrapper .cart-items-list-line {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 15px;
   text-align: center;
 }
-.shoppig-cart-page .cart-table .cart-items .cart-items-list-line li {
+.shoppig-cart-page .cart-table .cart-wrapper .cart-items-list-line li {
   display: inline-block;
 }
-.shoppig-cart-page .cart-table .cart-items .cart-items-list-line .cart-item-name {
+.shoppig-cart-page .cart-table .cart-wrapper .cart-items-list-line .cart-item-name {
   margin-left: 0;
   text-align: left;
 }
