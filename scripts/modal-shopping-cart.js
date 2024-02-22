@@ -11,4 +11,6 @@ function sendOrder(){
 closeMessageSendOrder.addEventListener('click', closeModalOrder);
 function closeModalOrder(){
     modalSendOrder.style.display = 'none';
+    localStorage.clear()
+    location.href = 'index.html';
 }

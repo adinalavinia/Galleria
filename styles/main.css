@@ -82,6 +82,9 @@ main .container-fluid .starry-night {
     max-width: 100%;
     -moz-columns: 2;
          columns: 2;
+    padding: 0;
+    margin-left: 30px;
+    margin-right: 30px;
   }
   main .container-fluid .card {
     width: 324px;
@@ -93,5 +96,17 @@ main .container-fluid .starry-night {
   }
   main .container-fluid .starry-night {
     margin-top: 0;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main .container-fluid {
+    max-width: 100%;
+    -moz-columns: 2;
+         columns: 2;
   }
 }/*# sourceMappingURL=main.css.map */

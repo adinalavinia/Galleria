@@ -81,6 +81,7 @@ function loginForm(event){
 
     let emailLoginValue = emailLogin.value;
     let passwordLoginValue = passwordLogin.value;
+    loginErrors();
     
     if(emailLogin !== '' && passwordLogin !== ''){
         const users = JSON.parse(localStorage.getItem('users'));
@@ -99,7 +100,6 @@ function loginForm(event){
             alert('This user does not exist!')
         }
     }
-    loginErrors();
 }
 
 function loginErrors(){

@@ -4,7 +4,7 @@ header {
 }
 header .container {
   display: grid;
-  grid-template-columns: 200px auto 700px;
+  grid-template-columns: 200px auto 500px;
   align-items: center;
   justify-items: center;
   position: relative;
@@ -77,6 +77,7 @@ header .container .search:focus-within {
 }
 
 .rectangle {
+  display: flex;
   height: 1px;
   background-color: #E5E5E5;
   margin-left: 40px;
@@ -138,13 +139,11 @@ header .container .search:focus-within {
     padding: 23px;
     display: flex;
     align-items: center;
-    max-width: 90%;
   }
   header .container {
-    max-width: 90%;
-    position: relative;
-    box-sizing: border-box;
-    align-items: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 400px auto 200px;
   }
   header .container .site-logo {
     display: flex;
@@ -175,11 +174,12 @@ header .container .search:focus-within {
   }
   header .container .dropdown .toggle-btn {
     position: absolute;
-    right: 30px;
+    right: 0;
   }
   .rectangle {
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 40px;
   }
 }
 @media screen and (min-width: 769px) {

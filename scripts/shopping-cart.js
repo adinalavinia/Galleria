@@ -2,77 +2,77 @@ let productsArray = [
     {
         id: 0,
         name: 'Starry Night',
-        price: '$100.000.000',
+        price: 100000000,
     },
     {
         id: 1,
         name: 'Girl with a Pearl Earring',
-        price: '$300.000.000',
+        price: 300000000,
     },
     {
         id: 2,
         name: 'Guernica', 
-        price: '$200.000.000',
+        price: 200000000,
     },
     {
         id: 3,
         name: 'Penitent Magdalene',
-        price: '$5.000.000',
+        price: 5000000,
     },
     {
         id: 4,
         name: 'The Storm on the Sea of Galilee', 
-        price: '$500.000.000',
+        price: 500000000,
     },
     {
         id: 5,
         name: 'The Great Wave off Kanagawa', 
-        price: '$2.800.000',
+        price: 2800000,
     },
     {
         id: 6,
         name: 'Van Gogh self-portrait', 
-        price: '$72.000.000',
+        price: 72000000,
     },
     {
         id: 7,
         name: 'The Sleeping Gypsy', 
-        price: '$5.000.000',
+        price: 5000000,
     },
     {
         id: 8,
         name: 'Lady with an Ermine', 
-        price: '$3.000.000.000',
+        price: 3000000000,
     },
     {
         id: 9,
         name: 'The Night Café', 
-        price: '$200.000.000',
+        price: 200000000,
     },
     {
         id: 10,
         name: 'The Basket of Apples', 
-        price: '$7.000.000',
+        price: 7000000,
     },
     {
         id: 11,
         name: 'The Boy in the Red Vest', 
-        price: '$109.000.000',
+        price: 109000000,
     },
     {
         id: 12,
         name: 'Arnolfini Portrait', 
-        price: '$400.000.000',
+        price: 400000000,
     },
     {
         id: 13,
         name: 'Mona Lisa', 
-        price: '$860.000.000',
+        price: 860000000,
     },
     {
         id: 14,
         name: 'The Swing', 
-        price: '$24.000.000',
+        price: 24000000,
     }
 ];
 
@@ -116,6 +116,8 @@ function addToShoppingList(e) {
     }
 }
 
+const totalCart = document.querySelector('.price-total');
+
 function showItemsCart() {
     const products = JSON.parse(localStorage.getItem('products'));
     let cartWrapper = document.querySelector('.cart-wrapper');
@@ -127,7 +129,7 @@ function showItemsCart() {
 
         const shopItemPrice = document.createElement('li');
         shopItemPrice.classList.add('cart-item-price');
-        shopItemPrice.textContent = products[i].price;
+        shopItemPrice.textContent = "$" + products[i].price;
 
         const newListShop = document.createElement('ul')
         newListShop.classList.add('cart-items-list-line');
@@ -143,13 +145,30 @@ function showItemsCart() {
         newListShop.appendChild(shopItemPrice);
         newListShop.appendChild(deleteBtnShoppingCart);
 
-        deleteBtnShoppingCart.addEventListener('click', (e) => {
+
+        let cartCost = 0;
+        for (let j = 0; j < products.length; j++ ){
+            let priceCart = products[j].price;
+            cartCost += priceCart;
+            localStorage.setItem('cartCost', cartCost);
+            totalCart.innerHTML = '$' + cartCost;
+        }
+
+
+        deleteBtnShoppingCart.addEventListener('click', deleteItem)
+        function deleteItem() { 
             newListShop.remove();
-        })
-    }   
+            let index = products.indexOf()
+            products.splice(index, 1)
+            localStorage.setItem('products', JSON.stringify(products));
+            location.reload(); 
+        }
+    }
 }
+
 
 let currentLocation = window.location.href;
 if(location.href.includes('shopping-cart')){
     showItemsCart()
 }
+

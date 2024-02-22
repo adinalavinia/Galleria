@@ -4,7 +4,7 @@ header {
 
    .container {
     display: grid;
-    grid-template-columns: 200px auto 700px;
+    grid-template-columns: 200px auto 500px;
     align-items: center;
     justify-items: center;
     // overflow: hidden;
@@ -89,7 +89,7 @@ header {
 }
 
 .rectangle {
-    // display: flex;
+    display: flex;
     // width: auto;
     height: 1px;
     background-color: #E5E5E5;
@@ -168,14 +168,11 @@ header {
         padding: 23px;
         display: flex;
         align-items: center;
-        max-width: 90%;
-    
+            
         .container {
-            max-width: 90%;
-            // display: flex;
-            position: relative;
-            box-sizing: border-box;
-            align-items: center;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 400px auto 200px;
 
             .site-logo {
                 display: flex;
@@ -206,23 +203,21 @@ header {
             .dropdown {
                 background-color: #fff;
                 background: transparent;
-                // display: flex;
-                // position: absolute;
                 right: 20px;
                 top: 10px;
     
                 .toggle-btn {
                     position: absolute;
-                    right: 30px;
+                    right: 0;
                 }
             }
         }
     }
 
     .rectangle {
-        // max-width: 80vh;
         margin-left: 0;
         margin-right: 0;
+        margin-bottom: 40px;
     }
 }
 
