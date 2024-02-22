@@ -14,4 +14,5 @@ function sendMessage(){
 closeModalContactUs.addEventListener('click', closeMessageModal);
 function closeMessageModal() {
     modalContactUs.style.display = 'none';
+    location.href = 'index.html';
 }

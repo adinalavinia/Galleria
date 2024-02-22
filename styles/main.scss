@@ -97,10 +97,13 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
-
+        
         .container-fluid {
             max-width: 100%;
             columns: 2;
+            padding: 0;
+            margin-left: 30px;
+            margin-right: 30px;
 
             .card {
                 width: 324px;
@@ -121,7 +124,21 @@ main {
 }
 
 
+// desktop
+@media screen and (min-width: 769px) and (max-width: 1100px) {
 
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .container-fluid {
+            max-width: 100%;
+            columns: 2;
+        }
+    }
+
+}
 
 
 
