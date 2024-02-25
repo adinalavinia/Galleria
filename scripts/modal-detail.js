@@ -24,6 +24,7 @@ window.onclick = function(event) {
 
 const shoppingCartBtn = document.querySelector('.shopping-cart');
 const popup = document.querySelector('.popup-text');
+
 shoppingCartBtn.addEventListener('click', showPopup)
 
 function showPopup(){

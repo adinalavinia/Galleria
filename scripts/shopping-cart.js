@@ -77,6 +77,7 @@ let productsArray = [
 ];
 
 const addToCartBtn = document.querySelectorAll('.shopping-cart');
+const popupDetail = document.querySelector('.popup-text');
 
 for(let i = 0; i < addToCartBtn.length; i++){
     addToCartBtn[i].addEventListener('click', addToShoppingList);
@@ -105,6 +106,7 @@ function addToShoppingList(e) {
 
     if (foundCartItem) {
         alert("This is a unique product! You can add only one product of this type to the shopping cart!")
+        popupDetail.style.display = "none";
         return;
     }
 
