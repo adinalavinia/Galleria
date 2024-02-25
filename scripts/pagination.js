@@ -1,4 +1,3 @@
-let domain = 'http://127.0.0.1:5500/';
 let pages = [
     'starry-night.html',
     'girl-with-a-pearl-earring.html',
@@ -16,6 +15,8 @@ let pages = [
     'mona-lisa.html',
     'the-swing.html'
 ];
+
+let domain = 'http://127.0.0.1:5500/';
 
 let nextPageBtn = document.querySelector('.next-page');
 nextPageBtn.addEventListener('click', nextPage);
