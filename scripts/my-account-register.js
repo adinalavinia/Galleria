@@ -141,7 +141,8 @@ function registerForm(event){
     closeModalRegisterSuccess.addEventListener('click', closeMessageModalRegister);
     function closeMessageModalRegister() {
         modalRegisterSuccess.style.display = 'none';
-        location.href = "index.html";
+        // location.href = "index.html";
+        location.reload();
     }
 
     if(emailStored !== '' && nameStored !== '' && passwordStored !== '' && confirmPasswordStored !== '' && checkboxTerms.checked === true){

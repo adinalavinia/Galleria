@@ -30,7 +30,6 @@ function nextPage(e){
     } else {
         nextPageBtn.style.opacity = '0.4';
     }
-
 }
 
 let prevPageBtn = document.querySelector('.prev-page');

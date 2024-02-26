@@ -52,7 +52,7 @@
     </div>   
 
 <div class="container-account">
-    <div class="login-register-forms">
+    <div class="login-register-forms" style="display: grid;">
         <div class="login">
             <h2>Login</h2>
             <form action="" id="login-form">
@@ -86,6 +86,19 @@
             <div class="login-button-box">
                 <button type="submit" class="login-button">Login</button>
             </div>
+
+            <div class="modal-login-error" style="display: none;">
+                <div class="modal-login-error-content">
+                    This user does not exist!
+                    <button type="submit" class="close-login-error">OK</button>
+                </div>
+            </div>
+
+            <div class="modal-success-login" style="display: none;">
+                <button class="close-modal-success-login">CLOSE</button>
+                <div class="modal-success-login-content"> Welcome! <br> You have successfully logged in!</div>
+            </div>
+
         </div>
 
         <div class="register">
@@ -119,20 +132,33 @@
                 <button type="submit" class="register-button">Register</button>
             </div>
 
+            <div class="modal-register-error" style="display: none;">
+                <div class="modal-register-error-content">
+                    This user already exist!
+                    <button type="submit" class="close-register-error">OK</button>
+                </div>
+            </div>
+
             <div class="modal-register-success" style="display: none;">
                 <button class="close-modal-register-success">CLOSE</button>
                 <div class="modal-register-success-content">Your account has been created!</div>
             </div>
-
         </div>
-
-
     </div>
+    <div class="logout-message">   
+        <div class="logout-button-box" style="display: none;">
+            <p>You are already logged in. <br> Do you want to logout? <br> </p>
+            <button type="submit" class="logout-button">Logout</button>
+        </div>
+    </div>
+
+
+
 </div>
 
     <script src="./scripts/my-account-login.js"></script>
     <script src="./scripts/my-account-register.js"></script>
-    <script src="./scripts/modal-my-account.js"></script>
+    <script src="./scripts/my-account-forgot-password.js"></script>
     <script src="./scripts/search-input.js"></script>
     <script src="./scripts/toggle-menu.js"></script>
 

@@ -266,13 +266,11 @@ html {
         width: 100%;
         height: 8px;
         margin-top: 70px;
-    }
-    
-    .loading-bar {
         accent-color: grey;
     }
 
     .footer-section {
+        margin-top: 20px;
         height: 96px;
         display: grid;
         grid-template-columns: 400px auto 200px;

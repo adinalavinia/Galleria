@@ -73,6 +73,11 @@ passwordLogin.addEventListener('keyup', (event) => {
     }
 })
 
+const logoutButton = document.querySelector('.logout-button-box');
+const allForms = document.querySelector('.login-register-forms');
+const modalLoginError = document.querySelector('.modal-login-error');
+const successLogin = document.querySelector('.modal-success-login');
+const successLoginCloseBtn = document.querySelector('.close-modal-success-login');
 
 loginButton.addEventListener('click', loginForm)
 
@@ -87,20 +92,32 @@ function loginForm(event){
         const users = JSON.parse(localStorage.getItem('users'));
 
         if(!users || users.length === 0){
-            alert('This email does not exist!')
-            return;
+            modalLoginError.style.display = 'flex';
+            modalLoginError.style.alignItems = 'center';
+            modalLoginError.style.justifyContent = 'center';
         }
         
         const foundUser = users.find((user) => user.emailStored == emailLoginValue && user.passwordStored == passwordLoginValue);
         if(foundUser){
-            localStorage.setItem('logged-user', JSON.stringify(foundUser))
-            alert("Welcome! You are successfully logged in");
-            location.href = 'index.html';
+            localStorage.setItem('logged-user', JSON.stringify(foundUser));
+            successLogin.style.display = "flex";
+            successLogin.style.alignItems = 'center';
+            successLogin.style.justifyContent = 'center';
         } else {
-            alert('This user does not exist!')
-        }
+            // modalLoginError.style.display = "flex"
+            // modalLoginError.style.alignItems = 'center';
+            // modalLoginError.style.justifyContent = 'center';
+
+            alert("This user does not exist!")
+        }       
     }
 }
+
+if(localStorage.getItem('users') !== null && localStorage.getItem('logged-user') !== null){
+    allForms.style.display = 'none';
+    logoutButton.style.display = 'flex';
+}
+
 
 function loginErrors(){
     if(emailLogin.value == ''){
@@ -110,4 +127,23 @@ function loginErrors(){
     if(passwordLogin.value == ''){
         passwordLoginError.style.display = 'block';
     }
+}
+
+
+logoutButton.addEventListener('click', logoutUser);
+function logoutUser(){
+    localStorage.removeItem('logged-user');
+    location.href = 'index.html';
+}
+
+
+modalLoginError.addEventListener('click', closeModalLoginError);
+function closeModalLoginError(){
+    modalLoginError.style.display = "none";
+}
+
+successLoginCloseBtn.addEventListener('click', closeModalSuccessLogin);
+function closeModalSuccessLogin(){
+    successLogin.style.display = "none";
+    location.href = 'index.html';
 }

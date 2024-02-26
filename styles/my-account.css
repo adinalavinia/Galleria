@@ -65,8 +65,12 @@
 }
 .login-register-forms .login .modal-forgot-password,
 .login-register-forms .login .modal-send-email,
+.login-register-forms .login .modal-login-error,
+.login-register-forms .login .modal-success-login,
 .login-register-forms .register .modal-forgot-password,
-.login-register-forms .register .modal-send-email {
+.login-register-forms .register .modal-send-email,
+.login-register-forms .register .modal-login-error,
+.login-register-forms .register .modal-success-login {
   position: fixed;
   z-index: 9999;
   top: 0;
@@ -81,9 +85,21 @@
   flex-direction: column;
 }
 .login-register-forms .login .modal-forgot-password .close-forgot-password,
+.login-register-forms .login .modal-forgot-password .close-modal-success-login,
 .login-register-forms .login .modal-send-email .close-forgot-password,
+.login-register-forms .login .modal-send-email .close-modal-success-login,
+.login-register-forms .login .modal-login-error .close-forgot-password,
+.login-register-forms .login .modal-login-error .close-modal-success-login,
+.login-register-forms .login .modal-success-login .close-forgot-password,
+.login-register-forms .login .modal-success-login .close-modal-success-login,
 .login-register-forms .register .modal-forgot-password .close-forgot-password,
-.login-register-forms .register .modal-send-email .close-forgot-password {
+.login-register-forms .register .modal-forgot-password .close-modal-success-login,
+.login-register-forms .register .modal-send-email .close-forgot-password,
+.login-register-forms .register .modal-send-email .close-modal-success-login,
+.login-register-forms .register .modal-login-error .close-forgot-password,
+.login-register-forms .register .modal-login-error .close-modal-success-login,
+.login-register-forms .register .modal-success-login .close-forgot-password,
+.login-register-forms .register .modal-success-login .close-modal-success-login {
   width: 90px;
   margin-bottom: 20px;
   margin-left: 270px;
@@ -96,20 +112,56 @@
   border: none;
 }
 .login-register-forms .login .modal-forgot-password .close-forgot-password:hover,
+.login-register-forms .login .modal-forgot-password .close-modal-success-login:hover,
 .login-register-forms .login .modal-send-email .close-forgot-password:hover,
+.login-register-forms .login .modal-send-email .close-modal-success-login:hover,
+.login-register-forms .login .modal-login-error .close-forgot-password:hover,
+.login-register-forms .login .modal-login-error .close-modal-success-login:hover,
+.login-register-forms .login .modal-success-login .close-forgot-password:hover,
+.login-register-forms .login .modal-success-login .close-modal-success-login:hover,
 .login-register-forms .register .modal-forgot-password .close-forgot-password:hover,
-.login-register-forms .register .modal-send-email .close-forgot-password:hover {
+.login-register-forms .register .modal-forgot-password .close-modal-success-login:hover,
+.login-register-forms .register .modal-send-email .close-forgot-password:hover,
+.login-register-forms .register .modal-send-email .close-modal-success-login:hover,
+.login-register-forms .register .modal-login-error .close-forgot-password:hover,
+.login-register-forms .register .modal-login-error .close-modal-success-login:hover,
+.login-register-forms .register .modal-success-login .close-forgot-password:hover,
+.login-register-forms .register .modal-success-login .close-modal-success-login:hover {
   opacity: 0.5;
   text-decoration: none;
 }
 .login-register-forms .login .modal-forgot-password .modal-forgot-password-content,
 .login-register-forms .login .modal-forgot-password .modal-send-email-content,
+.login-register-forms .login .modal-forgot-password .modal-login-error-content,
+.login-register-forms .login .modal-forgot-password .modal-success-login-content,
 .login-register-forms .login .modal-send-email .modal-forgot-password-content,
 .login-register-forms .login .modal-send-email .modal-send-email-content,
+.login-register-forms .login .modal-send-email .modal-login-error-content,
+.login-register-forms .login .modal-send-email .modal-success-login-content,
+.login-register-forms .login .modal-login-error .modal-forgot-password-content,
+.login-register-forms .login .modal-login-error .modal-send-email-content,
+.login-register-forms .login .modal-login-error .modal-login-error-content,
+.login-register-forms .login .modal-login-error .modal-success-login-content,
+.login-register-forms .login .modal-success-login .modal-forgot-password-content,
+.login-register-forms .login .modal-success-login .modal-send-email-content,
+.login-register-forms .login .modal-success-login .modal-login-error-content,
+.login-register-forms .login .modal-success-login .modal-success-login-content,
 .login-register-forms .register .modal-forgot-password .modal-forgot-password-content,
 .login-register-forms .register .modal-forgot-password .modal-send-email-content,
+.login-register-forms .register .modal-forgot-password .modal-login-error-content,
+.login-register-forms .register .modal-forgot-password .modal-success-login-content,
 .login-register-forms .register .modal-send-email .modal-forgot-password-content,
-.login-register-forms .register .modal-send-email .modal-send-email-content {
+.login-register-forms .register .modal-send-email .modal-send-email-content,
+.login-register-forms .register .modal-send-email .modal-login-error-content,
+.login-register-forms .register .modal-send-email .modal-success-login-content,
+.login-register-forms .register .modal-login-error .modal-forgot-password-content,
+.login-register-forms .register .modal-login-error .modal-send-email-content,
+.login-register-forms .register .modal-login-error .modal-login-error-content,
+.login-register-forms .register .modal-login-error .modal-success-login-content,
+.login-register-forms .register .modal-success-login .modal-forgot-password-content,
+.login-register-forms .register .modal-success-login .modal-send-email-content,
+.login-register-forms .register .modal-success-login .modal-login-error-content,
+.login-register-forms .register .modal-success-login .modal-success-login-content {
   width: 350px;
   height: 200px;
   background-color: white;
@@ -125,24 +177,104 @@
 }
 .login-register-forms .login .modal-forgot-password .modal-forgot-password-content .input-forgot-password,
 .login-register-forms .login .modal-forgot-password .modal-send-email-content .input-forgot-password,
+.login-register-forms .login .modal-forgot-password .modal-login-error-content .input-forgot-password,
+.login-register-forms .login .modal-forgot-password .modal-success-login-content .input-forgot-password,
 .login-register-forms .login .modal-send-email .modal-forgot-password-content .input-forgot-password,
 .login-register-forms .login .modal-send-email .modal-send-email-content .input-forgot-password,
+.login-register-forms .login .modal-send-email .modal-login-error-content .input-forgot-password,
+.login-register-forms .login .modal-send-email .modal-success-login-content .input-forgot-password,
+.login-register-forms .login .modal-login-error .modal-forgot-password-content .input-forgot-password,
+.login-register-forms .login .modal-login-error .modal-send-email-content .input-forgot-password,
+.login-register-forms .login .modal-login-error .modal-login-error-content .input-forgot-password,
+.login-register-forms .login .modal-login-error .modal-success-login-content .input-forgot-password,
+.login-register-forms .login .modal-success-login .modal-forgot-password-content .input-forgot-password,
+.login-register-forms .login .modal-success-login .modal-send-email-content .input-forgot-password,
+.login-register-forms .login .modal-success-login .modal-login-error-content .input-forgot-password,
+.login-register-forms .login .modal-success-login .modal-success-login-content .input-forgot-password,
 .login-register-forms .register .modal-forgot-password .modal-forgot-password-content .input-forgot-password,
 .login-register-forms .register .modal-forgot-password .modal-send-email-content .input-forgot-password,
+.login-register-forms .register .modal-forgot-password .modal-login-error-content .input-forgot-password,
+.login-register-forms .register .modal-forgot-password .modal-success-login-content .input-forgot-password,
 .login-register-forms .register .modal-send-email .modal-forgot-password-content .input-forgot-password,
-.login-register-forms .register .modal-send-email .modal-send-email-content .input-forgot-password {
+.login-register-forms .register .modal-send-email .modal-send-email-content .input-forgot-password,
+.login-register-forms .register .modal-send-email .modal-login-error-content .input-forgot-password,
+.login-register-forms .register .modal-send-email .modal-success-login-content .input-forgot-password,
+.login-register-forms .register .modal-login-error .modal-forgot-password-content .input-forgot-password,
+.login-register-forms .register .modal-login-error .modal-send-email-content .input-forgot-password,
+.login-register-forms .register .modal-login-error .modal-login-error-content .input-forgot-password,
+.login-register-forms .register .modal-login-error .modal-success-login-content .input-forgot-password,
+.login-register-forms .register .modal-success-login .modal-forgot-password-content .input-forgot-password,
+.login-register-forms .register .modal-success-login .modal-send-email-content .input-forgot-password,
+.login-register-forms .register .modal-success-login .modal-login-error-content .input-forgot-password,
+.login-register-forms .register .modal-success-login .modal-success-login-content .input-forgot-password {
   width: 280px;
   height: 50px;
   margin: 15px;
 }
 .login-register-forms .login .modal-forgot-password .modal-forgot-password-content .close-reset-email,
+.login-register-forms .login .modal-forgot-password .modal-forgot-password-content .close-login-error,
 .login-register-forms .login .modal-forgot-password .modal-send-email-content .close-reset-email,
+.login-register-forms .login .modal-forgot-password .modal-send-email-content .close-login-error,
+.login-register-forms .login .modal-forgot-password .modal-login-error-content .close-reset-email,
+.login-register-forms .login .modal-forgot-password .modal-login-error-content .close-login-error,
+.login-register-forms .login .modal-forgot-password .modal-success-login-content .close-reset-email,
+.login-register-forms .login .modal-forgot-password .modal-success-login-content .close-login-error,
 .login-register-forms .login .modal-send-email .modal-forgot-password-content .close-reset-email,
+.login-register-forms .login .modal-send-email .modal-forgot-password-content .close-login-error,
 .login-register-forms .login .modal-send-email .modal-send-email-content .close-reset-email,
+.login-register-forms .login .modal-send-email .modal-send-email-content .close-login-error,
+.login-register-forms .login .modal-send-email .modal-login-error-content .close-reset-email,
+.login-register-forms .login .modal-send-email .modal-login-error-content .close-login-error,
+.login-register-forms .login .modal-send-email .modal-success-login-content .close-reset-email,
+.login-register-forms .login .modal-send-email .modal-success-login-content .close-login-error,
+.login-register-forms .login .modal-login-error .modal-forgot-password-content .close-reset-email,
+.login-register-forms .login .modal-login-error .modal-forgot-password-content .close-login-error,
+.login-register-forms .login .modal-login-error .modal-send-email-content .close-reset-email,
+.login-register-forms .login .modal-login-error .modal-send-email-content .close-login-error,
+.login-register-forms .login .modal-login-error .modal-login-error-content .close-reset-email,
+.login-register-forms .login .modal-login-error .modal-login-error-content .close-login-error,
+.login-register-forms .login .modal-login-error .modal-success-login-content .close-reset-email,
+.login-register-forms .login .modal-login-error .modal-success-login-content .close-login-error,
+.login-register-forms .login .modal-success-login .modal-forgot-password-content .close-reset-email,
+.login-register-forms .login .modal-success-login .modal-forgot-password-content .close-login-error,
+.login-register-forms .login .modal-success-login .modal-send-email-content .close-reset-email,
+.login-register-forms .login .modal-success-login .modal-send-email-content .close-login-error,
+.login-register-forms .login .modal-success-login .modal-login-error-content .close-reset-email,
+.login-register-forms .login .modal-success-login .modal-login-error-content .close-login-error,
+.login-register-forms .login .modal-success-login .modal-success-login-content .close-reset-email,
+.login-register-forms .login .modal-success-login .modal-success-login-content .close-login-error,
 .login-register-forms .register .modal-forgot-password .modal-forgot-password-content .close-reset-email,
+.login-register-forms .register .modal-forgot-password .modal-forgot-password-content .close-login-error,
 .login-register-forms .register .modal-forgot-password .modal-send-email-content .close-reset-email,
+.login-register-forms .register .modal-forgot-password .modal-send-email-content .close-login-error,
+.login-register-forms .register .modal-forgot-password .modal-login-error-content .close-reset-email,
+.login-register-forms .register .modal-forgot-password .modal-login-error-content .close-login-error,
+.login-register-forms .register .modal-forgot-password .modal-success-login-content .close-reset-email,
+.login-register-forms .register .modal-forgot-password .modal-success-login-content .close-login-error,
 .login-register-forms .register .modal-send-email .modal-forgot-password-content .close-reset-email,
-.login-register-forms .register .modal-send-email .modal-send-email-content .close-reset-email {
+.login-register-forms .register .modal-send-email .modal-forgot-password-content .close-login-error,
+.login-register-forms .register .modal-send-email .modal-send-email-content .close-reset-email,
+.login-register-forms .register .modal-send-email .modal-send-email-content .close-login-error,
+.login-register-forms .register .modal-send-email .modal-login-error-content .close-reset-email,
+.login-register-forms .register .modal-send-email .modal-login-error-content .close-login-error,
+.login-register-forms .register .modal-send-email .modal-success-login-content .close-reset-email,
+.login-register-forms .register .modal-send-email .modal-success-login-content .close-login-error,
+.login-register-forms .register .modal-login-error .modal-forgot-password-content .close-reset-email,
+.login-register-forms .register .modal-login-error .modal-forgot-password-content .close-login-error,
+.login-register-forms .register .modal-login-error .modal-send-email-content .close-reset-email,
+.login-register-forms .register .modal-login-error .modal-send-email-content .close-login-error,
+.login-register-forms .register .modal-login-error .modal-login-error-content .close-reset-email,
+.login-register-forms .register .modal-login-error .modal-login-error-content .close-login-error,
+.login-register-forms .register .modal-login-error .modal-success-login-content .close-reset-email,
+.login-register-forms .register .modal-login-error .modal-success-login-content .close-login-error,
+.login-register-forms .register .modal-success-login .modal-forgot-password-content .close-reset-email,
+.login-register-forms .register .modal-success-login .modal-forgot-password-content .close-login-error,
+.login-register-forms .register .modal-success-login .modal-send-email-content .close-reset-email,
+.login-register-forms .register .modal-success-login .modal-send-email-content .close-login-error,
+.login-register-forms .register .modal-success-login .modal-login-error-content .close-reset-email,
+.login-register-forms .register .modal-success-login .modal-login-error-content .close-login-error,
+.login-register-forms .register .modal-success-login .modal-success-login-content .close-reset-email,
+.login-register-forms .register .modal-success-login .modal-success-login-content .close-login-error {
   margin-top: 20px;
 }
 .login-register-forms .login .modal-register-success,
@@ -214,6 +346,49 @@
 .login-register-forms .login .valid,
 .login-register-forms .register .valid {
   color: green;
+}
+
+.logout-message,
+.success-login {
+  margin-top: 50px;
+}
+.logout-message .logout-button-box,
+.logout-message .success-login-box,
+.success-login .logout-button-box,
+.success-login .success-login-box {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.logout-message .logout-button-box p,
+.logout-message .success-login-box p,
+.success-login .logout-button-box p,
+.success-login .success-login-box p {
+  text-align: center;
+  margin-top: 20px;
+}
+.logout-message .logout-button-box .logout-button,
+.logout-message .success-login-box .logout-button,
+.success-login .logout-button-box .logout-button,
+.success-login .success-login-box .logout-button {
+  width: 130px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 50px 0;
+}
+.logout-message .logout-button-box .logout-button:hover,
+.logout-message .success-login-box .logout-button:hover,
+.success-login .logout-button-box .logout-button:hover,
+.success-login .success-login-box .logout-button:hover {
+  background-color: #f0f0f0;
 }
 
 @media screen and (max-width: 375px) {
