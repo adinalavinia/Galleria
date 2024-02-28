@@ -92,9 +92,7 @@ function loginForm(event){
         const users = JSON.parse(localStorage.getItem('users'));
 
         if(!users || users.length === 0){
-            modalLoginError.style.display = 'flex';
-            modalLoginError.style.alignItems = 'center';
-            modalLoginError.style.justifyContent = 'center';
+            loginErrors();
         }
         
         const foundUser = users.find((user) => user.emailStored == emailLoginValue && user.passwordStored == passwordLoginValue);
@@ -104,10 +102,6 @@ function loginForm(event){
             successLogin.style.alignItems = 'center';
             successLogin.style.justifyContent = 'center';
         } else {
-            // modalLoginError.style.display = "flex"
-            // modalLoginError.style.alignItems = 'center';
-            // modalLoginError.style.justifyContent = 'center';
-
             alert("This user does not exist!")
         }       
     }
@@ -134,12 +128,6 @@ logoutButton.addEventListener('click', logoutUser);
 function logoutUser(){
     localStorage.removeItem('logged-user');
     location.href = 'index.html';
-}
-
-
-modalLoginError.addEventListener('click', closeModalLoginError);
-function closeModalLoginError(){
-    modalLoginError.style.display = "none";
 }
 
 successLoginCloseBtn.addEventListener('click', closeModalSuccessLogin);
