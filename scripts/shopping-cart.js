@@ -125,16 +125,16 @@ function showItemsCart() {
     let cartWrapper = document.querySelector('.cart-wrapper');
 
     for(let i = 0; i < products.length; i++){
-        let shopItemName = document.createElement('li');
+        const newListShop = document.createElement('ul')
+        newListShop.classList.add('cart-items-list-line');
+
+        const shopItemName = document.createElement('li');
         shopItemName.classList.add('cart-item-name');
         shopItemName.textContent = products[i].name;
 
         const shopItemPrice = document.createElement('li');
         shopItemPrice.classList.add('cart-item-price');
         shopItemPrice.textContent = "$" + products[i].price;
-
-        const newListShop = document.createElement('ul')
-        newListShop.classList.add('cart-items-list-line');
 
         const deleteBtnShoppingCart = document.createElement('li');
         deleteBtnShoppingCart.innerHTML = `<span class="material-symbols-outlined">delete</span>`;

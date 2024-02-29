@@ -67,12 +67,30 @@
                 </div>
                 <form action="">
                     <div class="cart-address-order">
-                        <input type="text" name="name" placeholder="Name">
-                        <input type="text" name="address" placeholder="Address">
-                        <input type="number" name="postal-code" placeholder="Postal code">
-                        <input type="text" name="city" placeholder="City">
-                        <input type="text" name="country" placeholder="Country">
-                        <input type="number" name="phone" placeholder="Phone">
+                        <div>
+                            <input type="text" class='name-input' name="name" placeholder="Name">
+                            <span class="error-required error-name-input" style="display: none;">This field is required!</span>
+                        </div>
+                        <div>
+                            <input type="text" class='address-input' name="address" placeholder="Address">
+                            <span class="error-required error-address-input" style="display: none;">This field is required!</span>
+                        </div>
+                        <div>
+                            <input type="number" class='postal-code-input' name="postal-code" placeholder="Postal code">
+                            <span class="error-required error-postal-code-input" style="display: none;">This field is required!</span>
+                        </div>
+                        <div>
+                            <input type="text" class='city-input' name="city" placeholder="City">
+                            <span class="error-required error-city-input" style="display: none;">This field is required!</span>
+                        </div>
+                        <div>
+                            <input type="text" class='country-input' name="country" placeholder="Country">
+                            <span class="error-required error-country-input" style="display: none;">This field is required!</span>
+                        </div>
+                        <div>
+                            <input type="number" class='phone-input' name="phone" placeholder="Phone">
+                            <span class="error-required error-phone-input" style="display: none;">This field is required!</span>
+                        </div>
                     </div>
                 </form>
 

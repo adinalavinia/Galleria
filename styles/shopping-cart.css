@@ -40,9 +40,15 @@
   padding: 50px 0 50px 20px;
 }
 .shoppig-cart-page .cart-address-order input {
+  width: 500px;
   border: none;
   border-bottom: 1px solid grey;
   font-size: 16px;
+}
+.shoppig-cart-page .cart-address-order .error-required {
+  font-size: 16px;
+  margin-top: 10px;
+  color: red;
 }
 .shoppig-cart-page .cart-notes {
   padding-left: 20px;
@@ -149,6 +155,9 @@
   }
   .shoppig-cart-page .cart-address-order input {
     max-width: 300px;
+    font-size: 14px;
+  }
+  .shoppig-cart-page .cart-address-order .error-required {
     font-size: 14px;
   }
   .shoppig-cart-page .cart-notes {

@@ -135,3 +135,10 @@ function closeModalSuccessLogin(){
     successLogin.style.display = "none";
     location.href = 'index.html';
 }
+
+window.onclick = function(event) {
+    if (event.target == successLogin) {
+        successLogin.style.display = 'none';
+        location.href = 'index.html';
+    }
+}

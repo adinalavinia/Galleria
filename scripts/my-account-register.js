@@ -141,8 +141,14 @@ function registerForm(event){
     closeModalRegisterSuccess.addEventListener('click', closeMessageModalRegister);
     function closeMessageModalRegister() {
         modalRegisterSuccess.style.display = 'none';
-        // location.href = "index.html";
         location.reload();
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modalRegisterSuccess) {
+            modalRegisterSuccess.style.display = 'none';
+            location.reload();
+        }
     }
 
     if(emailStored !== '' && nameStored !== '' && passwordStored !== '' && confirmPasswordStored !== '' && checkboxTerms.checked === true){
