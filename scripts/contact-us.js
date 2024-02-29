@@ -7,12 +7,17 @@ function sendMessage(){
     modalContactUs.style.display = 'flex';
     modalContactUs.style.alignItems = 'center';
     modalContactUs.style.justifyContent = 'center';
-    
-    
 }
 
 closeModalContactUs.addEventListener('click', closeMessageModal);
 function closeMessageModal() {
     modalContactUs.style.display = 'none';
     location.href = 'index.html';
+}
+
+window.onclick = function(event) {
+    if (event.target == modalContactUs) {
+        modalContactUs.style.display = 'none';
+        location.href = 'index.html';
+    }
 }
